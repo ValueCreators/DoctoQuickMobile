@@ -14,7 +14,10 @@ Ext.define('DoctoApp.view.Main', {
             },
             {
         		xtype : 'registerDoctorScreen2'
-        	}
+        	},
+            {
+                xtype : 'LandingView'
+            }
         ]
     }
 });

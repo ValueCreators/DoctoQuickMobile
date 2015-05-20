@@ -36,6 +36,7 @@ Ext.define('DoctoApp.controller.doctoController.LoginController', {
     },
     
     doLogin : function(){
+
     	var loginForm = this.getLoginFormFieldSet();
     	
     	var mobileNumber = loginForm.getComponent('phNumId').getValue();
@@ -60,7 +61,9 @@ Ext.define('DoctoApp.controller.doctoController.LoginController', {
     		//Login is successfull. Save the authtoken obtained in local DB.
     		//So that it can be checked upon during app launch and directly user will be taken to main screen.
     		
-    		alert('Login successfull');
+    		//alert('Login successfull');
+            this.getMainView().setActiveItem('LandingView');
+
     	},
     	function(result){
     		alert('Login failure');
