@@ -1,4 +1,4 @@
-Ext.define('DoctoApp.view.registration.RegisterDoctor2', {
+Ext.define('DoctorQuickMobile.view.registration.RegisterDoctor2', {
     extend: 'Ext.Panel',
     xtype: 'registerDoctorScreen2',
     config: {
@@ -12,7 +12,7 @@ Ext.define('DoctoApp.view.registration.RegisterDoctor2', {
                 xtype : 'container',
                 cls : 'headerCls gridCls',
                 itemId : 'backBtnRegistration',
-                html : '<div class="backBtnCls" onclick="DoctoApp.app.getController(\'doctoController.LoginController\').showDoctoRegistrationView1()"><img src="./resources/images/dq_arrow_back_black.png"></img><span>Back</span></div>'
+                html : '<div class="backBtnCls" onclick="DoctorQuickMobile.app.getController(\'doctoController.LoginController\').showDoctoRegistrationView1()"><img src="./resources/images/dq_arrow_back_black.png"></img><span>Back</span></div>'
             },
             {
     		  

@@ -1,4 +1,4 @@
-Ext.define('DoctoApp.view.registration.RegisterDoctor1', {
+Ext.define('DoctorQuickMobile.view.registration.RegisterDoctor1', {
     extend: 'Ext.Panel',
     xtype: 'registerDoctorScreen1',
     config: {

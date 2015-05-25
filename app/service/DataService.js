@@ -1,4 +1,4 @@
-Ext.define('DoctoApp.data.DataService', {
+Ext.define('DoctorQuickMobile.data.DataService', {
 
 	singleton: true,
 
@@ -9,7 +9,7 @@ Ext.define('DoctoApp.data.DataService', {
 				mobile : mobile,
 				password : password 
 		};
-		DoctoApp.data.Service.makeServerReqest(node_route, reqObj, successCallback, failureCallback, scope);
+		DoctorQuickMobile.data.Service.makeServerReqest(node_route, reqObj, successCallback, failureCallback, scope);
 	},
 	
 	doDoctorRegistration : function(firstName, middleName, lastName, email, mobile, successCallback, failureCallback, scope){
@@ -22,6 +22,6 @@ Ext.define('DoctoApp.data.DataService', {
 				email : email,
 				mobile : mobile 
 		};
-		DoctoApp.data.Service.makeServerReqest(node_route, reqObj, successCallback, failureCallback, scope);
+		DoctorQuickMobile.data.Service.makeServerReqest(node_route, reqObj, successCallback, failureCallback, scope);
 	}
 });

@@ -1,4 +1,4 @@
-Ext.define('DoctoApp.view.doctoView.LandingView', {
+Ext.define('DoctorQuickMobile.view.doctoView.LandingView', {
 	extend : 'Ext.Panel',
 	xtype: 'LandingView',
 	config : {

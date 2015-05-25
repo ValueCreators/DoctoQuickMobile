@@ -1,4 +1,4 @@
-Ext.define('DoctoApp.controller.doctoController.LoginController', {
+Ext.define('DoctorQuickMobile.controller.doctoController.LoginController', {
     extend: 'Ext.app.Controller',
 
     config: {
@@ -21,7 +21,7 @@ Ext.define('DoctoApp.controller.doctoController.LoginController', {
     },
     
     init : function () {
-        this.dataService = DoctoApp.data.DataService;
+        this.dataService = DoctorQuickMobile.data.DataService;
     },
 
     footerTapHandler : function(event, node, options, eOpts){

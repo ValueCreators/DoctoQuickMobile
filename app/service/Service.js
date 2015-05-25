@@ -1,4 +1,4 @@
-Ext.define('DoctoApp.data.Service', {
+Ext.define('DoctorQuickMobile.data.Service', {
 
 	singleton: true,
 	

@@ -1,4 +1,4 @@
-Ext.define('DoctoApp.controller.doctoController.MainController', {
+Ext.define('DoctorQuickMobile.controller.doctoController.MainController', {
     extend: 'Ext.app.Controller',
 
     config: {
@@ -18,7 +18,7 @@ Ext.define('DoctoApp.controller.doctoController.MainController', {
     },
     
     init : function () {
-        this.dataService = DoctoApp.data.DataService;
+        this.dataService = DoctorQuickMobile.data.DataService;
     },
 
 //    showDoctoRegistrationView2 : function () {
@@ -54,7 +54,7 @@ Ext.define('DoctoApp.controller.doctoController.MainController', {
 
     registerSuccessCl : function (data) {
         console.log('successfully data saved',data);
-        //Ext.Viewport.add(DoctoApp.view.notificationOverlay).showBy();
+        //Ext.Viewport.add(DoctorQuickMobile.view.notificationOverlay).showBy();
          overlay = Ext.Viewport.add({
             xtype: 'panel',
             cls: 'notifyOverlay',
@@ -102,7 +102,7 @@ Ext.define('DoctoApp.controller.doctoController.MainController', {
 
     registerFailureCl : function (data) {
         console.log('register fails',data);
-         //Ext.Viewport.add(DoctoApp.view.notificationOverlay).showBy();
+         //Ext.Viewport.add(DoctorQuickMobile.view.notificationOverlay).showBy();
          overlay = Ext.Viewport.add({
             xtype: 'panel',
             cls: 'notifyOverlay',

@@ -9,7 +9,7 @@
  * metadata-driven class system features
  */
 Ext.Loader.addClassPathMappings({
-  "DoctoApp": "app",
+  "DoctorQuickMobile": "app",
   "Ext": "touch/src",
   "Ext-more": "touch/src/core/Ext-more.js",
   "Ext.Boot": ".sencha/app/Boot.js",
@@ -36,7 +36,7 @@ Ext.Loader.addClassPathMappings({
 });
 
 Ext.ClassManager.addNameAlternateMappings({
-  "DoctoApp.view.Main": [],
+  "DoctorQuickMobile.view.Main": [],
   "Ext.AbstractComponent": [],
   "Ext.AbstractManager": [],
   "Ext.AbstractPlugin": [],
@@ -671,7 +671,7 @@ Ext.ClassManager.addNameAlternateMappings({
 });
 
 Ext.ClassManager.addNameAliasMappings({
-  "DoctoApp.view.Main": [
+  "DoctorQuickMobile.view.Main": [
     "widget.main"
   ],
   "Ext.AbstractComponent": [],

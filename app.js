@@ -11,7 +11,7 @@
 */
 
 Ext.application({
-    name: 'DoctoApp',
+    name: 'DoctorQuickMobile',
 
     requires: [
         'Ext.MessageBox'
@@ -50,7 +50,7 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
 
         // Initialize the main view
-        Ext.Viewport.add(Ext.create('DoctoApp.view.Main'));
+        Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.Main'));
     },
 
     onUpdated: function() {

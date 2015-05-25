@@ -1,4 +1,4 @@
-Ext.define('DoctoApp.view.DoctorLogin', {
+Ext.define('DoctorQuickMobile.view.DoctorLogin', {
     extend: 'Ext.Panel',
     xtype: 'doctorLoginScreen',
     fullscreen: true,
@@ -113,7 +113,7 @@ Ext.define('DoctoApp.view.DoctorLogin', {
 		    			listeners : {
 		    				painted : function(ele){
 		    					
-		    					var loginController = DoctoApp.app.getController('doctoController.LoginController')
+		    					var loginController = DoctorQuickMobile.app.getController('doctoController.LoginController')
 		    					ele.on('singletap',function(event, node, options, eOpts){
 		    						loginController.footerTapHandler(event, node, options, eOpts);
 		    					});

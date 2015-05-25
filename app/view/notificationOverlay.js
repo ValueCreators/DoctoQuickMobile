@@ -1,4 +1,4 @@
-Ext.define('DoctoApp.view.notificationOverlay', {
+Ext.define('DoctorQuickMobile.view.notificationOverlay', {
     extend: 'Ext.Panel',
     xtype: 'notificationOverlay',
     cls : 'notificationOverlayCls',

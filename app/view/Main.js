@@ -1,4 +1,4 @@
-Ext.define('DoctoApp.view.Main', {
+Ext.define('DoctorQuickMobile.view.Main', {
     extend: 'Ext.Panel',
     xtype: 'main',
     config: {
