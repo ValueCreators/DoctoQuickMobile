@@ -19,12 +19,21 @@ Ext.application({
 
     controllers : [
         'doctoController.MainController',
-        'doctoController.LoginController'
+        'doctoController.LoginController',
+        'doctor.SlideMenuController',
+        'patient.SlideMenuController'
     ],
 
     views: [
-        'Main',
-        'notificationOverlay'
+//        'Main',
+        //'notificationOverlay',
+        'doctor.LandingView',
+        'doctor.MainPanel',
+        'doctor.SlideMenu',
+        
+        'patient.LandingView',
+        'patient.MainPanel',
+        'patient.SlideMenu'
     ],
 
     icon: {
@@ -48,9 +57,23 @@ Ext.application({
     launch: function() {
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
-
-        // Initialize the main view
-        Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.Main'));
+        
+        //TODO : add splash image as background for a div in html page.
+        
+        //Splash screen is shown for 3 seconds and then sencha view is created.
+        setTimeout(function(){
+        	
+        	//TODO : Implement the below described logic.
+        	
+        	//1. Check for the availability of login auth token.
+        	//2. If No, then launch Login View
+        	//Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.common.LoginView'));
+        	//3. If Yes, then check if the user has loggedin as patient or doctor
+        	//4. If doctor, then launch doctor landing view
+        	Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.doctor.LandingView'));
+        	//5. If Patient, then launch patient landing view.
+        	//Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.patient.LandingView'));
+        },3000);
     },
 
     onUpdated: function() {
