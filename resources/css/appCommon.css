@@ -2,6 +2,10 @@
 
 /*********************** css for login view **************************/
 
+.height100{
+	height: 100%;
+}
+
 .x-form-fieldset .x-form-fieldset-inner {
 	background: transparent;
   	border: 0px;

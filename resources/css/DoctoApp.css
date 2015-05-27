@@ -1,0 +1,64 @@
+
+/*
+*   PATIENT REQUEST DETAIL PAGE
+*/
+
+.patientRequestDetails {
+	position: relative;
+}
+
+.patientRequestDetails .patientProfilePic {
+	margin: 10px auto;
+	width: 100px;
+	border: 5px solid gray;
+	border-radius: 54px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+}
+
+.patientRequestDetails .patientProfilePic img {
+	width: 75px;
+	height: 75px;
+}
+
+.patientRequestDetails .nameContent {
+	text-align: center;
+	line-height: 30px;
+}
+
+.patientRequestDetails .ageSexCls, .patientRequestDetails .regionLocationCls { 
+	text-align: center;
+	line-height: 20px;
+	font-size: 14px;
+	color: : rgb(81, 78, 78);
+}
+
+.patientRequestDetails .bottomDetailCls {
+	margin-top: 40px;
+}
+
+.patientRequestDetails .requestedVoiceCls {
+	text-align: center;
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+
+.patientRequestDetails .declineBtnCls, .patientRequestDetails .acceptBtnCls {
+	width: 50%;
+	float: left;
+	text-align: center;
+	height: 200px;
+	background-color: rgb(215, 212, 212);
+	line-height: 60px;
+	border-right: 1px solid rgb(186, 182, 182);
+}
+
+.patientRequestDetails .acceptDeclineCls img {
+   height: 70px;
+   margin-top: 40px;
+}
+
+.patientRequestDetails .acceptDeclineCls p {
+	line-height: 20px;
+}

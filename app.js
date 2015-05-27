@@ -30,6 +30,7 @@ Ext.application({
         'doctor.LandingView',
         'doctor.MainPanel',
         'doctor.SlideMenu',
+        //'doctor.RequestDetailView',
         
         'patient.LandingView',
         'patient.MainPanel',
@@ -73,6 +74,8 @@ Ext.application({
         	Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.doctor.LandingView'));
         	//5. If Patient, then launch patient landing view.
         	//Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.patient.LandingView'));
+            //Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.doctor.consultation.RequestDetailView'));
+
         },3000);
     },
 
