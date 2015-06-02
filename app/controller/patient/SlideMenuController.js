@@ -6,7 +6,7 @@ Ext.define('DoctorQuickMobile.controller.patient.SlideMenuController',{
 							mainPanel : 'patient_mainPanel',
 							slideMenu : 'patient_slideMenu',
 							
-							navBtn : 'button[name="nav_btn"]'
+							navBtn : 'button[name="patient_nav_btn"]'
 				},
 				control : {
 							navBtn : {

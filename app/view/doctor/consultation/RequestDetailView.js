@@ -41,9 +41,9 @@ Ext.define('DoctorQuickMobile.view.doctor.consultation.RequestDetailView', {
 	            		'</div>'+
             		'</div>',
             //tpl : listItemTpl,
-            scrollable: {
-                direction: 'vertical'
-            }
+//            scrollable: {
+//                direction: 'vertical'
+//            }
 		}
 	}
 
