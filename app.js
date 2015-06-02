@@ -27,7 +27,7 @@ Ext.application({
     views: [
 //        'Main',
         //'notificationOverlay',
-        'doctor.LandingView',
+        'doctor.DashboardView',
         'doctor.MainPanel',
         'doctor.SlideMenu',
         //'doctor.RequestDetailView',
@@ -62,7 +62,7 @@ Ext.application({
         //TODO : add splash image as background for a div in html page.
         
         //Splash screen is shown for 3 seconds and then sencha view is created.
-        setTimeout(function(){
+        //setTimeout(function(){
         	
         	//TODO : Implement the below described logic.
         	
@@ -71,12 +71,13 @@ Ext.application({
         	//Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.common.LoginView'));
         	//3. If Yes, then check if the user has loggedin as patient or doctor
         	//4. If doctor, then launch doctor landing view
-        	Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.doctor.LandingView'));
+        	//Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.doctor.LandingView'));
         	//5. If Patient, then launch patient landing view.
         	//Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.patient.LandingView'));
             //Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.doctor.consultation.RequestDetailView'));
+            Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.doctor.DashboardView'));
 
-        },3000);
+        //},3000);
     },
 
     onUpdated: function() {
@@ -91,3 +92,22 @@ Ext.application({
         );
     }
 });
+
+var requesttest = function () {
+    var reqObj = {
+        mobile : 8904814609,
+        password : 'thiyagu'
+    };
+    $.ajax({
+            url : 'http://localhost:8000/loginDoctor',
+            method : 'POST',
+            dataType : 'json',
+            data : reqObj,
+            success : function(data) {    
+                console.log('success',data);
+            },
+            error: function (err) {
+                console.log('Error', err);
+            }
+        });
+};
