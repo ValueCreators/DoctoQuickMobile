@@ -18,20 +18,29 @@ Ext.application({
     ],
 
     controllers : [
-        'doctoController.MainController',
-        'doctoController.LoginController',
+        
+        'LoginController',
+        'CommonController',
+
+        'doctor.DoctoRegController',
         'doctor.SlideMenuController',
+        
+        'patient.PatientRegController',
         'patient.SlideMenuController'
+        
     ],
 
     views: [
-//        'Main',
-        //'notificationOverlay',
+
+        'common.LoginView',
+
+        'doctor.registration.DocRegMainView',
+        'doctor.LandingView',
         'doctor.DashboardView',
         'doctor.MainPanel',
         'doctor.SlideMenu',
-        //'doctor.RequestDetailView',
         
+        'patient.registration.PatientRegMainView',
         'patient.LandingView',
         'patient.MainPanel',
         'patient.SlideMenu'
@@ -65,6 +74,7 @@ Ext.application({
         //setTimeout(function(){
         	
         	//TODO : Implement the below described logic.
+            DoctorQuickMobile.app.getController('CommonController').initializeView();
         	
         	//1. Check for the availability of login auth token.
         	//2. If No, then launch Login View
@@ -75,7 +85,7 @@ Ext.application({
         	//5. If Patient, then launch patient landing view.
         	//Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.patient.LandingView'));
             //Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.doctor.consultation.RequestDetailView'));
-            Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.doctor.DashboardView'));
+            //Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.patient.registration.PatientRegMainView'));
 
         //},3000);
     },
@@ -93,21 +103,4 @@ Ext.application({
     }
 });
 
-var requesttest = function () {
-    var reqObj = {
-        mobile : 8904814609,
-        password : 'thiyagu'
-    };
-    $.ajax({
-            url : 'http://localhost:8000/loginDoctor',
-            method : 'POST',
-            dataType : 'json',
-            data : reqObj,
-            success : function(data) {    
-                console.log('success',data);
-            },
-            error: function (err) {
-                console.log('Error', err);
-            }
-        });
-};
+

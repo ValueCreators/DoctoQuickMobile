@@ -1,5 +1,5 @@
 /**
- * 
+ *	Login view 
  */
 Ext.define('DoctorQuickMobile.view.common.LoginView', {
     extend: 'Ext.Panel',
@@ -29,11 +29,19 @@ Ext.define('DoctorQuickMobile.view.common.LoginView', {
 			    		cls : 'loginFormPanelCls gridCls',
 			    		items : [{
 			    			xtype : 'numberfield',
-			    			itemId: 'phNumId',
+			    			name: 'mobileNumber',
+			    			itemId: 'mobileNumberId',
 			    			cls : 'textfiledCls',
 			    			maxValue: 10,
 			    			placeHolder : 'Phone Number',
-			    			clearIcon : false
+			    			required: true,
+			    			clearIcon : false,
+			    			listeners: {
+				            	keyup : function (ele, event, eObj) {
+				            		console.log('on key up events');
+				            		DoctorQuickMobile.app.getController('CommonController').removeEmptyCls(ele, event);
+				            	}
+				            }
 			    		},
 			    		{
 			    			xtype : 'spacer',
@@ -41,10 +49,18 @@ Ext.define('DoctorQuickMobile.view.common.LoginView', {
 			    		},
 			    		{
 			    			xtype : 'passwordfield',
-			    			itemId: 'pswdId',
+			    			name: 'password',
+			    			itemId: 'passwordId',
 			    			cls : 'textfiledCls',
 			    			placeHolder : 'Password',
-			    			clearIcon : false
+			    			required: true,
+			    			clearIcon : false,
+			    			listeners: {
+			            	keyup : function (ele, event, eObj) {
+			            		console.log('on key up events');
+			            		DoctorQuickMobile.app.getController('CommonController').removeEmptyCls(ele, event);
+			            	}
+			            }
 			    		},
 			    		{
 			    			xtype : 'spacer',
@@ -91,37 +107,24 @@ Ext.define('DoctorQuickMobile.view.common.LoginView', {
 		    		{
 		    			xtype : 'spacer',
 		    			cls : 'spacerCls'
-		    		},
-		    		{
-			    		xtype: 'container',
-			    		itemId : 'footerContainer',
-			    		cls : 'gridCls clearfix bottomOptionsToolsCls',
-			            html : '<div class="learnMoreContainer">'+
-			            		'	<div>'+
-		    					'		<img id="learnMoreBtnId" src="./resources/images/learnMore2.png"></img>'+
-		    					'	</div>'+
-		    					'	<div>'+
-		    					'		<span>Learn more</span>'+
-		    					'	</div>'+
-		    					'</div>'+
-		    					'<div class="registerDoctorCls">'+
-		    					'	<div>'+
-		    					'		<img id="regAsDoctorBtnId" src="./resources/images/addMore2.png"></img>'+
-		    					'	</div>'+
-		    					'	<div>'+
-		    					'		<span>Register as a doctor</span>'+
-		    					'	</div>'+
-		    					'</div>',
-		    					
-		    			listeners : {
-		    				painted : function(ele){
-		    					
-		    					var loginController = DoctorQuickMobile.app.getController('doctoController.LoginController')
-		    					ele.on('singletap',function(event, node, options, eOpts){
-		    						loginController.footerTapHandler(event, node, options, eOpts);
-		    					});
-		    				}
-		    			}
+		    		}, {
+		    			xtype: 'container',
+			    		cls : 'gridCls bottomOptionsToolsCls',
+			    		items : [
+			    			{
+			    				xtype: 'button',
+			    				itemId: 'learnMoreBtnId',
+			    				cls: 'learnMoreBtnCls fl-left',
+			    				iconCls: 'learn-more-icon-cls',
+			    				html: '<div class="text-cls">Learn More</div>'
+			    			}, {
+			    				xtype: 'button',
+			    				itemId: 'registerDocBtnId',
+			    				cls: 'registerDocBtnCls fl-right',
+			    				iconCls: 'register-doc-icon-cls',
+			    				html: '<div class="text-cls">Register as a doctor<div>'
+			    			}
+			    		]
 		    		}
     			]
     		}

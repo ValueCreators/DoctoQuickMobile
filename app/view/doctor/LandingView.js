@@ -1,5 +1,5 @@
 /**
- * 
+ * This is the Landing view for doctor 
  */
 Ext.define('DoctorQuickMobile.view.doctor.LandingView', {
 				

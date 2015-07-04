@@ -1,4 +1,4 @@
-/**
+/*
  * 
  */
 Ext.define('DoctorQuickMobile.view.doctor.DashboardView', {

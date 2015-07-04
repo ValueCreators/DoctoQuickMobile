@@ -1,0 +1,35 @@
+.x-form-fieldset .x-field:first-child{
+	border-radius: 0px;
+}
+
+.learnMoreBtnCls, .registerDocBtnCls {
+	background-image: none !important;
+	background-color: transparent !important;
+	border: none;
+    width: 50%;
+    color: #ffffff;
+}
+
+.learn-more-icon-cls {
+	background: url('./../images/learnMore2.png');
+	left: 35px !important;
+}
+
+.register-doc-icon-cls {
+	background: url('./../images/addMore2.png');
+	left: 65px !important;
+}
+
+.learn-more-icon-cls, .register-doc-icon-cls {
+	position: absolute !important;
+    width: 35px !important;
+    height: 35px !important;
+}
+
+.bottomOptionsToolsCls .text-cls {
+	margin-top: 40px;
+    font-weight: normal;
+    text-align: left;
+}
+
+
