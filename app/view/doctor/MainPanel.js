@@ -27,7 +27,7 @@ Ext.define('DoctorQuickMobile.view.doctor.MainPanel', {
 				         {
 				        	 xtype : 'container',
 				        	 cls : 'containerCls',
-				        	 html : 'Welcome Doctor'
+				        	 html : '<div style="padding:50px;text-align:center;font-weight:bold;">Welcome Doctor</div>'
 				         }
 				        ]
 	}

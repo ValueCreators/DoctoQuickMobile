@@ -39,5 +39,47 @@ Ext.define('DoctorQuickMobile.data.Service', {
 		    	errorCallback.apply(scope, [responseObj]);
 		    }
 		});
-	}
+	},
+
+	testWebService : function () {
+        var reqObj = {
+            mobile : 8904814609,
+            password : 'thiyagu'
+        };
+        Ext.Ajax.request({
+            
+            url : 'http://localhost:8000/agent',
+            method : 'POST',
+            params : reqObj,
+            useDefaultXhrHeader : false,
+            
+            success : function (response) {
+                
+                //If the server is sending non JSON, string call error callback with invalid response
+               
+                    var responseObj = JSON.parse(response.responseText);
+                    console.log('success response object-->', responseObj);
+               
+            },
+            failure: function(response) {
+                
+                //If the server is sending non JSON, string call error callback with invalid response
+                    var responseObj = JSON.parse(response.responseText);
+                    console.log('failure response object-->', responseObj);
+                
+            }
+        });
+    }
+
+
 });
+
+
+
+
+
+
+
+
+
+

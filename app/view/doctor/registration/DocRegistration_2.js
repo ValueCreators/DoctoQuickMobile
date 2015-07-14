@@ -1,22 +1,34 @@
-/**
+/*
  * 
- */
-Ext.define('DoctorQuickMobile.view.registration.RegisterDoctor2', {
+ *	Registration For doctor Flow for second view
+ *
+ *	This view holds the doctor information such as email and mobile number
+ *
+ *
+ *--------------------------------------------------------------
+ *						author@thiyagu
+ *--------------------------------------------------------------
+*/
+Ext.define('DoctorQuickMobile.view.doctor.registration.RegisterDoctor2', {
     extend: 'Ext.Panel',
-    xtype: 'registerDoctorScreen2',
+    xtype: 'docRegistration_2',
     config: {
     	
     	itemId : 'registerNameScreenId2',
     	cls : 'registerContainer2Cls bg1',
     	
     	items : [
-            //itemId : 'registerScreen2ContentId',
             {
-                xtype : 'container',
-                cls : 'headerCls gridCls',
-                itemId : 'backBtnRegistration',
-                html : '<div class="backBtnCls" onclick="DoctorQuickMobile.app.getController(\'doctoController.LoginController\').showDoctoRegistrationView1()"><img src="./resources/images/dq_arrow_back_black.png"></img><span>Back</span></div>'
-            },
+ 				xtype: 'toolbar',
+ 				docked: 'top',
+ 				items : {
+ 					xtype: 'button',
+ 					itemId: 'back-btn-Id',
+ 					text: 'Back',
+ 					cls: 'back-btn-cls',
+ 					iconCls: 'back-btn-icon-cls'
+ 				}
+ 			}, 
             {
     		  
                 xtype : 'container',
@@ -40,14 +52,22 @@ Ext.define('DoctorQuickMobile.view.registration.RegisterDoctor2', {
 					items : [{
 						xtype : 'emailfield',
 						cls : 'textfiledCls',
-						placeHolder : 'Enter your mailId'
+						name: 'email',
+						itemId: 'emailId',
+						required: true,
+						placeHolder : 'Enter your mail Id',
+						clearIcon : false
 					},{
 						xtype : 'spacer',
 						cls : 'spacerCls'
 					},{
 						xtype : 'numberfield',
 						cls : 'textfiledCls',
-						placeHolder : 'Mobile number'
+						name : 'mobile',
+						itemId : 'mobileId',
+						required : true,
+						placeHolder : 'Mobile number',
+						clearIcon : false
 					},{
 						xtype : 'spacer',
 						cls : 'spacerCls'

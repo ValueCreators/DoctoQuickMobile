@@ -18,8 +18,6 @@ Ext.application({
     ],
 
     controllers : [
-        'doctoController.MainController',
-        'doctoController.LoginController',
         
         'CustomerCareController',
         'NotificationsController',
@@ -34,20 +32,28 @@ Ext.application({
         'patient.MyDoctorsController',
         'patient.PaymentsController',
         'patient.ProfileController',
+        
+        'LoginController',
+        'CommonController',
+
+        'doctor.DoctoRegController',
+        'doctor.SlideMenuController',
+        
+        'patient.PatientRegController',
         'patient.SlideMenuController'
+        
     ],
 
     views: [
-//        'Main',
-        //'notificationOverlay',
 
-		'common.LoginView',
-		
+        'common.LoginView',
+
         'doctor.LandingView',
+        'doctor.DashboardView',
         'doctor.MainPanel',
         'doctor.SlideMenu',
-        //'doctor.RequestDetailView',
         
+        'patient.registration.PatientRegMainView',
         'patient.LandingView',
         'patient.MainPanel',
         'patient.SlideMenu'
@@ -78,21 +84,18 @@ Ext.application({
         //TODO : add splash image as background for a div in html page.
         
         //Splash screen is shown for 3 seconds and then sencha view is created.
-        setTimeout(function(){
+        //setTimeout(function(){
         	
         	//TODO : Implement the below described logic.
+            DoctorQuickMobile.app.getController('CommonController').initializeView();
         	
         	//1. Check for the availability of login auth token.
         	//2. If No, then launch Login View
 //        	Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.common.LoginView'));
         	//3. If Yes, then check if the user has loggedin as patient or doctor
         	//4. If doctor, then launch doctor landing view
-//        	Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.doctor.LandingView'));
-        	//5. If Patient, then launch patient landing view.
-        	Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.patient.LandingView'));
-//            Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.doctor.consultation.RequestDetailView'));
 
-        },3000);
+        //},3000);
     },
 
     onUpdated: function() {
@@ -106,4 +109,6 @@ Ext.application({
             }
         );
     }
+
 });
+

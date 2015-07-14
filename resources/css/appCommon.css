@@ -29,8 +29,9 @@ body {
   height: 48px;
   color: white;
   background-image: none;
-  background-color: green;
-  border: 0px; }
+  background-color: #6f9f2d;
+  border: 0px; 
+      border-radius: 0px;}
 
 .bgBtn2 {
   height: 48px;
@@ -158,7 +159,7 @@ input.checkbox-cls {
 /***************************************** Css done for Doctor regsitraton1 **************************/
 .registerNameContainerCls .headerCls {
   text-align: center;
-  margin-top: 60px; }
+  margin-top: 40px; }
 
 .registerNameContainerCls .headerCls .imgCls {
   margin: 40px 0px 20px 0px; }
@@ -175,7 +176,9 @@ input.checkbox-cls {
   height: 100% !important; }
 
 .nextBtnCls {
-  margin-top: 40px; }
+  margin-top: 30px; 
+  border-radius: 0px;
+}
 
 /***************************************** Css done for Doctor regsitraton2 **************************/
 .registerContainer2Cls {

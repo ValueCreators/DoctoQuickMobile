@@ -44,6 +44,13 @@
 	margin-bottom: 20px;
 }
 
+.patientRequestDetails .acceptDeclineCls {
+	height: 170px;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+}
+
 .patientRequestDetails .declineBtnCls, .patientRequestDetails .acceptBtnCls {
 	width: 50%;
 	float: left;
@@ -62,3 +69,137 @@
 .patientRequestDetails .acceptDeclineCls p {
 	line-height: 20px;
 }
+
+/********************** Account Statement ****************************/
+
+.accountStatementCls .report_pic {
+	margin: 10px auto;
+	width: 100px;	
+	border-radius: 54px;
+	height: 50px;
+	text-align: center;
+	line-height: 100px;
+}
+
+.accountStatementCls .report_pic img {
+	width: 50px;
+	height: 50px;
+}
+
+.accountStatementCls .report_head {
+	text-align: center;
+	line-height: 30px;
+}
+
+.accountStatementCls .wallet_value {
+	margin-top: 20px;
+}
+
+.accountStatementCls .wallet_value label {
+	margin-left: 25px;
+}
+
+.accountStatementCls .wallet_value span {
+	float: right;
+    margin-right: 25px;
+}
+
+.accountStatementCls .historyTitleCls .title_cls {
+	height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #E0DDDD;
+    margin-top: 20px;
+    border-top: 2px solid #ffffff;
+    box-shadow: 0px 4px 9px #888888;
+}
+
+.accountStatementCls .selectDateCls {
+	margin-top: 15px;
+}
+
+.selectDateCls .x-inner{
+	width: 270px;
+    margin: 0px auto;
+    height: 50px;
+}
+
+.accountStatementCls .fromDateCls {
+	float: left;
+    width: 125px;
+}
+
+.accountStatementCls  .spacerCls {
+    position: relative;
+    width: 10px;
+    float: left;
+    margin: 10px 5px;
+    text-align: center;
+}
+
+.accountStatementCls .toDateCls {
+	width: 125px;
+    float: left;
+}
+
+.accountStatementCls .reportListCls {
+	height: calc(100% - 300px);
+	margin-top: 10px;
+}
+
+.fromDateCls .x-component-outer .x-field-input .x-input-text, .toDateCls .x-component-outer .x-field-input .x-input-text {
+	-webkit-text-fill-color: gray;
+	font-size: 14px;
+    padding-left: 10px;
+}
+
+.x-webkit .x-field-select .x-component-outer:after, .x-field-select .x-webkit .x-component-outer:after {
+	-webkit-mask-image: none;
+    background: url('../images/dq_icon_calendar.png');
+    background-repeat: no-repeat;
+    width: 25px;
+    right: 4px;
+    background-size: contain;
+}
+.reportListCls .x-list-item {
+	height: 80px;
+	clear: both;
+}
+
+.reportListCls  .profile-pic {
+	float: left;
+	height: 50px;
+	width: 60px;
+}
+.reportListCls  .profile-pic  img {
+	height: 50px;
+}
+.reportListCls .detail-cls {
+	float: left;
+	width: calc(100% - 140px);
+	font-size: 16px;
+}
+
+.reportListCls .detail-cls .time-cls{
+	font-size: 14px;
+	color: gray;
+}
+
+.reportListCls .amount-cls {
+	float: left;
+	width: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

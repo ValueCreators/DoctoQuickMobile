@@ -12,3 +12,16 @@ var listItemTpl = new Ext.XTemplate(
 				return Ext.Date.format(new Date(date), 'h m A');
 			}
 });
+
+
+var accountStatementViewTpl = new Ext.XTemplate(
+
+		'<div> Hello World </div>'
+
+);
+
+var accountStatementTpl = new Ext.XTemplate(
+
+	
+
+);

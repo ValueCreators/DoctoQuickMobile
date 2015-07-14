@@ -4,7 +4,7 @@ Ext.define('DoctorQuickMobile.controller.doctor.SlideMenuController',{
 	config:{
 				refs:{
 							mainPanel : 'doctor_mainPanel',
-							slideMenu : 'doctor_slideMenu',
+							slideMenu : 'doctor_slideMenu #doctorMenuList',
 							
 							navBtn : 'button[name="doctor_nav_btn"]'
 				},
@@ -14,13 +14,19 @@ Ext.define('DoctorQuickMobile.controller.doctor.SlideMenuController',{
 							},
 							
 							slideMenu : {
-										itemtap : function(list, index, target, record){
-													this.toggleNav();
-												  }
+										itemtap : 'switchView'
 										}
 				}
 	},
 	
+	init : function(){
+		this.profile_controller = DoctorQuickMobile.app.getController('doctor.ProfileController');
+		this.myConsult_controller = DoctorQuickMobile.app.getController('doctor.MyConsultController');
+		this.reviewApp_controller = DoctorQuickMobile.app.getController('ReviewAppController');
+		this.customerCare_controller = DoctorQuickMobile.app.getController('CustomerCareController');
+		this.accStatement_controller = DoctorQuickMobile.app.getController('doctor.AccStatementController');
+		this.notif_controller = DoctorQuickMobile.app.getController('NotificationsController');
+	},
 	
 	/**
 	 * Toggle the slide navogation view
@@ -38,6 +44,34 @@ Ext.define('DoctorQuickMobile.controller.doctor.SlideMenuController',{
 				
 			mainEl.removeCls('in').addCls('out');  
 			me.getMainPanel().setMasked(true);
+		}
+	},
+	
+	switchView : function(list, index, target, record){
+		
+		this.toggleNav();
+		switch(record.data.id){
+		
+			case 'profile' :
+				this.profile_controller.showProfileView();
+				break;
+			case 'myConsultations' :
+				this.myConsult_controller.showConsultationsView();
+				break;
+			case 'reviewApp' :
+				this.reviewApp_controller.launchAppStoreForReview();
+				break;
+			case 'customerCare' :
+				this.customerCare_controller.showCustomerCareView();
+				break;
+			case 'acctStatement' :
+				this.accStatement_controller.showAccStatementView();
+				break;
+			case 'notif' :
+				this.notif_controller.toggleNotifications();
+				break;
+			default :
+				break;
 		}
 	}
 });

@@ -1,0 +1,172 @@
+/*
+*   PATIENT REGISTRATION PAGE
+*/
+
+.fl-left {
+	float: left;
+}
+
+.fl-right {
+	float: right;
+}
+
+.emptyCls {
+	border: 1px solid red !important;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.clearfix:before,.clearfix:after {
+        content: "";
+        display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+/*************** Top Toolbar CSS *******************************/
+.registerNameContainerCls .x-toolbar-dark, .docRegMainViewCls  .x-toolbar-dark{
+	background: transparent;
+	background-image: none;
+	border-bottom: none;
+}
+
+.registerNameContainerCls .back-btn-cls, .docRegMainViewCls  .back-btn-cls{
+	background: none;
+	background-image: none;
+	color: black;
+	border: none;
+}
+
+.registerNameContainerCls .back-btn-icon-cls, .docRegMainViewCls .back-btn-icon-cls{
+	background-image: url('../../resources/images/dq_arrow_back_black.png');
+}
+
+.registerNameContainerCls .back-btn-cls .x-button-label,
+.docRegMainViewCls .back-btn-cls .x-button-label
+ {
+	font-size: 1em;
+    margin-left: .2em;
+}
+
+.registerNameContainerCls .back-btn-cls.x-button-pressing,
+.docRegMainViewCls .back-btn-cls.x-button-pressing
+ {
+	background-image: none !important;
+	background: transparent !important;
+}
+
+/*************** Registration Form 1 CSS START *****************/
+
+.patientReg1FormCls {
+	height: calc(100% - 234px);
+    width: 90%;
+    margin: 20px auto;
+}
+
+.patientReg1FormCls .x-scroll-container {
+	background: transparent !important;
+}
+
+.patientReg1FormCls .spaceBtwCls {
+	margin: 10px 0px;
+}
+
+.patientReg1FormCls .bottomTextCls {
+	font-size: 0.7em;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+	color: #ffffff;
+    font-weight: bold;
+    line-height: 18px;
+}
+
+/***************** REGISTRATION FORM 1 CSS END ******************/
+
+/***************** REGISTRATION FORM 2 CSS START ****************/
+
+.patientReg2FormCls {
+	height: calc(100% - 158px) !important;
+}
+
+.gender-male-cls, .gender-female-cls {
+	width: 45%;
+	margin-right: 10%;
+}
+
+.gender-male-cls .x-form-label, .gender-female-cls .x-form-label {
+	background-color: #ffffff !important;
+	width: 100% !important;
+}
+
+.gender-male-cls .x-component-outer, .gender-female-cls .x-component-outer {
+	right: 70px;
+}
+
+.patientReg2FormCls .emailDescCls {
+	width: 90%;
+    margin: auto;
+    font-size: 0.8em;
+    color: #ffffff;
+}
+
+.patientReg2FormCls .nextBtnCls {
+	margin-top: 15px;
+}
+
+/******************** Registration OTP Verification *********************************/
+.patient_registration_3_cls  .headerDescCls {
+	font-weight: bold;
+    font-size: 1.1em;
+}
+
+.patient_registration_3_cls #otp-mobilenumber {
+    font-weight: bold;
+    font-size: 1.4em;
+    color: black;
+}
+
+.otp-cls {
+	height: 50px;
+	width: 300px;
+    margin: 20px auto;
+}
+.otp-cls .x-field .x-field-input {
+	min-width: 50px;
+}
+
+.otp-cls .otp1-cls, .otp-cls .otp2-cls, .otp-cls .otp3-cls, .otp-cls .otp4-cls {
+	width: 56px;
+	margin-right: 25px;
+}
+
+.patient_registration_3_cls .otp-btn-cls {
+	margin-top: 50px;
+}
+
+.patient_registration_3_cls .otp-btn-cls .x-inner{
+	width: 280px;
+	margin: 0px auto;
+}
+
+.patient_registration_3_cls .resendBtnCls, .patient_registration_3_cls .confirmBtnCls {
+	width: 130px;
+    margin-right: 10px;
+}
+
+.patient_registration_3_cls .bottomTextCls {
+	color: #ffffff;
+	width: 270px;
+	margin: 20px auto;
+	font-size: 0.8em;
+	text-align: center;
+}
+
+
+
+
+

@@ -1,16 +1,23 @@
-/**
+/*
  * 
+ *	Registration For doctor Flow First view.
+ *
+ *	This view holds doctor information such as First name, middle name, last name
+ *
+ *--------------------------------------------------------------
+ *						author@thiyagu
+ *--------------------------------------------------------------
+ *
  */
-Ext.define('DoctorQuickMobile.view.registration.RegisterDoctor1', {
+Ext.define('DoctorQuickMobile.view.doctor.registration.RegisterDoctor1', {
     extend: 'Ext.Panel',
-    xtype: 'registerDoctorScreen1',
+    xtype: 'docRegistration_1',
     config: {
     	
     	itemId : 'registerNameScreenId1',
     	cls : 'registerNameContainerCls bg1',
     	
     	items : [
-        //itemId : 'registerScreen1ContentId',
         {
     		
     		xtype : 'container',
@@ -35,14 +42,19 @@ Ext.define('DoctorQuickMobile.view.registration.RegisterDoctor1', {
 				items : [{
 						xtype : 'textfield',
 						cls : 'textfiledCls',
+						name: 'firstName',
+						itemId: 'firstNameId',
 						placeHolder : 'First Name',
-						clearIcon : false
+						clearIcon : false,
+						required: true
 					},{
 						xtype : 'spacer',
 						cls : 'spacerCls'
 					},{
 						xtype : 'textfield',
 						cls : 'textfiledCls',
+						name: 'middleName',
+						itemId: 'middleNameId',
 						placeHolder : 'Middle Name',
 						clearIcon : false
 					},{
@@ -51,8 +63,11 @@ Ext.define('DoctorQuickMobile.view.registration.RegisterDoctor1', {
 					},{
 						xtype : 'textfield',
 						cls : 'textfiledCls regNameLastFieldCls',
+						name : 'lastName',
+						itemId : 'lastNameId',
 						placeHolder : 'Last Name',
-						clearIcon : false
+						clearIcon : false,
+						required: true
 					},{
 						xtype : 'spacer',
 						cls : 'spacerCls'

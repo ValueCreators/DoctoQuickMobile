@@ -2,7 +2,9 @@ Ext.define('DoctorQuickMobile.view.doctor.SlideMenu', {
 			
 	extend: 'Ext.Container',
 	xtype: 'doctor_slideMenu',
-	
+	requires : ['Ext.data.Store'],
+	hideOnMaskTap: true,
+	modal: true,
 	config: {
 					
 		itemId : 'doctorSlideMenuId',			
