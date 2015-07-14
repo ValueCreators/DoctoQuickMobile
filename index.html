@@ -57,7 +57,10 @@
     <!-- Application CSS -->
     <link rel="stylesheet" type="text/css" href="resources/css/appCommon.css" />
     <link rel="stylesheet" type="text/css" href="resources/css/DoctoApp.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/login.css" />
     <link rel="stylesheet" type="text/css" href="resources/css/SlideMenu.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/patientRegistration.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/doctorLandingView.css">
     
     <!-- The line below must be kept intact for Sencha Command to build your application -->
     <!--  <script id="microloader" type="text/javascript" src=".sencha/app/microloader/development.js"></script> -->
@@ -72,43 +75,76 @@
    <script type="text/javascript" src="app/util/Util.js"></script>
    <script type="text/javascript" src="app/util/Template.js"></script>
 
+   <!-- Store and Model -->
+  <script type="text/javascript" src="app/model/AccountStatementModel.js"></script>
+  <script type="text/javascript" src="app/store/AccountStatementStore.js"></script>
+
    <!-- Service -->
    <script type="text/javascript" src="app/service/Service.js"></script>
    <script type="text/javascript" src="app/service/DataService.js"></script>
-
-   <!-- Controller -->
-   <script type="text/javascript" src="app/controller/doctoController/MainController.js"></script>
-   <script type="text/javascript" src="app/controller/doctoController/LoginController.js"></script>
-
-   <!-- Views -->
-<!--    <script type="text/javascript" src="app/view/doctoView/RegisterDoctor2.js"></script> -->
-<!--    <script type="text/javascript" src="app/view/doctoView/RegisterDoctor1.js"></script> -->
-<!--    <script type="text/javascript" src="app/view/doctoView/DoctorLogin.js"></script> -->
-<!--    <script type="text/javascript" src="app/view/doctoView/LandingView.js"></script> -->
-
-
-<!--    <script type="text/javascript" src="app/view/Main.js"></script> -->
-<!--    <script type="text/javascript" src="app/view/notificationOverlay.js"></script> -->
    
    
    <script type="text/javascript" src="app/controller/doctor/SlideMenuController.js"></script>
    <script type="text/javascript" src="app/controller/patient/SlideMenuController.js"></script>
    
    
-   <!-- NEW VIEWS -->
-   <script type="text/javascript" src="app/view/doctor/LandingView.js"></script>
+   <!-- LIST OF VIEWS START-->
+   <!-- Doctor -->
+   <script type="text/javascript" src="app/view/doctor/registration/DocRegistration_1.js"></script>
+   <script type="text/javascript" src="app/view/doctor/registration/DocRegistration_2.js"></script>
+   
+   <script type="text/javascript" src="app/view/doctor/DashboardView.js"></script>
    <script type="text/javascript" src="app/view/doctor/MainPanel.js"></script>
    <script type="text/javascript" src="app/view/doctor/SlideMenu.js"></script>
    
-   
+  
+  <!-- Patient -->
    <script type="text/javascript" src="app/view/patient/LandingView.js"></script>
    <script type="text/javascript" src="app/view/patient/MainPanel.js"></script>
    <script type="text/javascript" src="app/view/patient/SlideMenu.js"></script>
+   <script type="text/javascript" src="app/view/patient/registration/PatientRegistration_1.js"></script>
+   <script type="text/javascript" src="app/view/patient/registration/PatientRegistration_2.js"></script>
+   <script type="text/javascript" src="app/view/patient/registration/PatientRegistration_3.js"></script>
+   <script type="text/javascript" src="app/view/patient/registration/PatientRegMainView.js"></script>
+
+   <!-- LIST OF VIEWS END -->
 
    <script type="text/javascript" src="app/view/doctor/consultation/RequestDetailView.js"></script>
+   <script type="text/javascript" src="app/view/doctor/wallet/AccountStatementView.js"></script>
    
    
    <script type="text/javascript" src="app.js"></script>
+   <script type="text/javascript">
+
+   //Initial flow setup config
+
+    var isMobile = false;
+    var loginDetail = {
+        loginType : '', //Doctor or Patient
+        authtoken : '', //Login token
+        userId : '', //userId
+        password : '' //password
+    };
+
+    if (Ext.os.deviceType === 'Desktop') {
+        isMobile = false;
+        var data =  JSON.parse(localStorage.getItem('loginCredentials'));
+        if (data) {
+            loginDetail = {
+                loginType : data.loginType ? data.loginType : '', 
+                authtoken : data.authtoken ? data.authtoken : '', 
+                userId : data.userId ? data.userId : '', 
+                password : data.password ? data.password :'' 
+            };
+        }
+    } else {
+        isMobile = true;
+        //getting the details from the local database
+        //and set the values
+    }
+
+
+   </script>
 </head>
 <body>
     <div id="appLoadingIndicator">
