@@ -261,7 +261,11 @@ input.checkbox-cls {
   .doctorLandingViewCls .slideMenuCls .slideMenuTopToolbarCls .signOutBtnCls, .doctorLandingViewCls .slideMenuCls .slideMenuBtmToolbarCls .signOutBtnCls {
     background: none;
     border: none;
-    width: 100%; }
+    width: 94%;
+    margin: 3%;
+    z-index: 0; }
+    .doctorLandingViewCls .slideMenuCls .slideMenuTopToolbarCls .signOutBtnCls.x-button-pressing, .doctorLandingViewCls .slideMenuCls .slideMenuBtmToolbarCls .signOutBtnCls.x-button-pressing {
+      background: #20242D; }
     .doctorLandingViewCls .slideMenuCls .slideMenuTopToolbarCls .signOutBtnCls > span:nth-child(2), .doctorLandingViewCls .slideMenuCls .slideMenuBtmToolbarCls .signOutBtnCls > span:nth-child(2) {
       width: 1.2em;
       height: 1.2em; }
@@ -304,7 +308,11 @@ input.checkbox-cls {
   .patientLandingViewCls .slideMenuCls .slideMenuTopToolbarCls .signOutBtnCls, .patientLandingViewCls .slideMenuCls .slideMenuBtmToolbarCls .signOutBtnCls {
     background: none;
     border: none;
-    width: 100%; }
+    width: 94%;
+    margin: 3%;
+    z-index: 0; }
+    .patientLandingViewCls .slideMenuCls .slideMenuTopToolbarCls .signOutBtnCls.x-button-pressing, .patientLandingViewCls .slideMenuCls .slideMenuBtmToolbarCls .signOutBtnCls.x-button-pressing {
+      background: #20242D; }
     .patientLandingViewCls .slideMenuCls .slideMenuTopToolbarCls .signOutBtnCls > span:nth-child(2), .patientLandingViewCls .slideMenuCls .slideMenuBtmToolbarCls .signOutBtnCls > span:nth-child(2) {
       width: 1.2em;
       height: 1.2em; }
