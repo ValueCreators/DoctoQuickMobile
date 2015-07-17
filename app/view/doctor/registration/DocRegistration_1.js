@@ -23,7 +23,7 @@ Ext.define('DoctorQuickMobile.view.doctor.registration.RegisterDoctor1', {
     		xtype : 'container',
     		cls : 'headerCls gridCls',
             html : '<div class="headerTxtCls"><h2>Doctor Registration</h2></div>'+
-                    '<div class="imgCls"><img src="./resources/images/dq_patient_registration_progress1.png"></img></div>'+
+                    '<div class="imgCls"><img src="./resources/images/docReg1.png"></img></div>'+
                     '<div class="headerDescCls"><span>DoctorQuick is a unique technology to help you consult and treat patients at your own time and pace from different corners of the country and get paid for your time.</span></div>'
     	},{
 				xtype : 'container',

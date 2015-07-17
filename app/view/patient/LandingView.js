@@ -5,9 +5,7 @@ Ext.define('DoctorQuickMobile.view.patient.LandingView', {
 				
 	extend: 'Ext.Container',
 	xtype: 'patient_landingView',
-	requires: [
-		'Ext.TitleBar'
-	],
+
 	config: {
 				cls : 'patientLandingViewCls',
 				fullscreen: true,

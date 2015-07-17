@@ -17,6 +17,13 @@ Ext.application({
         'Ext.MessageBox'
     ],
 
+    models: [
+        'RequestPendingModel'
+    ],
+    stores: [
+         'RequestPendingStore'
+    ],
+
     controllers : [
         
         'LoginController',
