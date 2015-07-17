@@ -13,6 +13,7 @@ Ext.define('DoctorQuickMobile.view.doctor.MainPanel', {
 				cls : 'mainPanelToolbarCls',
 
 				items : [
+
 					{
 						xtype: 'container',
 						cls: 'batch-cls',
@@ -101,5 +102,6 @@ Ext.define('DoctorQuickMobile.view.doctor.MainPanel', {
 			    ]
             }
 		]
+
 	}
 });

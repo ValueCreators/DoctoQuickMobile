@@ -26,6 +26,20 @@ Ext.application({
 
     controllers : [
         
+        'CustomerCareController',
+        'NotificationsController',
+        'ReviewAppController',
+        
+        'doctor.SlideMenuController',
+        'doctor.AccStatementController',
+        'doctor.ProfileController',
+        'doctor.MyConsultController',
+        
+        'patient.MyConsultController',
+        'patient.MyDoctorsController',
+        'patient.PaymentsController',
+        'patient.ProfileController',
+        
         'LoginController',
         'CommonController',
 
@@ -41,7 +55,6 @@ Ext.application({
 
         'common.LoginView',
 
-        'doctor.registration.DocRegMainView',
         'doctor.LandingView',
         'doctor.DashboardView',
         'doctor.MainPanel',
@@ -85,14 +98,9 @@ Ext.application({
         	
         	//1. Check for the availability of login auth token.
         	//2. If No, then launch Login View
-        	//Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.common.LoginView'));
+//        	Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.common.LoginView'));
         	//3. If Yes, then check if the user has loggedin as patient or doctor
         	//4. If doctor, then launch doctor landing view
-        	//Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.doctor.LandingView'));
-        	//5. If Patient, then launch patient landing view.
-        	//Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.patient.LandingView'));
-            //Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.doctor.consultation.RequestDetailView'));
-            //Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.patient.registration.PatientRegMainView'));
 
         //},3000);
     },
@@ -108,6 +116,6 @@ Ext.application({
             }
         );
     }
-});
 
+});
 
