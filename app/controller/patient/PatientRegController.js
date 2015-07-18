@@ -47,7 +47,7 @@ Ext.define('DoctorQuickMobile.controller.patient.PatientRegController', {
 		this.patientRegForm1Obj = form1.getValues();
 
 		if (this.commonController.validateForms(this.patientRegForm1Obj, form1)) {
-			this.patientRegMainView().setActiveItem(1);
+			this.getPatientRegMainView().setActiveItem(1);
 		}
 		
 	},
@@ -100,14 +100,14 @@ Ext.define('DoctorQuickMobile.controller.patient.PatientRegController', {
 		loginDetail.loginType = 'Patient';
 		this.commonController.storingLoginCredentials();
 
-		this.patientRegMainView().setActiveItem(2);
+		this.getPatientRegMainView().setActiveItem(2);
 		$('#otp-mobilenumber span')[0].innerHTML = this.patientRegForm2Obj.mobileNumber;
 	},
 
 	patientRegistrationfailureCb : function (data) {
 		console.log('failure call back',data);
 		//this just for sample because of no internet conection. Please remove it when internet is up
-		this.patientRegMainView().setActiveItem(2);
+		this.getPatientRegMainView().setActiveItem(2);
 		$('#otp-mobilenumber span')[0].innerHTML = this.patientRegForm2Obj.mobileNumber;
 	
 	},
@@ -122,7 +122,7 @@ Ext.define('DoctorQuickMobile.controller.patient.PatientRegController', {
 
 	goBack : function () {
 		console.log('go back to the view');
-		var activeItemId = this.patientRegMainView().getActiveItem().getItemId();
+		var activeItemId = this.getPatientRegMainView().getActiveItem().getItemId();
 		console.log('active item id is-->',activeItemId);
 		if (activeItemId === 'patientRegistration_2') {
 			this.patientRegMainView().setActiveItem(0);

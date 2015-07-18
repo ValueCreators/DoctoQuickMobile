@@ -15,7 +15,7 @@ Ext.define('DoctorQuickMobile.view.doctor.profile.Profile', {
 			        		{
 				    			xtype : 'button',
 				    			cls : 'loginBtnCls bgBtn1 reviewPanelToolBtnCls',
-				    			itemId : 'closeDoctorProfil',
+				    			itemId : 'closeDoctorProfile',
 				    			text : 'Back',
 				    			//flex : 1
 			        		},{

@@ -33,7 +33,7 @@ Ext.define('DoctorQuickMobile.view.doctor.registration.RegisterDoctor2', {
     		  
                 xtype : 'container',
                 cls : 'headerCls gridCls registerNameContainerCls ',
-                html : '<div class="imgCls"><img src="./resources/images/dq_patient_registration_progress2.png"></img></div>'
+                html : '<div class="imgCls"><img src="./resources/images/docReg2.png"></img></div>'
     	   },
            {
 				xtype : 'container',

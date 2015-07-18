@@ -18,7 +18,7 @@ var common_templates = {
 
 var doctor_templates = {
 		
-		profileContainerTpl =new Ext.XTemplate('{[this.setDetailsData(values)]}', {
+		profileContainerTpl : new Ext.XTemplate('{[this.setDetailsData(values)]}', {
 
 			            	setDetailsData : function(docData) {
 
@@ -179,7 +179,27 @@ var doctor_templates = {
 								html += '</div>';
 								return html;
 			            	}
-			            })
+			            }),
+
+		requestPendingItemTpl : new Ext.XTemplate(
+				'<div class="menuItemWrapCls clearfix">'+
+				'	<div class="profileImgCls">'+ 
+				'		<img src="./resources/images/dq_icon_small_mydoctors.png">'+    
+				'	</div>'+
+				'	<div class="descriptionCls">'+
+				'		<div class="menuTitleCls">'+
+				'			<label>FirstName</label> <label>last nsmr</label>'+
+				'		</div>'+
+				'		<div class="ageGenderCls">'+
+				'     		<label>Male,</label><label> Age 36</label>'+
+				'   	</div>'+
+				'   	<div class="locationCls">'+
+				'			<label>Region or Location </label>'+
+				'   	</div>'+
+				'	</div>'+
+				'   <img class="nextArrowIconCls" src="./resources/images/arrow_grey.png">'+
+				'</div>'
+			)
 };
 
 var patient_templates = {
