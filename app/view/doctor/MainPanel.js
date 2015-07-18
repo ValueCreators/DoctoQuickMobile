@@ -18,6 +18,7 @@ Ext.define('DoctorQuickMobile.view.doctor.MainPanel', {
 				        	        	  xtype : 'spacer'
 				        	          },
 				        	          {
+				        	          	  xtype : 'button',
 										  name : 'doctor_nav_btn',
 										  iconCls : 'menu_iconCls',
 										  ui : 'plain'

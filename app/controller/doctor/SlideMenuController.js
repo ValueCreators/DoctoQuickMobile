@@ -53,7 +53,7 @@ Ext.define('DoctorQuickMobile.controller.doctor.SlideMenuController',{
 		switch(record.data.id){
 		
 			case 'profile' :
-				this.profile_controller.showProfileView();
+				DoctorQuickMobile.app.getController('doctor.ProfileController').showProfileView();
 				break;
 			case 'myConsultations' :
 				this.myConsult_controller.showConsultationsView();

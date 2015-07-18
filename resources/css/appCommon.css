@@ -388,4 +388,79 @@ input.checkbox-cls {
 
 /* iconCls classes - END */
 
+/* Profile Panel Classes - START */
+
+.dataContainer {
+      text-align: center;
+      height: 10%;
+      width: 95.8%;
+      /*border: 1px solid black;*/
+      margin: 0 2% 0 1.5%;
+      border-radius: .5em;
+      font-size: .8em;
+    }
+
+    .groupFieldsContainer {
+      width: 96%;
+      /* padding: 3% 0px; */
+      overflow: hidden;
+      /* border-bottom: 1px solid gray; */
+      background: white;
+      margin: 2%;
+      padding: 2% 0;
+      border-radius: .5em;
+    }
+
+    .dataRow {
+      width: 100%;
+      /* padding: 3% 0px; */
+      overflow: hidden;
+      /* border-bottom: 1px solid gray; */
+      background: white;
+      margin: 4% 3%;
+      padding: 0 0;
+    }
+
+    .field {
+      width: 50%;
+      float: left;
+      text-align: left;
+      padding: 0 0 0 4%;
+    }
+
+    .value {
+      width: 50%;
+      float: left;
+      text-align: left;
+      padding: 0 0 0 4%;
+    }
+
+    .reviewPanelCls {
+      /*z-index : 2000;*/
+      background : #E2E2E2;
+    }
+
+    .reviewPanelToolbarCls {
+      background : #00745f;
+    }
+
+    .reviewPanelContainerCls {
+      height : 100%;
+    }
+
+    .reviewPanelToolBtnCls {
+      background: none !important;
+      border: none !important;
+      font-size: 1.2em !important;
+    }
+
+    .profileScreenPicContainerCls {
+      width: 100%;
+      overflow: hidden;
+      padding: 3%;
+      height: 100%;
+    }
+
+/* Profile Panel Classes - END */
+
 /*# sourceMappingURL=appCommon.css.map */
