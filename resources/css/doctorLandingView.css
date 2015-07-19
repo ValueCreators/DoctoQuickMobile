@@ -80,15 +80,6 @@
   margin-top: 20px;
 }
 
-
-.doctorMainPanelCls {
-	z-index: 12;
-}
-
-.slideMenuCls {
-	z-index: 10;
-}
-
 #status-btn-id {
 	width: 22px;
     height: 22px;
