@@ -21,5 +21,19 @@ var docProfileData = {
 	feesDesired : 400,
 	specialist : 'Dermatologist',
 	membership : 'Not Available',
-	membershipNum : 456
+	membershipNum : 456,
+	profilePicData : ""
+}
+
+var patientProfileData = {
+
+	fName : 'Jhon',
+	mName : 'Abhraham',
+	lName : 'H',
+	age : 36,
+	sex : 'M',
+	email : 'JhonAbhraham@gmail.com',
+	mobile : '124359565546',
+	knowLaunguages : 'Marathi, English',
+	profilePicData : ""
 }

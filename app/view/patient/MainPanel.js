@@ -1,6 +1,6 @@
 Ext.define('DoctorQuickMobile.view.patient.MainPanel', {
 	
-	extend: 'Ext.Container',
+	extend: 'Ext.Panel',
 	xtype: 'patient_mainPanel',
 	
 	config: {
@@ -12,23 +12,42 @@ Ext.define('DoctorQuickMobile.view.patient.MainPanel', {
 				        	 title : 'DoctorQuick',
 				        	 docked : 'top',
 				        	 cls : 'mainPanelToolbarCls',
-				        	 
-				        	 items : [
+				        	 itemId : 'mainPanelToolbarId',
+				        	 items : [{
+							    			xtype : 'button',
+							    			cls : 'loginBtnCls bgBtn1 reviewPanelToolBtnCls',
+							    			itemId : 'gotoDashBoardBtn',
+							    			text : 'Back',
+							    			hidden : true
+						        		},
 				        	          {
 				        	        	  xtype : 'spacer'
-				        	          },
+				        	          },{
+							    			xtype : 'button',
+							    			cls : 'loginBtnCls bgBtn1 reviewPanelToolBtnCls',
+							    			itemId : 'editOrSubmitProfile',
+							    			text : 'Edit',
+							    			hidden : true
+						        		},
 				        	          {
 										  name : 'patient_nav_btn',
 										  iconCls : 'menu_iconCls',
 										  ui : 'plain'
 				        	          }
 				        	         ]
-				         },
-				         {
-				        	 xtype : 'container',
-				        	 cls : 'containerCls',
-				        	 html : '<div style="padding:50px;text-align:center;font-weight:bold;">Welcome Patient</div>'
-				         }
+				         },{
+								xtype : 'panel',
+								itemId : '_mainPanelContainer',
+								cls : 'mainPanelContainerCls',
+								config : {
+
+									layout : 'card',
+									
+									items : [{
+										xtype : 'patientProfileScreen'
+									}]
+								}
+							}
 				        ]
 	}
 });
