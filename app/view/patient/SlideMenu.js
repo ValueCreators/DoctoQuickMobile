@@ -6,7 +6,7 @@ Ext.define('DoctorQuickMobile.view.patient.SlideMenu', {
 	config: {
 					
 		itemId : 'patientSlideMenuId',			
-		cls : 'nav-list slideMenuCls',
+		cls : 'nav-list slideMenuCls in',
 		
 		items : [
 		         {

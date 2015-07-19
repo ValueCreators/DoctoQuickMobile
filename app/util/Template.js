@@ -39,5 +39,20 @@ var doctor_templates = {
 };
 
 var patient_templates = {
-		
+		findDoctorItemTpl : new Ext.XTemplate(
+				'<div class="menuItemWrapCls clearfix">'+
+				'	<div class="profileImgCls">'+ 
+				'		<img src="{profilePic}">'+    
+				'	</div>'+
+				'	<div class="descriptionCls">'+
+				'		<div class="menuTitleCls">'+
+				'			<label>{name}</label>'+
+				'		</div>'+
+				'		<div class="ageGenderCls">'+
+				'     		<label>{description}</label>'+
+				'   	</div>'+
+				'	</div>'+
+				'   <img class="nextArrowIconCls" src="./resources/images/arrow_grey.png">'+
+				'</div>'
+			)
 }

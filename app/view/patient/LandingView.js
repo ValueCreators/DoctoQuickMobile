@@ -17,7 +17,8 @@ Ext.define('DoctorQuickMobile.view.patient.LandingView', {
 								width: '100%'												
 						}, {
 								xtype : 'patient_slideMenu',
-								width : '250px'
+								width : '250px',
+								//hidden: true
 						}]
 			}
 });

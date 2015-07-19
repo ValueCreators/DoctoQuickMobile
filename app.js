@@ -54,6 +54,7 @@ Ext.application({
     views: [
 
         'common.LoginView',
+        'common.CustomerCareView',
 
         'doctor.LandingView',
         'doctor.DashboardView',
