@@ -66,7 +66,8 @@ Ext.application({
         'patient.LandingView',
         'patient.MainPanel',
         'patient.SlideMenu',
-        'patient.profile.Profile'
+        'patient.profile.Profile',
+        'patient.DashboardView'
 
     ],
 

@@ -2,6 +2,10 @@
 * Patient landing screen
 */
 
+.patientMainPanelCls {
+  width: 100%;
+}
+
 .demo-video-link {
 	position: absolute;
 	top: 20px;
@@ -21,7 +25,7 @@
     padding-left: 10px;
 }
 
-.patientLandingViewCls {
+.patientDashboardCls {
 		height: calc(100% - 44px);
 }
 
