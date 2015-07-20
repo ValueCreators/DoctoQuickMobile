@@ -6,10 +6,10 @@ Ext.define('DoctorQuickMobile.controller.doctor.SlideMenuController',{
 							mainPanel : 'doctor_mainPanel',
 							slideMenu : 'doctor_slideMenu #doctorMenuList',
 							
-							navBtn : 'button[name="doctor_nav_btn"]'
+							navBtn1 : 'doctor_mainPanel button[name="doctor_nav_btn"]'
 				},
 				control : {
-							navBtn : {
+							navBtn1 : {
 										tap : 'toggleNav'
 							},
 							

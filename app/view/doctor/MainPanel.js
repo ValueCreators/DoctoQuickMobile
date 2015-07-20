@@ -41,6 +41,8 @@ Ext.define('DoctorQuickMobile.view.doctor.MainPanel', {
 		    			hidden : true
 	        		},
 					{
+						xtype: 'button',
+						itemId: 'doctor_nav_btn_Id',
 						name : 'doctor_nav_btn',
 						iconCls : 'menu_iconCls',
 						ui : 'plain'

@@ -309,16 +309,16 @@ input.checkbox-cls {
         float: left; }
 
 /* patientLandingViewCls is top level CSS class for doctor App except for login and reg screens */
-.patientLandingViewCls .patientMainPanelCls .mainPanelToolbarCls {
+.patientMainPanelCls .mainPanelToolbarCls {
   background: #00745F;
   font-family: UbuntuBold;
   height : 4% !important; }
 
-.patientLandingViewCls .patientMainPanelCls .x-dock-body {
+.patientMainPanelCls .x-dock-body {
     height : 96%;
  }
 
-  .patientLandingViewCls .patientMainPanelCls .mainPanelToolbarCls .x-title > .x-innerhtml {
+.patientMainPanelCls .mainPanelToolbarCls .x-title > .x-innerhtml {
     text-shadow: none !important; }
 .patientLandingViewCls .slideMenuCls .slideMenuTopToolbarCls, .patientLandingViewCls .slideMenuCls .slideMenuBtmToolbarCls {
   border: none  !important;

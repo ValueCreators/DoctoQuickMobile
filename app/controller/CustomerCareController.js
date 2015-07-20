@@ -16,5 +16,6 @@ Ext.define('DoctorQuickMobile.controller.CustomerCareController',{
 	
 	showCustomerCareView : function(){
 		alert('customer care view');
+		this.customerView = Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.common.CustomerCareView'));
 	}
 });

@@ -1,0 +1,97 @@
+/*
+* Patient landing screen
+*/
+
+.patientMainPanelCls {
+  width: 100%;
+}
+
+.demo-video-link {
+	position: absolute;
+	top: 20px;
+	right: 45px;
+	color: #ffffff;
+}
+
+.demo-video-link .demo-txt-cls {
+	text-align: center;
+    position: relative;
+    font-size: 0.8em;
+    line-height: 20px;
+}
+
+.demo-video-link .demo-txt-cls img{
+	position: absolute;
+    padding-left: 10px;
+}
+
+.patientDashboardCls {
+		height: calc(100% - 44px);
+}
+
+.patientReqListCls {
+  height: 230px;
+  background-color: #5BAB00;
+}
+
+.patientLandingViewCls .togglw-container-cls{
+	background: url('../images/wallPaper01.jpg');
+	background-repeat: no-repeat;
+	width: 100%;
+	background-size: cover;
+}
+
+.patientLandingViewCls .switch {
+	width: 260px;
+    margin: 55px auto;
+}
+
+.patientLandingViewCls .questionCls{
+	font-size: 2em;
+}
+
+.patientLandingViewCls .questionDesCls {
+	font-size: 0.8em;
+}
+
+.profileImgCls {
+  float: left;
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
+}
+
+.patientReqListCls .descriptionCls {
+  float: left;
+  padding-left: 10px;
+  color: #ffffff;
+}
+
+.patientReqListCls .x-list-item{
+  border-top: 2px solid #518C0E !important;
+}
+
+.patientReqListCls .x-list-item.x-list-item-tpl.x-list-footer-wrap {
+  border-bottom: 2px solid #518C0E !important;
+}
+
+.patientReqListCls .profileImgCls img{
+  width: 50px;
+  height: 50px;
+}
+
+.patientReqListCls .ageGenderCls {
+  font-size: 0.8em;
+  line-height: 25px;
+}
+
+.patientReqListCls .locationCls {
+  font-size: 0.8em;
+}
+
+.patientReqListCls .nextArrowIconCls {
+  position: absolute;
+  right: 20px;
+  height: 30px;
+  top: 25px;
+}

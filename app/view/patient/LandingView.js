@@ -4,20 +4,22 @@
 Ext.define('DoctorQuickMobile.view.patient.LandingView', {
 				
 	extend: 'Ext.Container',
-	xtype: 'patient_landingView',
+	xtype: 'LandingView',
 
 	config: {
 				cls : 'patientLandingViewCls',
 				fullscreen: true,
 				layout: 'hbox',
-				items : [{
+				items : [
+							{
 								xtype : 'patient_mainPanel',
-								
-								// Needed to fit the whole content
-								width: '100%'												
-						}, {
+								flex : 1
+							},											
+							{
 								xtype : 'patient_slideMenu',
-								width : '250px'
-						}]
+								width : '250px',
+								//hidden: true
+							}
+						]
 			}
 });
