@@ -60,11 +60,14 @@ Ext.application({
         'doctor.DashboardView',
         'doctor.MainPanel',
         'doctor.SlideMenu',
+        'doctor.profile.Profile',
         
         'patient.registration.PatientRegMainView',
         'patient.LandingView',
         'patient.MainPanel',
-        'patient.SlideMenu'
+        'patient.SlideMenu',
+        'patient.profile.Profile'
+
     ],
 
     icon: {

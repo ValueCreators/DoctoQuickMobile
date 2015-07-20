@@ -254,7 +254,17 @@ input.checkbox-cls {
 /* doctorLandingViewCls is top level CSS class for doctor App except for login and reg screens */
 .doctorLandingViewCls .doctorMainPanelCls .mainPanelToolbarCls {
   background: #00745F;
-  font-family: UbuntuBold; }
+  font-family: UbuntuBold; 
+  height: 4% !important;
+}
+
+ .doctorLandingViewCls .doctorMainPanelCls .x-dock-body {
+    height : 96%;
+ }
+
+ .mainPanelContainerCls {
+    height : 100%;
+ }
   .doctorLandingViewCls .doctorMainPanelCls .mainPanelToolbarCls .x-title > .x-innerhtml {
     text-shadow: none !important; }
 .doctorLandingViewCls .slideMenuCls .slideMenuTopToolbarCls, .doctorLandingViewCls .slideMenuCls .slideMenuBtmToolbarCls {
@@ -301,7 +311,13 @@ input.checkbox-cls {
 /* patientLandingViewCls is top level CSS class for doctor App except for login and reg screens */
 .patientLandingViewCls .patientMainPanelCls .mainPanelToolbarCls {
   background: #00745F;
-  font-family: UbuntuBold; }
+  font-family: UbuntuBold;
+  height : 4% !important; }
+
+.patientLandingViewCls .patientMainPanelCls .x-dock-body {
+    height : 96%;
+ }
+
   .patientLandingViewCls .patientMainPanelCls .mainPanelToolbarCls .x-title > .x-innerhtml {
     text-shadow: none !important; }
 .patientLandingViewCls .slideMenuCls .slideMenuTopToolbarCls, .patientLandingViewCls .slideMenuCls .slideMenuBtmToolbarCls {
@@ -387,5 +403,116 @@ input.checkbox-cls {
   background-size: 100%; }
 
 /* iconCls classes - END */
+
+/* Profile Panel Classes - START */
+
+.dataContainer {
+      text-align: center;
+      height: 10%;
+      width: 95.8%;
+      /*border: 1px solid black;*/
+      margin: 0 2% 0 1.5%;
+      border-radius: .5em;
+      font-size: .8em;
+    }
+
+    .groupFieldsContainer {
+      width: 96%;
+      /* padding: 3% 0px; */
+      overflow: hidden;
+      /* border-bottom: 1px solid gray; */
+      background: white;
+      margin: 2%;
+      padding: 2% 0;
+      border-radius: .5em;
+    }
+
+    .dataRow {
+      width: 100%;
+      /* padding: 3% 0px; */
+      overflow: hidden;
+      /* border-bottom: 1px solid gray; */
+      background: white;
+      margin: 4% 3%;
+      padding: 0 0;
+    }
+
+    .field {
+      width: 50%;
+      float: left;
+      text-align: left;
+      padding: 0 0 0 4%;
+    }
+
+    .value {
+      width: 46%;
+      float: left;
+      text-align: left;
+      padding: 0 0 0 4%;
+      word-break : break-all;
+    }
+
+    .reviewPanelCls {
+      z-index : 100;
+      background : #E2E2E2;
+      height: 100%;
+    }
+
+    .reviewPanelCls .x-dock-body {
+      height : 100%;
+    }
+
+    .reviewPanelToolbarCls {
+      background : #00745f;
+    }
+
+    .docProfilePanelContainerCls, .patientProfilePanelContainerCls  {
+      height : 100%;
+    }
+
+    .reviewPanelToolBtnCls {
+      background: none !important;
+      border: none !important;
+      font-size: 1.2em !important;
+      margin : 0 !important;
+    }
+
+    .profileScreenPicContainerCls {
+      width: 100%;
+      overflow: hidden;
+      padding: 3%;
+      height: 100%;
+    }
+
+    .profileScreenPicContainerCls > .profilePicDiv {
+      width : 30%;
+      border-radius: 2em;
+      background-image: url('../images/dq_registration_background.png');
+      background-size: cover;
+      background-position:50% 50%;
+      background-repeat:no-repeat;
+      height: 72px;
+      width: 72px;
+      float: left;
+    }
+
+    .profileScreenPicContainerCls > .nameContainerCls {
+        float: left;
+        margin-left: 7%;
+        text-overflow: ellipsis;
+        width: calc(100% - 72px - 10%);
+    }
+
+
+    .contentEditableCls {
+      -webkit-user-modify: read-write;
+      -moz-user-modify: read-write;
+      user-modify: read-write;
+      border: 1px solid;
+      padding: 1%;
+      -webkit-user-modify: read-write;
+    }
+
+/* Profile Panel Classes - END */
 
 /*# sourceMappingURL=appCommon.css.map */

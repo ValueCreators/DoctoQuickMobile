@@ -44,8 +44,9 @@ Ext.define('DoctorQuickMobile.controller.CommonController', {
 		} else if (loginDetail && loginDetail.loginType === 'Patient') {
 
 			//Patient main view
-			Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.patient.LandingView'));
+			this.patienMainView = Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.patient.MainPanel'));
 
+			this.patienMainView.getComponent('_mainPanelContainer').setActiveItem('patient_landingView');
 		}
 
 	},
