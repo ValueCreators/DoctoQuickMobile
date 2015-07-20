@@ -8,17 +8,22 @@ Ext.define('DoctorQuickMobile.view.patient.LandingView', {
 
 	config: {
 				cls : 'patientLandingViewCls',
-				fullscreen: true,
-				layout: 'hbox',
+				//fullscreen: true,
+				//layout: 'hbox',
 				items : [
 							{
 								xtype: 'container',
 								cls: 'togglw-container-cls',
 								html:   '<div class="switch">' +
-											'<div><span>Did You Know?</span></div>'+
-											'<div><span>First consultation with the doctor of your choice is free!</span></div>'+
+											'<div class="questionCls"><span>Did You Know?</span></div>'+
+											'<div class="questionDesCls"><span>First consultation with the doctor of your choice is free!</span></div>'+
 										'</div>'
-							}, 
+							},
+							{
+								xtype: 'container',
+								cls: 'demo-video-link',
+								html: '<div class="demo-txt-cls"><span>Demo</span><img src="./resources/images/icon_play_demo.png" /></div>'
+							},
 							{
 								xtype : 'container',
 								cls : 'request-pending-txt',
@@ -46,10 +51,11 @@ Ext.define('DoctorQuickMobile.view.patient.LandingView', {
 								    },
 								]
 							},											
-							{
-									xtype : 'patient_slideMenu',
-									width : '250px',
-									//hidden: true
-							}]
+							// {
+							// 		xtype : 'patient_slideMenu',
+							// 		width : '250px',
+							// 		//hidden: true
+							// }
+						]
 			}
 });

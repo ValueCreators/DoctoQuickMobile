@@ -56,9 +56,4 @@ Ext.define('DoctorQuickMobile.view.patient.MainPanel', {
 	}
 });
 
-/********
-
-<<<<<<< HEAD
-
-======= *********/
 
