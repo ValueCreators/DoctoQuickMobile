@@ -12,17 +12,18 @@ Ext.define('DoctorQuickMobile.view.doctor.DashboardView', {
 				fullscreen: true,
 				layout: 'hbox',
 				items : [
+//						{
+//								xtype : 'doctor_mainPanel',
+//								cls: 'slide',
+//								
+//								// Needed to fit the whole content
+//								width: '100%'												
+//						}, 
+//						{
+//								xtype : 'doctor_slideMenu',
+//								width : 250
+//						},
 						{
-								xtype : 'doctor_mainPanel',
-								cls: 'slide',
-								
-								// Needed to fit the whole content
-								width: '100%'												
-						}, 
-						{
-								xtype : 'doctor_slideMenu',
-								width : 250
-						}, {
 							cls: 'dashboardViewCls',
 							xtype: 'panel',
 							items: [{
