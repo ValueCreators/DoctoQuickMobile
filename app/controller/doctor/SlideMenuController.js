@@ -6,11 +6,11 @@ Ext.define('DoctorQuickMobile.controller.doctor.SlideMenuController',{
 							mainPanel : 'doctor_mainPanel',
 							slideMenu : 'doctor_slideMenu #doctorMenuList',
 							
-							navBtn1 : 'doctor_mainPanel button[name="doctor_nav_btn"]'
+							slideNavBtn : '#doctorMainPanel button[name="doctor_nav_btn"]'
 				},
 				control : {
-							navBtn1 : {
-										tap : 'toggleNav'
+							slideNavBtn : {
+										tap : 'slideMenuShow'
 							},
 							
 							slideMenu : {
@@ -31,7 +31,7 @@ Ext.define('DoctorQuickMobile.controller.doctor.SlideMenuController',{
 	/**
 	 * Toggle the slide navogation view
 	 */
-	toggleNav : function(){
+	slideMenuShow : function(){
 					
 		var me = this;
 		var mainEl = me.getMainPanel().element;
