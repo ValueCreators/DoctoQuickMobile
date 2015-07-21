@@ -12,7 +12,7 @@ Ext.define('DoctorQuickMobile.view.patient.profile.Profile', {
     				    itemId : '_doctorProfileContainer',
     				    cls : 'patientProfilePanelContainerCls',
     				    //height : '100%',
-			            tpl : doctor_templates.profileContainerTpl
+			            tpl : patient_templates.profileContainerTpl
 			        }/*,{
 			        	xtype : 'toolbar',
 			        	docked : 'bottom',

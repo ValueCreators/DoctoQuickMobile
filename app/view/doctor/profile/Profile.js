@@ -11,7 +11,7 @@ Ext.define('DoctorQuickMobile.view.doctor.profile.Profile', {
     				    scrollable : true,
     				    itemId : '_doctorProfileContainer',
     				    cls : 'docProfilePanelContainerCls',
-			            tpl : patient_templates.profileContainerTpl
+			            tpl : doctor_templates.profileContainerTpl
 			        }/*,
 
 			        {

@@ -37,3 +37,12 @@ var patientProfileData = {
 	knowLaunguages : 'Marathi, English',
 	profilePicData : ""
 }
+
+var notesData = {
+	fName : 'Jhon',
+	mName : 'H',
+	lName : 'Abhraham',
+	profilePicData : "",
+	time : '14:48',
+	date : '20/07/2015'
+}
