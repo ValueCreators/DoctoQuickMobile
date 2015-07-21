@@ -61,6 +61,7 @@
     <link rel="stylesheet" type="text/css" href="resources/css/SlideMenu.css" />
     <link rel="stylesheet" type="text/css" href="resources/css/patientRegistration.css">
     <link rel="stylesheet" type="text/css" href="resources/css/doctorLandingView.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/patientLandingView.css">
     
     <!-- The line below must be kept intact for Sencha Command to build your application -->
     <!--  <script id="microloader" type="text/javascript" src=".sencha/app/microloader/development.js"></script> -->
@@ -77,16 +78,27 @@
    <script type="text/javascript" src="app/util/Util.js"></script>
    <script type="text/javascript" src="app/util/Template.js"></script>
 
-   <!-- Store and Model -->
-  <script type="text/javascript" src="app/model/AccountStatementModel.js"></script>
-  <script type="text/javascript" src="app/store/AccountStatementStore.js"></script>
+   <!-- MODELS -->
+   <script type="text/javascript" src="app/model/AccountStatementModel.js"></script>
+   <!-- Doctor -->
+   <!-- Patient -->
+   <script type="text/javascript" src="app/model/patient/SpecialityModel.js"></script>
+   <script type="text/javascript" src="app/model/patient/LanguageModel.js"></script>
+   
+   <!-- STORES -->
+   <script type="text/javascript" src="app/store/AccountStatementStore.js"></script>
+   <!-- Doctor -->
+   <!-- Patient -->
+   <script type="text/javascript" src="app/store/patient/SpecialityStore.js"></script>
+   <script type="text/javascript" src="app/store/patient/LanguageStore.js"></script>
+   
 
    <!-- Service -->
    <script type="text/javascript" src="app/service/Service.js"></script>
    <script type="text/javascript" src="app/service/DataService.js"></script>
    
    
-   <script type="text/javascript" src="app/controller/doctor/SlideMenuController.js"></script>
+<!--script type="text/javascript" src="app/controller/doctor/SlideMenuController.js"></script>-->
    <script type="text/javascript" src="app/controller/patient/SlideMenuController.js"></script>
    
    

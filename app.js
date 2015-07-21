@@ -18,10 +18,16 @@ Ext.application({
     ],
 
     models: [
-        'RequestPendingModel'
+        'RequestPendingModel',
+        
+        'patient.SpecialityModel',
+        'patient.LanguageModel'
     ],
     stores: [
-         'RequestPendingStore'
+         'RequestPendingStore',
+         
+         'patient.SpecialityStore',
+         'patient.LanguageStore'
     ],
 
     controllers : [
@@ -45,7 +51,6 @@ Ext.application({
         'CommonController',
 
         'doctor.DoctoRegController',
-        //'doctor.SlideMenuController',
         
         'patient.PatientRegController',
         'patient.SlideMenuController'
@@ -55,6 +60,7 @@ Ext.application({
     views: [
 
         'common.LoginView',
+        'common.CustomerCareView',
 
         'doctor.LandingView',
         'doctor.DashboardView',
@@ -71,7 +77,8 @@ Ext.application({
         'patient.LandingView',
         'patient.MainPanel',
         'patient.SlideMenu',
-        'patient.profile.Profile'
+        'patient.profile.Profile',
+        'patient.DashboardView'
 
     ],
 

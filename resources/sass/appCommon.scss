@@ -458,8 +458,14 @@ input.checkbox-cls {
 				}
 			}
 		}
+		
+		.searchOptionContCls{
+			
+			.x-list{
+				height : 100%;
+			}
+		}
 	}
-
 }
 
 /* iconCls classes - START */

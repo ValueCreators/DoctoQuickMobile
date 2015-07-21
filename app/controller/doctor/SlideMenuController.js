@@ -6,11 +6,11 @@ Ext.define('DoctorQuickMobile.controller.doctor.SlideMenuController',{
 							mainPanel : 'doctor_mainPanel',
 							slideMenu : 'doctor_slideMenu #doctorMenuList',
 							
-							navBtn : 'button[name="doctor_nav_btn"]'
+							slideNavBtn : '#doctorMainPanel button[name="doctor_nav_btn"]'
 				},
 				control : {
-							navBtn : {
-										tap : 'toggleNav'
+							slideNavBtn : {
+										tap : 'slideMenuShow'
 							},
 							
 							slideMenu : {
@@ -26,12 +26,13 @@ Ext.define('DoctorQuickMobile.controller.doctor.SlideMenuController',{
 		this.customerCare_controller = DoctorQuickMobile.app.getController('CustomerCareController');
 		this.accStatement_controller = DoctorQuickMobile.app.getController('doctor.AccStatementController');
 		this.notif_controller = DoctorQuickMobile.app.getController('NotificationsController');
+		this.commonController = DoctorQuickMobile.app.getController('CommonController');
 	},
 	
 	/**
 	 * Toggle the slide navogation view
 	 */
-	toggleNav : function(){
+	slideMenuShow : function(){
 					
 		var me = this;
 		var mainEl = me.getMainPanel().element;
@@ -49,7 +50,8 @@ Ext.define('DoctorQuickMobile.controller.doctor.SlideMenuController',{
 	
 	switchView : function(list, index, target, record){
 		
-		this.toggleNav();
+		this.commonController.onDashBoardDeactivate();
+		this.slideMenuShow();
 		switch(record.data.id){
 		
 			case 'profile' :

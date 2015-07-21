@@ -41,16 +41,31 @@ Ext.define('DoctorQuickMobile.view.patient.MainPanel', {
 								xtype : 'panel',
 								itemId : '_mainPanelContainer',
 								cls : 'mainPanelContainerCls',
+								layout: {
+							            type: 'card',
+							            animation: {
+							                duration: 300,
+							                easing: 'ease-out',
+							                type: 'slide',
+							                direction: 'right'
+							            }
+							        },
 								config : {
-
-									layout : 'card',
-									
-									items : [{
-										xtype : 'patientProfileScreen'
-									}]
+									items : [
+										{
+											xtype : 'patient_dashboardView',
+										},
+										{
+											xtype : 'patientProfileScreen'
+										},
+										{
+											xtype : 'customerCareView'
+										}
+									]
 								}
 							}
 				        ]
 	}
 });
+
 

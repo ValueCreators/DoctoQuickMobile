@@ -16,105 +16,8 @@ var common_templates = {
 			)
 };
 
-var patient_templates = {
-		
-		profileContainerTpl : new Ext.XTemplate('{[this.setDetailsData(values)]}', {
-
-			            	setDetailsData : function(data) {
-
-			            		console.log(data);
-			            		//alert("docData data :: "+JSON.stringify(docData));
-								var _util = DoctorQuickMobile.util.Utility;
-
-			            		var fName = _util.getValidFieldValue(data['fName']);
-			            		var lName = _util.getValidFieldValue(data['lName'])
-			            		var mName = _util.getValidFieldValue(data['mName'])
-								var html = '<div><div class="profileScreenPicContainerCls">';
-								  /*
-								  * HardCoded Profile Pic. It has to be changed.
-								  */
-								  var profilePicContainer = '<div class="profilePicDiv"></div>';
-
-								  if(data['profilePicData'] != "") {
-        								profilePicContainer = '<div class="profilePicDiv" style="background-image : url(\'data:image/jpeg;base64,'+docData['profilePicData']+'\')"></div>';
-        
-							      } 
-
-								  html += profilePicContainer+
-								  //'<div class="nameContainerCls">Dr. Jaganath Reddy bdnsfdfh sdjd fh</div>'+
-								  '<div class="nameContainerCls" style="margin-top : 4%;">Dr '+fName+' '+mName+' '+lName+'</div></div>';
-								  
-								  
-								html += '<div class="dataContainer">';
-
-								html += '<div class="groupFieldsContainer">'+
-											'<div class="dataRow">' +
-													'<div field="age" class="field">Age</div>'+
-													'<div class="value">' +  data['age'] + '</div>'+
-											'</div>'+
-											'<div class="dataRow">' +
-													'<div field="sex" class="field">Gender</div>'+
-													'<div class="value">' + data['sex'] + '</div>'+
-											'</div>'+
-										'</div>';		
-
-								html += '<div class="groupFieldsContainer">'+
-											'<div class="dataRow">' +
-													'<div field="email" class="field">Email</div>'+
-													'<div class="value">' +  _util.getValidFieldValue(data['email']) + '</div>'+
-											'</div>'+
-										'</div>';	
-
-								html += '<div class="groupFieldsContainer">'+
-											'<div class="dataRow">' +
-													'<div field="launguageKnown" class="field">Known Languages</div>'+
-													'<div class="value">' + _util.getValidFieldValue(data['knowLaunguages']) + '</div>'+
-											'</div>'+
-										'</div>';
-
-								html += '<div class="groupFieldsContainer">'+
-											'<div class="dataRow">' +
-													'<div field="mobile" class="field">Mobile Number</div>'+
-													'<div class="value">' +  _util.getValidFieldValue(data['mobile']) + '</div>'+
-											'</div>'+
-										'</div>';
-
-								/*html += '<div class="groupFieldsContainer">'+
-											'<div class="dataRow">' +
-													'<div field="mobile" class="field">Mobile Number</div>'+
-													'<div class="value">' + _util.getValidFieldValue(docData['mobileNum']) + '</div>'+
-											'</div>'+
-										'</div>';*/
-
-								html += '</div>';
-								return html;
-			            	}
-			            }),
-
-		requestPendingItemTpl : new Ext.XTemplate(
-				'<div class="menuItemWrapCls clearfix">'+
-				'	<div class="profileImgCls">'+ 
-				'		<img src="./resources/images/dq_icon_small_mydoctors.png">'+    
-				'	</div>'+
-				'	<div class="descriptionCls">'+
-				'		<div class="menuTitleCls">'+
-				'			<label>FirstName</label> <label>last nsmr</label>'+
-				'		</div>'+
-				'		<div class="ageGenderCls">'+
-				'     		<label>Male,</label><label> Age 36</label>'+
-				'   	</div>'+
-				'   	<div class="locationCls">'+
-				'			<label>Region or Location </label>'+
-				'   	</div>'+
-				'	</div>'+
-				'   <img class="nextArrowIconCls" src="./resources/images/arrow_grey.png">'+
-				'</div>'
-			)	  
-
-			
-};
-
 var doctor_templates = {
+		
 		profileContainerTpl : new Ext.XTemplate('{[this.setDetailsData(values)]}', {
 
     	setDetailsData : function(docData) {
@@ -377,6 +280,123 @@ var doctor_templates = {
 			html +=   '</div>';
 
 			html += '<div class="notesEditableDivCls"></div>';
+			return html;
+    	}
+    }),
+
+		
+
+		requestPendingItemTpl : new Ext.XTemplate(
+				'<div class="menuItemWrapCls clearfix">'+
+				'	<div class="profileImgCls">'+ 
+				'		<img src="./resources/images/icon_doctor.png">'+    
+				'	</div>'+
+				'	<div class="descriptionCls">'+
+				'		<div class="menuTitleCls">'+
+				'			<label>FirstName</label> <label>last nsmr</label>'+
+				'		</div>'+
+				'		<div class="ageGenderCls">'+
+				'     		<label>Male,</label><label> Age 36</label>'+
+				'   	</div>'+
+				'   	<div class="locationCls">'+
+				'			<label>Region or Location </label>'+
+				'   	</div>'+
+				'	</div>'+
+				'   <img class="nextArrowIconCls" src="./resources/images/arrow_forward_white.png">'+
+				'</div>'
+			)	  
+
+			
+};
+
+var patient_templates = {
+
+		findDoctorItemTpl : new Ext.XTemplate(
+				'<div class="menuItemWrapCls clearfix">'+
+				'	<div class="profileImgCls">'+ 
+				'		<img src="{profilePic}">'+    
+				'	</div>'+
+				'	<div class="descriptionCls">'+
+				'		<div class="menuTitleCls">'+
+				'			<label>{name}</label>'+
+				'		</div>'+
+				'		<div class="ageGenderCls">'+
+				'     		<label>{description}</label>'+
+				'   	</div>'+
+				'	</div>'+
+				'   <img class="nextArrowIconCls" src="./resources/images/arrow_grey.png">'+
+				'</div>'
+			),
+
+		profileContainerTpl : new Ext.XTemplate('{[this.setDetailsData(values)]}', {
+
+    	setDetailsData : function(data) {
+
+    		console.log(data);
+    		//alert("docData data :: "+JSON.stringify(docData));
+			var _util = DoctorQuickMobile.util.Utility;
+
+    		var fName = _util.getValidFieldValue(data['fName']);
+    		var lName = _util.getValidFieldValue(data['lName'])
+    		var mName = _util.getValidFieldValue(data['mName'])
+			var html = '<div><div class="profileScreenPicContainerCls">';
+			  /*
+			  * HardCoded Profile Pic. It has to be changed.
+			  */
+			  var profilePicContainer = '<div class="profilePicDiv"></div>';
+
+			  if(data['profilePicData'] != "") {
+					profilePicContainer = '<div class="profilePicDiv" style="background-image : url(\'data:image/jpeg;base64,'+docData['profilePicData']+'\')"></div>';
+
+		      } 
+
+			  html += profilePicContainer+
+			  //'<div class="nameContainerCls">Dr. Jaganath Reddy bdnsfdfh sdjd fh</div>'+
+			  '<div class="nameContainerCls" style="margin-top : 4%;">Dr '+fName+' '+mName+' '+lName+'</div></div>';
+			  
+			  
+			html += '<div class="dataContainer">';
+
+			html += '<div class="groupFieldsContainer">'+
+						'<div class="dataRow">' +
+								'<div field="age" class="field">Age</div>'+
+								'<div class="value">' +  data['age'] + '</div>'+
+						'</div>'+
+						'<div class="dataRow">' +
+								'<div field="sex" class="field">Gender</div>'+
+								'<div class="value">' + data['sex'] + '</div>'+
+						'</div>'+
+					'</div>';		
+
+			html += '<div class="groupFieldsContainer">'+
+						'<div class="dataRow">' +
+								'<div field="email" class="field">Email</div>'+
+								'<div class="value">' +  _util.getValidFieldValue(data['email']) + '</div>'+
+						'</div>'+
+					'</div>';	
+
+			html += '<div class="groupFieldsContainer">'+
+						'<div class="dataRow">' +
+								'<div field="launguageKnown" class="field">Known Languages</div>'+
+								'<div class="value">' + _util.getValidFieldValue(data['knowLaunguages']) + '</div>'+
+						'</div>'+
+					'</div>';
+
+			html += '<div class="groupFieldsContainer">'+
+						'<div class="dataRow">' +
+								'<div field="mobile" class="field">Mobile Number</div>'+
+								'<div class="value">' +  _util.getValidFieldValue(data['mobile']) + '</div>'+
+						'</div>'+
+					'</div>';
+
+			/*html += '<div class="groupFieldsContainer">'+
+						'<div class="dataRow">' +
+								'<div field="mobile" class="field">Mobile Number</div>'+
+								'<div class="value">' + _util.getValidFieldValue(docData['mobileNum']) + '</div>'+
+						'</div>'+
+					'</div>';*/
+
+			html += '</div>';
 			return html;
     	}
     }),

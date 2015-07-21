@@ -34,7 +34,7 @@ Ext.define('DoctorQuickMobile.controller.patient.ProfileController',{
 	},
 
 	showProfileView : function(){
-		alert('patient profile view');
+		//alert('patient profile view');
 
 		 /*if(!this.profileView) {
             this.profileView = Ext.Viewport.add(Ext.create("DoctorQuickMobile.view.patient.profile.Profile"));

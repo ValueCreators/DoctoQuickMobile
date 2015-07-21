@@ -4,16 +4,17 @@ Ext.define('DoctorQuickMobile.controller.patient.SlideMenuController',{
 	config:{
 				refs:{
 							mainPanel : 'patient_mainPanel',
-							slideMenu : 'patient_slideMenu #patientMenuList',
+							slideMenu : 'patient_slideMenu',
+							slideMenuList : 'patient_slideMenu #patientMenuList',
 							
-							navBtn : 'button[name="patient_nav_btn"]'
+							navBtn : '#patientMainPanel button[name="patient_nav_btn"]'
 				},
 				control : {
 							navBtn : {
-										tap : 'toggleNav'
+										tap : 'slideMenuOpen'
 							},
 							
-							slideMenu : {
+							slideMenuList : {
 										itemtap : 'switchView'
 										}
 				}
@@ -33,7 +34,7 @@ Ext.define('DoctorQuickMobile.controller.patient.SlideMenuController',{
 	/**
 	 * Toggle the slide navogation view
 	 */
-	toggleNav : function(){
+	slideMenuOpen : function(){
 					
 		var me = this;
 		var mainEl = me.getMainPanel().element;
@@ -51,7 +52,7 @@ Ext.define('DoctorQuickMobile.controller.patient.SlideMenuController',{
 	
 	switchView : function(list, index, target, record){
 		
-		this.toggleNav();
+		this.slideMenuOpen();
 		switch(record.data.id){
 		
 			case 'profile' :
@@ -67,6 +68,7 @@ Ext.define('DoctorQuickMobile.controller.patient.SlideMenuController',{
 				this.reviewApp_controller.launchAppStoreForReview();
 				break;
 			case 'customerCare' :
+				console.log('customer care---->');
 				this.customerCare_controller.showCustomerCareView();
 				break;
 			case 'payments' :

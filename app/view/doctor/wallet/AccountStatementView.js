@@ -1,7 +1,7 @@
 Ext.define('DoctorQuickMobile.view.doctor.wallet.AccountStatementView', {
 	
 	extend: 'Ext.Panel',
-	xtype: 'account_statement_view',
+	xtype: 'accountStatementView',
 	requires: [
 		'Ext.TitleBar'
 	],

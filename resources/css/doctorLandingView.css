@@ -9,7 +9,9 @@
 /************************************ Toggle button class Css **********************************/
 
 .togglw-container-cls {
-      margin-top: 12px;
+      padding-top: 12px;
+      height: calc(100% - 226px);
+      color: #ffffff;
 }
 
 .switch {
@@ -51,11 +53,13 @@
     transition: background 0.4s;
   }
   input.cmn-toggle-round + label:after {
-    width: 50px;
+    width: 55px;
     background-color: #fff;
     border-radius: 100%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     transition: margin 0.4s;
+    height: 55px;
+    top: -3px;
   }
   input.cmn-toggle-round:checked + label:before {
     background-color: #5AA911;
@@ -71,22 +75,58 @@
 
 
 /********************************************** Toggle Css end **************************************/
+.doctor_dashboardVieCls {
+  height: 100%;
+}
+
+.doctor_dashboardVieCls .containerCls {
+  color: #ffffff;
+}
+
+.doctor_dashboardVieCls .patientReqListCls {
+  height: calc(100% - 290px);
+}
+
+.doctor_dashboardVieCls .togglw-container-cls {
+  height: auto;
+}
+
+.doctor_dashboardVieCls .switch {
+    width: 290px;
+    margin: 0px auto;
+}
+
+.doctor_dashboardVieCls .questionCls{
+  font-size: 2em;
+}
+
+.doctor_dashboardVieCls .questionDesCls {
+  font-size: 0.8em;
+}
+
+.doctor_dashboardVieCls .demo-video-link {
+    top: 220px;
+    left: 20px;
+    right: 0px;
+}
+
+.doctor_dashboardVieCls .demo-txt-cls {
+  text-align: left !important;
+}
+
+.doctor_dashboardVieCls .topContainerCls {
+  height: 260px;
+  background: url('../images/wallPaper01.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .request-pending-txt {
   background-color: #DCDCDC;
   height: 40px;
   line-height: 40px;
   text-align: center;
-  margin-top: 20px;
-}
-
-
-.doctorMainPanelCls {
-	z-index: 12;
-}
-
-.slideMenuCls {
-	z-index: 10;
+  /*margin-top: 20px;*/
 }
 
 #status-btn-id {
@@ -120,55 +160,7 @@
     line-height: 38px;
 }
 
-.patientReqListCls {
-  height: 78%;
-  background-color: #5BAB00;
-}
 
-
-/**************************** Request Pending List view ***********************/
-
-.profileImgCls {
-  float: left;
-  width: 50px;
-  height: 50px;
-  border-radius: 20px;
-}
-
-.patientReqListCls .descriptionCls {
-  float: left;
-  padding-left: 10px;
-  color: #ffffff;
-}
-
-.patientReqListCls .x-list-item{
-  border-top: 2px solid #518C0E !important;
-}
-
-.patientReqListCls .x-list-item.x-list-item-tpl.x-list-footer-wrap {
-  border-bottom: 2px solid #518C0E !important;
-}
-
-.patientReqListCls .profileImgCls img{
-  width: 50px;
-  height: 50px;
-}
-
-.patientReqListCls .ageGenderCls {
-  font-size: 0.8em;
-  line-height: 25px;
-}
-
-.patientReqListCls .locationCls {
-  font-size: 0.8em;
-}
-
-.patientReqListCls .nextArrowIconCls {
-  position: absolute;
-  right: 20px;
-  height: 30px;
-  top: 25px;
-}
 
 
 

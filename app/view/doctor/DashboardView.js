@@ -5,74 +5,92 @@ Ext.define('DoctorQuickMobile.view.doctor.DashboardView', {
 				
 	extend: 'Ext.Container',
 	xtype: 'doctor_dashboardView',
-	requires: [
-		'Ext.TitleBar'
-	],
-	config: {
-				fullscreen: true,
-				layout: 'hbox',
+
+	config: {	
+				cls: 'doctor_dashboardVieCls',
 				items : [
-						{
-								xtype : 'doctor_mainPanel',
-								cls: 'slide',
-								
-								// Needed to fit the whole content
-								width: '100%'												
-						}, 
-						{
-								xtype : 'doctor_slideMenu',
-								width : 250
-						}, {
-							cls: 'dashboardViewCls',
-							xtype: 'panel',
-							items: [{
-									xtype: 'togglefield',
-									name: 'awesome',
-									value: 1,
-									label: 'Are you awesome?',
-									labelWidth: '40%'
-								}, {
-									xtype: 'container',
-									cls: 'accountCls',
-									html: 	'<div class="report_pic">'+
-	            								'<img src="./resources/images/dq_icon_payments.png" />'+
-	            							'</div>'+
-	            							'<div class="report_head"><p>Account Statement</p>'+
-	            								'<p>View your earnings in real time</p>'+
-	            							'</div>'
-								}, {
-									xtype: 'container',
-									cls: 'demoCls'
-								}
-							]
-						}, {
-							xtype: 'container',
-							itemId: 'historyTitleId',
-							cls: 'historyTitleCls',
-							html: '<div class="title_cls">Requests Pending</div>'
-						}, {
-							xtype: 'list',
-							itemId: 'reportListId',
-							cls: 'reportListCls',
-							//store: 'AccountStatementStore',
-							itemTpl: new Ext.XTemplate( 
-								'<div class="report-statement-cls">'+
+					{
+						xtype : 'container',
+						cls : 'topContainerCls',
+						items : [
+							{	
+								xtype : 'container',
+								cls : 'containerCls',
+								html : '<div id="status-txt-id" class="status-txt-cls">Offline</div>'
+							},
+							{
+					            xtype: 'container',
+								cls: 'togglw-container-cls',
+					            html: '<div class="switch">' +
+										  '<input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox"> ' +	
+										  '<label id="cmn-toggle-2" for="cmn-toggle-1">Offline</label>' +
+										'</div>'
+							},
+							{
+								xtype: 'container',
+								cls: 'togglw-container-cls',
+								html:   '<div class="switch">' +
+											'<div class="questionCls"><span>Welcome Doctor?</span></div>'+
+											'<div class="questionDesCls"><span>When you are ready to receive to patients, just set your status to "Online"!</span></div>'+
+										'</div>'
+							},
+							{
+								xtype: 'container',
+								cls: 'demo-video-link',
+								html: '<div class="demo-txt-cls"><span>Demo</span><img src="./resources/images/icon_play_demo.png" /></div>'
+							},
 
-								'<div class="profile-pic"><img src="./resources/images/dq_icon_payments.png" /></div>'+
-								'<div class="detail-cls"><p class="name-cls">First Name LastName</p><p class="time-cls">23 november 2014</p></div>'+
-								'<div class="amount-cls"><span>$15.00</span></div>'+
+						]
 
-								'</div>'
-
-							),
-							data: [
-								{ title: 'Item 1' },
-								{ title: 'Item 2' },
-								{ title: 'Item 3' },
-								{ title: 'Item 4' }
-							]
-						}
-
-					]
+						
+					}, {
+			        	xtype : 'container',
+			        	cls : 'request-pending-txt',
+			        	html : '<div>Request Pending</div>'
+			        }, {
+		            	xtype: 'list',
+		            	itemId : 'listId',
+		            	cls : 'patientReqListCls',
+		            	itemTpl : doctor_templates.requestPendingItemTpl,
+		            	data: [
+					        { 
+					        	profilePic: './resources/dq_icon_small_mydoctors.png',
+					        	firstName: 'name1',
+					        	lastName: 'name2',
+					        	location: 'bag',
+					        	patientId: 'qwerty' },
+					        { profilePic: './resources/dq_icon_small_mydoctors.png',
+					        	firstName: 'name1',
+					        	lastName: 'name2',
+					        	location: 'bag',
+					        	patientId: 'qwerty' },
+					        { profilePic: './resources/dq_icon_small_mydoctors.png',
+					        	firstName: 'name1',
+					        	lastName: 'name2',
+					        	location: 'bag',
+					        	patientId: 'qwerty' },
+					        { profilePic: './resources/dq_icon_small_mydoctors.png',
+					        	firstName: 'name1',
+					        	lastName: 'name2',
+					        	location: 'bag',
+					        	patientId: 'qwerty' },
+					        	{ profilePic: './resources/dq_icon_small_mydoctors.png',
+					        	firstName: 'name1',
+					        	lastName: 'name2',
+					        	location: 'bag',
+					        	patientId: 'qwerty' },
+					        { profilePic: './resources/dq_icon_small_mydoctors.png',
+					        	firstName: 'name1',
+					        	lastName: 'name2',
+					        	location: 'bag',
+					        	patientId: 'qwerty' },
+					        { profilePic: './resources/dq_icon_small_mydoctors.png',
+					        	firstName: 'name1',
+					        	lastName: 'name2',
+					        	location: 'bag',
+					        	patientId: 'qwerty' }
+					    ]
+		            }
+				]
 			}
 });
