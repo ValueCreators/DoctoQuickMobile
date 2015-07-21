@@ -26,6 +26,7 @@ Ext.define('DoctorQuickMobile.controller.doctor.SlideMenuController',{
 		this.customerCare_controller = DoctorQuickMobile.app.getController('CustomerCareController');
 		this.accStatement_controller = DoctorQuickMobile.app.getController('doctor.AccStatementController');
 		this.notif_controller = DoctorQuickMobile.app.getController('NotificationsController');
+		this.commonController = DoctorQuickMobile.app.getController('CommonController');
 	},
 	
 	/**
@@ -49,7 +50,8 @@ Ext.define('DoctorQuickMobile.controller.doctor.SlideMenuController',{
 	
 	switchView : function(list, index, target, record){
 		
-		this.toggleNav();
+		this.commonController.onDashBoardDeactivate();
+		this.slideMenuShow();
 		switch(record.data.id){
 		
 			case 'profile' :

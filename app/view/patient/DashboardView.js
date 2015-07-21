@@ -3,7 +3,7 @@
  */
 Ext.define('DoctorQuickMobile.view.patient.DashboardView', {
 				
-	extend: 'Ext.Container',
+	extend: 'Ext.Panel',
 	xtype: 'patient_dashboardView',
 
 	config: {

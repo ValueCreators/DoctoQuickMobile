@@ -94,7 +94,7 @@ var doctor_templates = {
 		requestPendingItemTpl : new Ext.XTemplate(
 				'<div class="menuItemWrapCls clearfix">'+
 				'	<div class="profileImgCls">'+ 
-				'		<img src="./resources/images/dq_icon_small_mydoctors.png">'+    
+				'		<img src="./resources/images/icon_doctor.png">'+    
 				'	</div>'+
 				'	<div class="descriptionCls">'+
 				'		<div class="menuTitleCls">'+
@@ -107,7 +107,7 @@ var doctor_templates = {
 				'			<label>Region or Location </label>'+
 				'   	</div>'+
 				'	</div>'+
-				'   <img class="nextArrowIconCls" src="./resources/images/arrow_grey.png">'+
+				'   <img class="nextArrowIconCls" src="./resources/images/arrow_forward_white.png">'+
 				'</div>'
 			),
 

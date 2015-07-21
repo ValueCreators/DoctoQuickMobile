@@ -51,7 +51,6 @@ Ext.define('DoctorQuickMobile.view.doctor.DashboardView', {
 		            	xtype: 'list',
 		            	itemId : 'listId',
 		            	cls : 'patientReqListCls',
-		            	//store : 'RequestPendingStore',
 		            	itemTpl : doctor_templates.requestPendingItemTpl,
 		            	data: [
 					        { 

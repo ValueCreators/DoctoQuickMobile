@@ -17,10 +17,6 @@ Ext.define('DoctorQuickMobile.view.common.LoginView', {
     		{	
     			xtype : 'container',
     			cls : 'contentCls gridCls',
-    			/*scrollable: {
-				    direction: 'vertical',
-				    directionLock: true
-				},*/
 				scrollable: true,
 
     			items: [
