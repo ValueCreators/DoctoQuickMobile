@@ -14,7 +14,8 @@ Ext.define('DoctorQuickMobile.view.doctor.LandingView', {
 								xtype : 'doctor_mainPanel',
 								
 								// Needed to fit the whole content
-								width: '100%'												
+								width: '100%',
+								flex: 1											
 						}, {
 								xtype : 'doctor_slideMenu',
 								width : 250

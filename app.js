@@ -44,7 +44,6 @@ Ext.application({
         'CommonController',
 
         'doctor.DoctoRegController',
-        'doctor.SlideMenuController',
         
         'patient.PatientRegController',
         'patient.SlideMenuController'

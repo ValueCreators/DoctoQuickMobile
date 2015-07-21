@@ -19,6 +19,15 @@ Ext.define('DoctorQuickMobile.controller.CommonController', {
 
 	config : {
 
+		refs : {
+			doctorDashBoardView : 'doctor_dashboardView',
+			docBatchBtn : 'doctor_mainPanel toolbar #batchBtnId',
+			statusNotificationBtn : 'doctor_mainPanel toolbar #statusNotificationId'
+		},
+		controls : {
+			doctorDashBoardView : { activate : 'onDashBoardActivate', deactivate : 'onDashBoardDeactivate', scope : this },
+		}
+
 	},
 
 	initializeView : function () {
@@ -39,13 +48,14 @@ Ext.define('DoctorQuickMobile.controller.CommonController', {
 		} else if (loginDetail && loginDetail.loginType === 'Doctor') {
 
 			//Doctor main View
-			Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.doctor.LandingView'));
+			this.landingView = Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.doctor.LandingView'));
+			this.landingView.getComponent('doctorMainPanel').getComponent('_mainPanelContainer').setActiveItem('doctor_dashboardView');
+			this.onDashBoardActivate();
 
 		} else if (loginDetail && loginDetail.loginType === 'Patient') {
 
 			//Patient main view
 			this.landingView = Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.patient.LandingView'));
-
 			this.landingView.getComponent('patientMainPanel').getComponent('_mainPanelContainer').setActiveItem('patient_dashboardView');
 		}
 
@@ -109,6 +119,16 @@ Ext.define('DoctorQuickMobile.controller.CommonController', {
         } else {
             //setting these values in the local database in the mobile
         }
+    },
+
+    onDashBoardActivate : function () {
+    	this.getDocBatchBtn().show();
+		this.getStatusNotificationBtn().show();
+    },
+
+    onDashBoardDeactivate : function () {
+    	this.getDocBatchBtn().hide();
+		this.getStatusNotificationBtn().hide();
     }
 
 
