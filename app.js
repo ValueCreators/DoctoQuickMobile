@@ -20,12 +20,14 @@ Ext.application({
     models: [
         'RequestPendingModel',
         
-        'patient.SpecialityModel'
+        'patient.SpecialityModel',
+        'patient.LanguageModel'
     ],
     stores: [
          'RequestPendingStore',
          
-         'patient.SpecialityStore'
+         'patient.SpecialityStore',
+         'patient.LanguageStore'
     ],
 
     controllers : [
