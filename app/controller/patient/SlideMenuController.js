@@ -4,7 +4,8 @@ Ext.define('DoctorQuickMobile.controller.patient.SlideMenuController',{
 	config:{
 				refs:{
 							mainPanel : 'patient_mainPanel',
-							slideMenu : 'patient_slideMenu #patientMenuList',
+							slideMenu : 'patient_slideMenu',
+							slideMenuList : 'patient_slideMenu #patientMenuList',
 							
 							navBtn : '#patientMainPanel button[name="patient_nav_btn"]'
 				},
@@ -13,7 +14,7 @@ Ext.define('DoctorQuickMobile.controller.patient.SlideMenuController',{
 										tap : 'slideMenuOpen'
 							},
 							
-							slideMenu : {
+							slideMenuList : {
 										itemtap : 'switchView'
 										}
 				}
