@@ -53,7 +53,7 @@ Ext.define('DoctorQuickMobile.controller.doctor.ProfileController',{
     },
 
     onDocProfileEditOrSave : function(btn, e, eOpts) {
-    	alert("OnEditOrSave");
+    	//alert("OnEditOrSave");
 
     	if(btn.getText() == "Edit") {
     		btn.setText("Save");

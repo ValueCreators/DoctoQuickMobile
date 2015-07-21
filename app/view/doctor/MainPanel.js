@@ -88,8 +88,7 @@ Ext.define('DoctorQuickMobile.view.doctor.MainPanel', {
 						{
 							xtype : 'accountStatementView'
 						},{
-							xtype : 'notesMainPanel',
-							itemId : 'notesMainPanel'
+							xtype : 'notesMainPanel'
 						}
 					]
 				}

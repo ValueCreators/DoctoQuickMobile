@@ -270,8 +270,8 @@ var doctor_templates = {
 
 
 			var btnsContainer = '<div class="buttonsParentDiv">'+
-								    '<div class="floatLeft" style="padding: 0% 6%;""><input class="noteSubContBtnCls" type="button" value="Clear"></div>'+
-								    '<div class="floatRight" style="padding: 0% 6%;"><input class="noteSubContBtnCls" style="color : black;" type="button" value="Done"></div>'+
+								    '<div class="floatLeft" style="padding: 0% 6%;""><input class="noteSubContBtnCls" type="button" value="Clear" onclick="DoctorQuickMobile.app.getController(\'doctor.NotesController\').saveOrClearNotesData(\'clear\');"></div>'+
+								    '<div class="floatRight" style="padding: 0% 6%;"><input class="noteSubContBtnCls" style="color : black;" type="button" value="Done" onclick="DoctorQuickMobile.app.getController(\'doctor.NotesController\').saveOrClearNotesData(\'done\');"></div>'+
 								'</div>';
 
 			html +=		btnsContainer +	'</div>';
@@ -279,7 +279,7 @@ var doctor_templates = {
 
 			html +=   '</div>';
 
-			html += '<div class="notesEditableDivCls"></div>';
+			html += '<div id="notesEditableDivId" contenteditable="true" class="notesEditableDivCls"></div>';
 			return html;
     	}
     }),
