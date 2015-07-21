@@ -2,7 +2,10 @@ Ext.define('DoctorQuickMobile.view.doctor.notes.NotesMain', {
     extend: 'Ext.Panel',
     xtype: 'notesMainPanel',
     fullscreen: true,
-    layout : 'card',
+    //layout : 'card',
+    layout : {
+        type : 'card'
+    },
     config: {
     	
     	itemId : '_noteMainPanel',

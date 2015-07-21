@@ -3,6 +3,10 @@
 *   PATIENT REQUEST DETAIL PAGE
 */
 
+.mainPanelContainerCls {
+	height : 100%;
+}
+
 .patientRequestDetails {
 	position: relative;
 }
