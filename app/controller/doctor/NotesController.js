@@ -48,7 +48,7 @@ Ext.define('DoctorQuickMobile.controller.doctor.NotesController',{
 		this.getGotoDashBoardBtn().hide();
 	},
 
-	/*onDiagnosisActivate : function() {
+	onDiagnosisActivate : function() {
 		this.getGotoNoteMainPanelBtn().show();
 		this.getGotoDashBoardBtn().hide();
 		this.getMainPanelToolbarId().setTitle("Diagnosis");
@@ -58,7 +58,7 @@ Ext.define('DoctorQuickMobile.controller.doctor.NotesController',{
 		this.getGotoNoteMainPanelBtn().hide();
 		this.getGotoDashBoardBtn().show();
 		this.getMainPanelToolbarId().setTitle("Notes");
-	},*/
+	},
 	
 	showNotesView : function(){
 
