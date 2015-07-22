@@ -15,9 +15,11 @@ Ext.define('DoctorQuickMobile.view.patient.MainPanel', {
 				        	 itemId : 'mainPanelToolbarId',
 				        	 items : [{
 							    			xtype : 'button',
-							    			cls : 'loginBtnCls bgBtn1 reviewPanelToolBtnCls',
+							    			cls : 'loginBtnCls bgBtn1 reviewPanelToolBtnCls ',
 							    			itemId : 'gotoDashBoardBtn',
-							    			text : 'Back',
+							    			//text : 'Back',
+							    			iconCls : 'gotoDashBoardBtnCls',
+										  	ui : 'plain',
 							    			hidden : true
 						        		},
 				        	          {

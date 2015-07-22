@@ -40,6 +40,7 @@ Ext.application({
         'doctor.AccStatementController',
         'doctor.ProfileController',
         'doctor.MyConsultController',
+        'doctor.NotesController',
         
         'patient.MyConsultController',
         'patient.MyDoctorsController',
@@ -66,6 +67,11 @@ Ext.application({
         'doctor.MainPanel',
         'doctor.SlideMenu',
         'doctor.profile.Profile',
+        'doctor.notes.NotesMain',
+        /*'doctor.notes.Notes',*/
+        /*'doctor.notes.Diagnosis',
+        'doctor.notes.Tests',
+        'doctor.notes.Medication',*/
         
         'patient.registration.PatientRegMainView',
         'patient.LandingView',

@@ -35,7 +35,7 @@
 								xtype: 'container',
 								cls: 'time_indication_cls',
 								html: 	'<div>'+
-											'<div><img src="" /></div>' + 
+											'<div><img src="./resources/images/icon_time.png" /></div>' + 
 											'<div><span>Working Hours: 9am to 9pm</span></div>'+
 											'<div><label>(Indian Standard Time)</label></div>'
 										+'</div>'

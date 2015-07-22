@@ -23,7 +23,17 @@ Ext.define('DoctorQuickMobile.view.doctor.MainPanel', {
 		    			xtype : 'button',
 		    			cls : 'loginBtnCls bgBtn1 reviewPanelToolBtnCls',
 		    			itemId : 'gotoDashBoardBtn',
-		    			text : 'Back',
+		    			//text : 'Back',
+		    			iconCls : 'gotoDashBoardBtnCls',
+					  	ui : 'plain',
+		    			hidden : true
+	        		},{
+		    			xtype : 'button',
+		    			cls : 'loginBtnCls bgBtn1 reviewPanelToolBtnCls',
+		    			itemId : 'gotoNotesMainPanelBtn',
+		    			text : 'Notes',
+		    			iconCls : 'gotoDashBoardBtnCls',
+					  	ui : 'plain',
 		    			hidden : true
 	        		},
 					{
@@ -64,6 +74,7 @@ Ext.define('DoctorQuickMobile.view.doctor.MainPanel', {
 		            }
 		        },
 				config : {
+
 					items : [
 						{
 							xtype: 'doctor_dashboardView'
@@ -76,10 +87,17 @@ Ext.define('DoctorQuickMobile.view.doctor.MainPanel', {
 						}, 
 						{
 							xtype : 'accountStatementView'
+						},{
+							xtype : 'notesMainPanel',
+							itemId : 'notesMainPanel'
 						}
 					]
 				}
 			}
 		]
+	},
+
+	init : function() {
+		this.setActiveItem(0);
 	}
 });
