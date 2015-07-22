@@ -14,6 +14,7 @@
 	config: {
 				itemId : 'customerCareViewId',	
 				cls : 'customerCareViewCls',
+				scrollable: true,
 				items : [
 							{
 								xtype: 'container',
@@ -22,11 +23,13 @@
 							},{
 								xtype: 'textareafield',
 								maxRows: 12,
+								height: 200,
 								cls: 'messageTxtCls',
+								clearIcon: false,
 								itemId: 'messageContentId'
 							},{
 								xtype: 'button',
-								cls: 'send_btn_cls',
+								cls: 'send_btn_cls clearfix',
 								itemId: 'commentSendBtnId',
 								text: 'Send'
 							},{
