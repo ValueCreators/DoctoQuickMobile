@@ -21,7 +21,8 @@
 								html: '<div><label>Please contact us through the form below or request a call back</label></div>'
 							},{
 								xtype: 'textareafield',
-								maxRows: 6,
+								maxRows: 12,
+								cls: 'messageTxtCls',
 								itemId: 'messageContentId'
 							},{
 								xtype: 'button',
