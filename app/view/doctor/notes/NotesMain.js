@@ -1,13 +1,13 @@
 Ext.define('DoctorQuickMobile.view.doctor.notes.NotesMain', {
     extend: 'Ext.Panel',
     xtype: 'notesMainPanel',
-    fullscreen: true,
+    //fullscreen: true,
     //layout : 'card',
-    layout : {
-        type : 'card'
-    },
+    
     config: {
-    	
+        layout : {
+            type : 'card'
+        },
     	itemId : '_noteMainPanel',
     	cls : 'notesMainPanelCls',
     	items : [
@@ -24,7 +24,7 @@ Ext.define('DoctorQuickMobile.view.doctor.notes.NotesMain', {
                         itemId : '_diagnosisContainer',
                         cls : 'notesSubContainer',
                         tpl : doctor_templates.notesOtherContainersTpl
-			        },
+			        }/*,
 			        {   
     				    xtype : 'container',
                         itemId : '_testContainer',
@@ -36,7 +36,7 @@ Ext.define('DoctorQuickMobile.view.doctor.notes.NotesMain', {
                         itemId : '_medicationContainer',
                         cls : 'notesSubContainer',
                         tpl : doctor_templates.notesOtherContainersTpl
-			        }
+			        }*/
 			    ]
     		},
 

@@ -1,0 +1,117 @@
+/* Notes View Classes - START */
+
+.height100 {
+  height : 100% !important;
+}
+
+.notesMainPanelCls {
+  height : 100%;
+}
+
+.notesInfoText {
+    font-size: .7em;
+    text-align: center;
+    padding: 6% 10%;
+}
+
+.notesSection {
+   width: 92%;
+  border: 1px solid #D3CBCB;
+  margin: 4%;
+  background: #FFF;
+  border-radius: .;
+  padding: 2%;
+  font-size: 0.8em;
+}
+
+.notesSection .section {
+  width: 100%;
+  font-size: .8em;
+  overflow: hidden;
+  padding: 2% 5%;
+}
+
+.notesSection .section .sectionName {
+  width: 80%;
+  font-size: .9em;
+  line-height: 20px;
+}
+
+.floatLeft {
+  float : left;
+}
+
+.floatRight {
+  float : right;
+}
+
+.notesBtnContainerCls {
+  margin-top: 15%;
+}
+
+.width70 {
+  width : 70%;
+}
+
+.chargeBtnDivCls {
+   margin: 0% 15%;
+}
+
+.noChargeBtnDivCls {
+   margin: 3% 15%;
+}
+
+.chargeBtnCls {
+   background: #6fa02d;
+}
+
+.noChargeBtnCls {
+   background: #a1a1a1;
+ }
+
+.notesBtnCls {
+  width: 100%;
+  padding: 3%;
+  color: white;
+  font-size: .8em;
+  border-radius: .3em;
+}
+
+.notesSubContainer .buttonsParentDiv {
+  margin-top: 5%;
+  overflow: hidden;
+  margin-bottom: 3%;
+  padding-bottom: 3%;
+}
+
+.noteSubContBtnCls {
+  border: none;
+  background: none;
+  font-weight: bold;
+  color: gray;
+  font-size: .8em;
+}
+
+.notesEditableDivCls {
+  width: 100%;
+  height: calc(100% - 135px);
+  /*-webkit-user-modify: read-write;*/
+  text-align: center;
+  padding: 5%;
+  color: gray;
+  font-size: 0.8em;
+  text-align: left;
+  overflow: auto;
+  background : #fff;
+  margin-top : -1.5%;
+}
+
+.notesSubContainer .x-innerhtml {
+  height : 100%;
+}
+
+.notesSubContainerDataCls {
+  box-shadow: 0px 0px 6px 1px gray;
+}
+
+/* Notes View Classes - END */

@@ -68,10 +68,6 @@ Ext.application({
         'doctor.SlideMenu',
         'doctor.profile.Profile',
         'doctor.notes.NotesMain',
-        /*'doctor.notes.Notes',*/
-        /*'doctor.notes.Diagnosis',
-        'doctor.notes.Tests',
-        'doctor.notes.Medication',*/
         
         'patient.registration.PatientRegMainView',
         'patient.LandingView',
