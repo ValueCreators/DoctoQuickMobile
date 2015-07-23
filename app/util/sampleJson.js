@@ -161,3 +161,60 @@ var GENDERS = [
                        "name": "Both"
                    }
                ];
+
+var DOCTOR_LIST = [
+                   {
+                       "fName": "Ram",
+                       "lName": "Kumar",
+                       "rating": 3.5,
+                       "no_of_reviews": 27,
+                       "practiceSinceYear": 2000,
+                       "specialist": "Family Medicine",
+                       "degrees": "MBBS, MD"
+                   },
+                   {
+                       "fName": "Aparna",
+                       "lName": "Ramesh",
+                       "rating": 4,
+                       "no_of_reviews": 40,
+                       "practiceSinceYear": 2005,
+                       "specialist": "Dermatology",
+                       "degrees": "MBBS, MD (ABCD)"
+                   },
+                   {
+                       "fName": "Shyam",
+                       "lName": "Kumar",
+                       "rating": 4,
+                       "no_of_reviews": 25,
+                       "practiceSinceYear": 1995,
+                       "specialist": "Dermatology",
+                       "degrees": "MBBS, MD"
+                   },
+                   {
+                       "fName": "Neha",
+                       "lName": "Prasad",
+                       "rating": 5,
+                       "no_of_reviews": 31,
+                       "practiceSinceYear": 2009,
+                       "specialist": "Opthalmology",
+                       "degrees": "MBBS"
+                   },
+                   {
+                       "fName": "Girish",
+                       "lName": "Hegde",
+                       "rating": 2.5,
+                       "no_of_reviews": 16,
+                       "practiceSinceYear": 2011,
+                       "specialist": "Orthopedic Surgery",
+                       "degrees": "MBBS, MD (Ortho)"
+                   },
+                   {
+                       "fName": "Santosh",
+                       "lName": "Kishan",
+                       "rating": 4.5,
+                       "no_of_reviews": 30,
+                       "practiceSinceYear": 2008,
+                       "specialist": "General Mdicine",
+                       "degrees": "MBBS"
+                   }
+               ];
