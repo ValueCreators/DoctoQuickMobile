@@ -170,7 +170,8 @@ var DOCTOR_LIST = [
                        "no_of_reviews": 27,
                        "practiceSinceYear": 2000,
                        "specialist": "Family Medicine",
-                       "degrees": "MBBS, MD"
+                       "degrees": "MBBS, MD",
+                       "online" : true
                    },
                    {
                        "fName": "Aparna",
@@ -179,7 +180,8 @@ var DOCTOR_LIST = [
                        "no_of_reviews": 40,
                        "practiceSinceYear": 2005,
                        "specialist": "Dermatology",
-                       "degrees": "MBBS, MD (ABCD)"
+                       "degrees": "MBBS, MD (ABCD)",
+                       "online" : false
                    },
                    {
                        "fName": "Shyam",
@@ -188,7 +190,8 @@ var DOCTOR_LIST = [
                        "no_of_reviews": 25,
                        "practiceSinceYear": 1995,
                        "specialist": "Dermatology",
-                       "degrees": "MBBS, MD"
+                       "degrees": "MBBS, MD",
+                       "online" : true
                    },
                    {
                        "fName": "Neha",
@@ -197,7 +200,8 @@ var DOCTOR_LIST = [
                        "no_of_reviews": 31,
                        "practiceSinceYear": 2009,
                        "specialist": "Opthalmology",
-                       "degrees": "MBBS"
+                       "degrees": "MBBS",
+                       "online" : true
                    },
                    {
                        "fName": "Girish",
@@ -206,7 +210,8 @@ var DOCTOR_LIST = [
                        "no_of_reviews": 16,
                        "practiceSinceYear": 2011,
                        "specialist": "Orthopedic Surgery",
-                       "degrees": "MBBS, MD (Ortho)"
+                       "degrees": "MBBS, MD (Ortho)",
+                       "online" : true
                    },
                    {
                        "fName": "Santosh",
@@ -215,6 +220,7 @@ var DOCTOR_LIST = [
                        "no_of_reviews": 30,
                        "practiceSinceYear": 2008,
                        "specialist": "General Mdicine",
-                       "degrees": "MBBS"
+                       "degrees": "MBBS",
+                       "online" : false
                    }
                ];
