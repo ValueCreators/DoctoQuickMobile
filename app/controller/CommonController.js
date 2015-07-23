@@ -22,7 +22,14 @@ Ext.define('DoctorQuickMobile.controller.CommonController', {
 		refs : {
 			doctorDashBoardView : 'doctor_dashboardView',
 			docBatchBtn : 'doctor_mainPanel toolbar #batchBtnId',
-			statusNotificationBtn : 'doctor_mainPanel toolbar #statusNotificationId'
+			statusNotificationBtn : 'doctor_mainPanel toolbar #statusNotificationId',
+			gotoPatientDashBoardBtn : 'patient_mainPanel toolbar button#gotoDashBoardBtn',
+			gotoDoctorDashBoardBtn : 'doctor_mainPanel toolbar button#gotoDashBoardBtn'					
+		},
+
+		control : {
+			gotoPatientDashBoardBtn : { tap : 'initializeView', scope : this },
+			gotoDoctorDashBoardBtn : { tap : 'initializeView', scope : this }
 		}
 
 	},

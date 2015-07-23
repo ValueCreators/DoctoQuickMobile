@@ -9,7 +9,7 @@ Ext.define('DoctorQuickMobile.controller.patient.ProfileController',{
 					patientProfileContainer : 'patientProfileScreen container#_doctorProfileContainer',
 					patientProfileBackBtn : 'patientProfileScreen toolbar button#closeDoctorProfile',
 					patientProfileEditOrSubmitBtn : 'patient_mainPanel toolbar button#editOrSubmitProfile',
-					gotoDashBoardBtn : 'patient_mainPanel toolbar button#gotoDashBoardBtn',
+					//gotoDoctorDashBoardBtn : 'patient_mainPanel toolbar button#gotoDashBoardBtn',
 
 					docProfileContainer : 'doctorProfileView container#_doctorProfileViewContainer',					
 				},
@@ -17,37 +17,41 @@ Ext.define('DoctorQuickMobile.controller.patient.ProfileController',{
 					patientProfileScreen : { activate : 'onProfileActivate', deactivate : 'onProfileDeactivate', scope : this },
 					patientProfileBackBtn : { tap : 'closeProfileView', scope : this },
 					patientProfileEditOrSubmitBtn : { tap : 'onEditOrSave', scope : this },
-					gotoDashBoardBtn : { tap : 'gotoDashBoard', scope : this}
+					//gotoDashBoardBtn : { tap : 'gotoDashBoard', scope : this}
 				}
 	},
 	
 	init : function(){
 		this.profileView = null;
+		this.commonController = DoctorQuickMobile.app.getController("CommonController");
 	},
 
 	onProfileActivate : function() {
 		this.getPatientProfileEditOrSubmitBtn().show();
-		this.getGotoDashBoardBtn().show();
+		this.commonController.getGotoPatientDashBoardBtn().show();
 	},
 
 	onProfileDeactivate : function() {
 		this.getPatientProfileEditOrSubmitBtn().hide();
-		this.getGotoDashBoardBtn().hide();
+		this.commonController.getGotoPatientDashBoardBtn().hide();
 	},
 
 	showProfileView : function(){
 		
        // this.getMainPanelContainer().setActiveItem('patientProfile');
 
-       this.getMainPanelContainer().setActiveItem('doctorProfileView');
+       /*
+			This is to bring Doctor Profile view
+       */
+       /*this.getMainPanelContainer().setActiveItem('doctorProfileView');
        this.getMainPanelToolbarId().setTitle("Doctor Profile");
-       this.getDocProfileContainer().setData(docProfileData);
+       this.getDocProfileContainer().setData(docProfileData);*/
        /*
 			Uncomment later.
        */
-       /*this.getMainPanelContainer().setActiveItem('patientProfileScreen');
+       this.getMainPanelContainer().setActiveItem('patientProfileScreen');
        this.getMainPanelToolbarId().setTitle("Profile");
-       this.getPatientProfileContainer().setData(patientProfileData);*/
+       this.getPatientProfileContainer().setData(patientProfileData);
 	},
 
 	closeProfileView : function() {
