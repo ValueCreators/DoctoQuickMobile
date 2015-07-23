@@ -2,7 +2,7 @@ Ext.define('DoctorQuickMobile.controller.patient.ProfileController',{
 				
 	extend: 'Ext.app.Controller',    
 	config:{
-				refs:{
+				refs: {
 					patientProfileScreen : 'patientProfileScreen',
 					mainPanelContainer : 'patient_mainPanel panel#_mainPanelContainer',
 					mainPanelToolbarId : 'patient_mainPanel toolbar#mainPanelToolbarId',
