@@ -38,17 +38,8 @@ Ext.define('DoctorQuickMobile.controller.patient.ProfileController',{
 
 	showProfileView : function(){
 		
-       // this.getMainPanelContainer().setActiveItem('patientProfile');
+       // this.getMainPanelContainer().setActiveItem('patientProfile');       
 
-       /*
-			This is to bring Doctor Profile view
-       */
-       /*this.getMainPanelContainer().setActiveItem('doctorProfileView');
-       this.getMainPanelToolbarId().setTitle("Doctor Profile");
-       this.getDocProfileContainer().setData(docProfileData);*/
-       /*
-			Uncomment later.
-       */
        this.getMainPanelContainer().setActiveItem('patientProfileScreen');
        this.getMainPanelToolbarId().setTitle("Profile");
        this.getPatientProfileContainer().setData(patientProfileData);
@@ -60,7 +51,7 @@ Ext.define('DoctorQuickMobile.controller.patient.ProfileController',{
     },
 
     onEditOrSave : function(btn, e, eOpts) {
-    	alert("OnEditOrSave");
+    	//alert("OnEditOrSave");
 
     	if(btn.getText() == "Edit") {
     		btn.setText("Save");

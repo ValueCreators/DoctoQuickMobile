@@ -2,7 +2,7 @@ Ext.define('DoctorQuickMobile.view.patient.profile.Profile', {
     extend: 'Ext.Panel',
     xtype: 'patientProfileScreen',
     fullscreen: true,
-    config: {
+     config: {
     	itemId : 'patientProfile',
     	cls : 'doctorLoginCls reviewPanelCls',
     	items : [

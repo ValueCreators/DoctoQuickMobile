@@ -21,13 +21,16 @@ Ext.application({
         'RequestPendingModel',
         
         'patient.SpecialityModel',
-        'patient.LanguageModel'
+        'patient.LanguageModel',
+        'patient.DoctorModel'
     ],
     stores: [
          'RequestPendingStore',
          
          'patient.SpecialityStore',
-         'patient.LanguageStore'
+         'patient.LanguageStore',
+         'patient.DoctorSearchResultStore',
+         'patient.MyDoctorsStore'
     ],
 
     controllers : [
@@ -76,8 +79,8 @@ Ext.application({
         'patient.profile.Profile',
         'patient.DashboardView',
         'patient.other.DoctorProfile',
-        'patient.wallet.Payments'
-
+        'patient.wallet.Payments',
+        'patient.other.MyDoctors'
     ],
 
     icon: {

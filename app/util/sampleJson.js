@@ -162,3 +162,78 @@ var GENDERS = [
                        "name": "Both"
                    }
                ];
+
+var DOCTOR_LIST = [
+                   {
+                	   "id" : "1",
+                       "fName": "Ram",
+                       "lName": "Kumar",
+                       "rating": 3.5,
+                       "no_of_reviews": 27,
+                       "practiceSinceYear": 2000,
+                       "speciality": "Family Medicine",
+                       "degrees": "MBBS, MD",
+                       "online" : true,
+                       "profile_pic" : "http://sociovigil.in/wp-content/uploads/2013/01/Dr.-Devi-Shetty.png"
+                   },
+                   {
+                	   "id" : "2",
+                       "fName": "Aparna",
+                       "lName": "Ramesh",
+                       "rating": 4,
+                       "no_of_reviews": 40,
+                       "practiceSinceYear": 2005,
+                       "speciality": "Dermatology",
+                       "degrees": "MBBS, MD (ABCD)",
+                       "online" : false,
+                       "profile_pic" : "http://sociovigil.in/wp-content/uploads/2013/01/Dr.-Devi-Shetty.png"
+                   },
+                   {
+                	   "id" : "3",
+                       "fName": "Shyam",
+                       "lName": "Kumar",
+                       "rating": 4,
+                       "no_of_reviews": 25,
+                       "practiceSinceYear": 1995,
+                       "speciality": "Dermatology",
+                       "degrees": "MBBS, MD",
+                       "online" : true,
+                       "profile_pic" : "http://sociovigil.in/wp-content/uploads/2013/01/Dr.-Devi-Shetty.png"
+                   },
+                   {
+                	   "id" : "4",
+                       "fName": "Neha",
+                       "lName": "Prasad",
+                       "rating": 5,
+                       "no_of_reviews": 31,
+                       "practiceSinceYear": 2009,
+                       "speciality": "Opthalmology",
+                       "degrees": "MBBS",
+                       "online" : true,
+                       "profile_pic" : "http://sociovigil.in/wp-content/uploads/2013/01/Dr.-Devi-Shetty.png"
+                   },
+                   {
+                	   "id" : "5",
+                       "fName": "Girish",
+                       "lName": "Hegde",
+                       "rating": 2.5,
+                       "no_of_reviews": 16,
+                       "practiceSinceYear": 2011,
+                       "speciality": "Orthopedic Surgery",
+                       "degrees": "MBBS, MD (Ortho)",
+                       "online" : true,
+                       "profile_pic" : "http://sociovigil.in/wp-content/uploads/2013/01/Dr.-Devi-Shetty.png"
+                   },
+                   {
+                	   "id" : "6",
+                       "fName": "Santosh",
+                       "lName": "Kishan",
+                       "rating": 4.5,
+                       "no_of_reviews": 30,
+                       "practiceSinceYear": 2008,
+                       "speciality": "General Mdicine",
+                       "degrees": "MBBS",
+                       "online" : false,
+                       "profile_pic" : "http://sociovigil.in/wp-content/uploads/2013/01/Dr.-Devi-Shetty.png"
+                   }
+               ];

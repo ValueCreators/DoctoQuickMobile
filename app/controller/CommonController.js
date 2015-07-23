@@ -24,7 +24,7 @@ Ext.define('DoctorQuickMobile.controller.CommonController', {
 			docBatchBtn : 'doctor_mainPanel toolbar #batchBtnId',
 			statusNotificationBtn : 'doctor_mainPanel toolbar #statusNotificationId',
 			gotoPatientDashBoardBtn : 'patient_mainPanel toolbar button#gotoDashBoardBtn',
-			gotoDoctorDashBoardBtn : 'doctor_mainPanel toolbar button#gotoDashBoardBtn'					
+			gotoDoctorDashBoardBtn : 'doctor_mainPanel toolbar button#gotoDashBoardBtn',									
 		},
 
 		control : {
@@ -42,6 +42,8 @@ Ext.define('DoctorQuickMobile.controller.CommonController', {
 		*	Whenever application is launching.
 		*/
 		Ext.Viewport.removeAll();
+		//Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.patient.LandingView'));
+		
 		if (!loginDetail.authtoken) {
 			/*
 			* 	First time when user opens the application, 

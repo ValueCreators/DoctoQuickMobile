@@ -409,7 +409,7 @@ var patient_templates = {
 
 			html += '</div>';
 			return html;
-    	}
+    	}	
     }),
 
 	doctorProfileViewTpl : new Ext.XTemplate('{[this.setDetailsData(values)]}', {
@@ -421,12 +421,18 @@ var patient_templates = {
     		var html = '<div>';
 
     		html += '<div class="profilePicDivCls" style="text-align: center;display: -webkit-box;-webkit-box-pack: center;padding: 7% 0%;">'+
-		    			'<div class="docProfileCls"></div>'+
-		    		'</div>';
+		    			'<div class="docProfileCls"></div>';
+
+		    var onlineOfflineInd =  '<div class="onlineOfflineIndicator onlineColor"></div>';
+		    if(!data.online) {
+		    	onlineOfflineInd =  '<div class="onlineOfflineIndicator offlineColor"></div>';
+		    }
+
+		    html += 	onlineOfflineInd +	'</div>';
 
     		html += '<div class="docDetailsDivCls">'+
     					'<div class="textAlignCenter fontBold fontSizePoint8em colorBlack">Dr '+data.fName+' '+data.lName+'</div>'+
-    					'<div class="textAlignCenter colorGray fontSizePoint6em" style="padding: 1% 0%;">'+data.degrees+'</div>'+
+    					'<div class="textAlignCenter colorGray fontSizePoint6em" style="padding: 1% 0%;">'+data.speciality+', '+data.degrees+'</div>'+
     					'<div class="textAlignCenter colorGray fontSizePoint6em">Practising since '+data.practiceSinceYear+'</div>'+
 
     				'</div>';
@@ -454,5 +460,34 @@ var patient_templates = {
 
     		return html;
        	}
-    })
+    }),
+    
+    doctorItemTpl : new Ext.XTemplate(
+    	'<div class="doctorItemCls">'+
+    	'	<div class="floatLeft picCls">'+
+    	'		<img src="{profile_pic}"/>'+
+    	'	</div>'+
+    	'	<div class="floatLeft detailCls">'+
+    	'		<div>Dr {fName} {lName}</div>'+
+    	'		<div>{speciality}, <span class="degreesCls">{degrees}</span></div>'+
+    	'		<div>Practicing since {practiceSinceYear}</div>'+
+    	'		<div><span class="ratingCls">{[this.getStars(values.rating)]}</span> ( {no_of_reviews} reviews )</div>'+
+		'	</div>'+
+		'	<div class="floatRight statusCls" style="background-color: {[this.getStatusColor(values.online)]}">'+
+		'	</div>'+
+    	'</div>',
+    	{
+    		getStars : function(rating){
+    			var stars = '';
+    			for(var i=0; i < Math.	floor(rating); i++){
+    				stars += 'S';
+    			}
+    			return stars;
+    		},
+    		getStatusColor : function(isOnline){
+    			if(isOnline)
+    				return  '#AFCA0B';
+    			return '#AF262D';
+    		}
+    	})
 }

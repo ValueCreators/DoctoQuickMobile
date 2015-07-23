@@ -301,6 +301,40 @@ input.checkbox-cls {
   font-family: UbuntuBold; }
   .patientLandingViewCls .patientMainPanelCls .mainPanelToolbarCls .x-title > .x-innerhtml {
     text-shadow: none !important; }
+.patientLandingViewCls .patientMainPanelCls .myDoctorsListCls {
+  background: #E7E7E7; }
+  .patientLandingViewCls .patientMainPanelCls .myDoctorsListCls .x-list-item .x-innerhtml {
+    padding: 0px !important; }
+.patientLandingViewCls .patientMainPanelCls .doctorItemCls {
+  padding: 10px;
+  overflow: auto;
+  border-bottom: 1px solid #C2C2C2;
+  border-top: 1px solid #fff;
+  color: #878787; }
+  .patientLandingViewCls .patientMainPanelCls .doctorItemCls .picCls {
+    padding: 5px;
+    margin-right: 5px; }
+    .patientLandingViewCls .patientMainPanelCls .doctorItemCls .picCls img {
+      width: 50px;
+      height: 50px;
+      border: 5px solid #DFDBD8;
+      border-radius: 50%; }
+  .patientLandingViewCls .patientMainPanelCls .doctorItemCls .detailCls {
+    font-size: 13px; }
+    .patientLandingViewCls .patientMainPanelCls .doctorItemCls .detailCls div:first-child {
+      font-size: 16px;
+      font-weight: bold;
+      color: black; }
+    .patientLandingViewCls .patientMainPanelCls .doctorItemCls .detailCls .degreesCls {
+      font-size: 9px; }
+    .patientLandingViewCls .patientMainPanelCls .doctorItemCls .detailCls .ratingCls {
+      font-family: Pictos;
+      color: #E99D16; }
+  .patientLandingViewCls .patientMainPanelCls .doctorItemCls .statusCls {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 10px; }
 .patientLandingViewCls .slideMenuCls .slideMenuTopToolbarCls, .patientLandingViewCls .slideMenuCls .slideMenuBtmToolbarCls {
   border: none  !important;
   border-bottom: 1px solid #0D0E12 !important;
@@ -383,7 +417,13 @@ input.checkbox-cls {
 
 .menu_iconCls {
   background-image: url(../images/480x854/dq_icon_white_menu_480x854.png);
-  /*background-size: 100%;*/ }
+  background-size: 100%; }
+
+.floatLeft {
+  float: left; }
+
+.floatRight {
+  float: right; }
 
 /* iconCls classes - END */
 
