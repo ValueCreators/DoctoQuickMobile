@@ -170,7 +170,7 @@ var DOCTOR_LIST = [
                        "rating": 3.5,
                        "no_of_reviews": 27,
                        "practiceSinceYear": 2000,
-                       "specialist": "Family Medicine",
+                       "speciality": "Family Medicine",
                        "degrees": "MBBS, MD",
                        "online" : true,
                        "profile_pic" : "http://sociovigil.in/wp-content/uploads/2013/01/Dr.-Devi-Shetty.png"
@@ -182,7 +182,7 @@ var DOCTOR_LIST = [
                        "rating": 4,
                        "no_of_reviews": 40,
                        "practiceSinceYear": 2005,
-                       "specialist": "Dermatology",
+                       "speciality": "Dermatology",
                        "degrees": "MBBS, MD (ABCD)",
                        "online" : false,
                        "profile_pic" : "http://sociovigil.in/wp-content/uploads/2013/01/Dr.-Devi-Shetty.png"
@@ -194,7 +194,7 @@ var DOCTOR_LIST = [
                        "rating": 4,
                        "no_of_reviews": 25,
                        "practiceSinceYear": 1995,
-                       "specialist": "Dermatology",
+                       "speciality": "Dermatology",
                        "degrees": "MBBS, MD",
                        "online" : true,
                        "profile_pic" : "http://sociovigil.in/wp-content/uploads/2013/01/Dr.-Devi-Shetty.png"
@@ -206,7 +206,7 @@ var DOCTOR_LIST = [
                        "rating": 5,
                        "no_of_reviews": 31,
                        "practiceSinceYear": 2009,
-                       "specialist": "Opthalmology",
+                       "speciality": "Opthalmology",
                        "degrees": "MBBS",
                        "online" : true,
                        "profile_pic" : "http://sociovigil.in/wp-content/uploads/2013/01/Dr.-Devi-Shetty.png"
@@ -218,7 +218,7 @@ var DOCTOR_LIST = [
                        "rating": 2.5,
                        "no_of_reviews": 16,
                        "practiceSinceYear": 2011,
-                       "specialist": "Orthopedic Surgery",
+                       "speciality": "Orthopedic Surgery",
                        "degrees": "MBBS, MD (Ortho)",
                        "online" : true,
                        "profile_pic" : "http://sociovigil.in/wp-content/uploads/2013/01/Dr.-Devi-Shetty.png"
@@ -230,7 +230,7 @@ var DOCTOR_LIST = [
                        "rating": 4.5,
                        "no_of_reviews": 30,
                        "practiceSinceYear": 2008,
-                       "specialist": "General Mdicine",
+                       "speciality": "General Mdicine",
                        "degrees": "MBBS",
                        "online" : false,
                        "profile_pic" : "http://sociovigil.in/wp-content/uploads/2013/01/Dr.-Devi-Shetty.png"
