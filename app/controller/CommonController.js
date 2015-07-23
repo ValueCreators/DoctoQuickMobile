@@ -35,28 +35,30 @@ Ext.define('DoctorQuickMobile.controller.CommonController', {
 		*	Whenever application is launching.
 		*/
 		Ext.Viewport.removeAll();
-		if (!loginDetail.authtoken) {
-			/*
-			* 	First time when user opens the application, 
-			*	we are showing the login view
-			*/
-			Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.common.LoginView'));
-
-		} else if (loginDetail && loginDetail.loginType === 'Doctor') {
-
-			//Doctor main View
-			this.landingView = Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.doctor.LandingView'));
-			this.landingView.getComponent('doctorMainPanel').getComponent('_mainPanelContainer').setActiveItem('doctor_dashboardView');
-			this.onDashBoardActivate(); 
-
-
-		} else if (loginDetail && loginDetail.loginType === 'Patient') {
-
-			//Patient main view
-			this.landingView = Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.patient.LandingView'));	
-			this.landingView.getComponent('patientMainPanel').getComponent('_mainPanelContainer').setActiveItem('patient_dashboardView');
-			
-		}
+		Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.patient.LandingView'));
+//		
+//		if (!loginDetail.authtoken) {
+//			/*
+//			* 	First time when user opens the application, 
+//			*	we are showing the login view
+//			*/
+//			Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.common.LoginView'));
+//
+//		} else if (loginDetail && loginDetail.loginType === 'Doctor') {
+//
+//			//Doctor main View
+//			this.landingView = Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.doctor.LandingView'));
+//			this.landingView.getComponent('doctorMainPanel').getComponent('_mainPanelContainer').setActiveItem('doctor_dashboardView');
+//			this.onDashBoardActivate(); 
+//
+//
+//		} else if (loginDetail && loginDetail.loginType === 'Patient') {
+//
+//			//Patient main view
+//			this.landingView = Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.patient.LandingView'));	
+//			this.landingView.getComponent('patientMainPanel').getComponent('_mainPanelContainer').setActiveItem('patient_dashboardView');
+//			
+//		}
 
 	},
 

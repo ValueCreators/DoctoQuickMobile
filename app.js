@@ -77,8 +77,9 @@ Ext.application({
         'patient.MainPanel',
         'patient.SlideMenu',
         'patient.profile.Profile',
-        'patient.DashboardView'
+        'patient.DashboardView',
 
+        'patient.other.MyDoctors'
     ],
 
     icon: {

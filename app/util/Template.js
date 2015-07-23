@@ -409,6 +409,35 @@ var patient_templates = {
 
 			html += '</div>';
 			return html;
-    	}
+    	}	
     }),
+    
+    doctorItemTpl : new Ext.XTemplate(
+    	'<div class="doctorItemCls">'+
+    	'	<div class="floatLeft picCls">'+
+    	'		<img src="{profile_pic}"/>'+
+    	'	</div>'+
+    	'	<div class="floatLeft detailCls">'+
+    	'		<div>Dr {fName} {lName}</div>'+
+    	'		<div>{speciality}, <span class="degreesCls">{degrees}</span></div>'+
+    	'		<div>Practicing since {practiceSinceYear}</div>'+
+    	'		<div><span class="ratingCls">{[this.getStars(values.rating)]}</span> ( {no_of_reviews} reviews )</div>'+
+		'	</div>'+
+		'	<div class="floatRight statusCls" style="background-color: {[this.getStatusColor(values.online)]}">'+
+		'	</div>'+
+    	'</div>',
+    	{
+    		getStars : function(rating){
+    			var stars = '';
+    			for(var i=0; i < Math.	floor(rating); i++){
+    				stars += 'S';
+    			}
+    			return stars;
+    		},
+    		getStatusColor : function(isOnline){
+    			if(isOnline)
+    				return  '#AFCA0B';
+    			return '#AF262D';
+    		}
+    	})
 }
