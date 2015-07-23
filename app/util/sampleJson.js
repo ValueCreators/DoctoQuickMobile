@@ -1,12 +1,12 @@
 var docProfileData = {
 	
 	fName : 'Shyam',
-	mName : 'Kumar',
-	lName : 'K G',
+	mName : 'K G',
+	lName : 'Kumar',
 	rating : 3.5,
 	no_of_reviews : 27,
 	practiceSinceYear : 1947,
-	degrees : 'MBBS, MD',
+	degrees : 'MBBS, MD, Bachelor of Surgery',
 	dob : new Date(),
 	addr1 : '#25, 2nd Floor',
 	addr2 : 'Ayodhya Nagar, J.P 5th Phase',
@@ -22,7 +22,8 @@ var docProfileData = {
 	specialist : 'Dermatologist',
 	membership : 'Not Available',
 	membershipNum : 456,
-	profilePicData : ""
+	profilePicData : "",
+  online : true
 };
 
 var patientProfileData = {

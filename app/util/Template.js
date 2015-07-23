@@ -411,4 +411,48 @@ var patient_templates = {
 			return html;
     	}
     }),
+
+	doctorProfileViewTpl : new Ext.XTemplate('{[this.setDetailsData(values)]}', {
+
+    	setDetailsData : function(data) {
+
+    		console.log("doctorProfileViewTpl >> "+data);
+
+    		var html = '<div>';
+
+    		html += '<div class="profilePicDivCls" style="text-align: center;display: -webkit-box;-webkit-box-pack: center;padding: 7% 0%;">'+
+		    			'<div class="docProfileCls"></div>'+
+		    		'</div>';
+
+    		html += '<div class="docDetailsDivCls">'+
+    					'<div class="textAlignCenter fontBold fontSizePoint8em colorBlack">Dr '+data.fName+' '+data.lName+'</div>'+
+    					'<div class="textAlignCenter colorGray fontSizePoint6em" style="padding: 1% 0%;">'+data.degrees+'</div>'+
+    					'<div class="textAlignCenter colorGray fontSizePoint6em">Practising since '+data.practiceSinceYear+'</div>'+
+
+    				'</div>';
+
+    		var infoMsg = '<div class="callInviteMsg colorGreen">Your invitation for consultation has been accepted. Please start the consultation now or decline.</div>';
+
+    		if(!data.online) {
+				infoMsg = '<div class="callInviteMsg colorBlack">Dr '+data.fName+ ' '+data.lName+' is Offline. You may request a consultation when back online by sending a notification.</div>';    			
+    		}
+    		var buttonsContainer =  '<div>'+
+										'<div class="width70 chargeBtnDivCls"><input type="button" class="notesBtnCls chargeBtnCls" value="Voice Call"></div>'+
+										'<div class="width70 noChargeBtnDivCls"><input type="button" class="notesBtnCls chargeBtnCls" value="Video Call"></div>'+
+										'<div class="width70 noChargeBtnDivCls"><input type="button" class="notesBtnCls btnBackgroundDecline" value="Decline"></div>'+
+									'</div>';
+
+			if(!data.online) {
+				buttonsContainer =  '<div style="padding-bottom : 2%;">'+
+										'<div class="width70 chargeBtnDivCls"><input type="button" class="notesBtnCls chargeBtnCls" value="Send Notification"></div>'+
+									'</div>';
+			}
+			html += infoMsg;
+    		html += buttonsContainer + '</div>';
+
+    		html += '<div class="textAlignCenter fontSizePoint7em colorGray fontBold">Consultation Fee $xxx</div>';
+
+    		return html;
+       	}
+    })
 }

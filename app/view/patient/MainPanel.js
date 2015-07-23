@@ -60,6 +60,9 @@ Ext.define('DoctorQuickMobile.view.patient.MainPanel', {
 										},
 										{
 											xtype : 'customerCareView'
+										},
+										{
+											xtype : 'doctorProfileView'
 										}
 									]
 								}
