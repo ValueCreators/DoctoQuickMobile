@@ -21,13 +21,16 @@ Ext.application({
         'RequestPendingModel',
         
         'patient.SpecialityModel',
-        'patient.LanguageModel'
+        'patient.LanguageModel',
+        'patient.DoctorModel'
     ],
     stores: [
          'RequestPendingStore',
          
          'patient.SpecialityStore',
-         'patient.LanguageStore'
+         'patient.LanguageStore',
+         'patient.DoctorSearchResultStore',
+         'patient.MyDoctorsStore'
     ],
 
     controllers : [
