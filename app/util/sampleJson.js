@@ -164,6 +164,7 @@ var GENDERS = [
 
 var DOCTOR_LIST = [
                    {
+                	   "id" : "1",
                        "fName": "Ram",
                        "lName": "Kumar",
                        "rating": 3.5,
@@ -175,6 +176,7 @@ var DOCTOR_LIST = [
                        "profile_pic" : "http://sociovigil.in/wp-content/uploads/2013/01/Dr.-Devi-Shetty.png"
                    },
                    {
+                	   "id" : "2",
                        "fName": "Aparna",
                        "lName": "Ramesh",
                        "rating": 4,
@@ -186,6 +188,7 @@ var DOCTOR_LIST = [
                        "profile_pic" : "http://sociovigil.in/wp-content/uploads/2013/01/Dr.-Devi-Shetty.png"
                    },
                    {
+                	   "id" : "3",
                        "fName": "Shyam",
                        "lName": "Kumar",
                        "rating": 4,
@@ -197,6 +200,7 @@ var DOCTOR_LIST = [
                        "profile_pic" : "http://sociovigil.in/wp-content/uploads/2013/01/Dr.-Devi-Shetty.png"
                    },
                    {
+                	   "id" : "4",
                        "fName": "Neha",
                        "lName": "Prasad",
                        "rating": 5,
@@ -208,6 +212,7 @@ var DOCTOR_LIST = [
                        "profile_pic" : "http://sociovigil.in/wp-content/uploads/2013/01/Dr.-Devi-Shetty.png"
                    },
                    {
+                	   "id" : "5",
                        "fName": "Girish",
                        "lName": "Hegde",
                        "rating": 2.5,
@@ -219,6 +224,7 @@ var DOCTOR_LIST = [
                        "profile_pic" : "http://sociovigil.in/wp-content/uploads/2013/01/Dr.-Devi-Shetty.png"
                    },
                    {
+                	   "id" : "6",
                        "fName": "Santosh",
                        "lName": "Kishan",
                        "rating": 4.5,
