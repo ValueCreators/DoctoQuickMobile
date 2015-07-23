@@ -79,7 +79,7 @@ Ext.application({
         'patient.profile.Profile',
         'patient.DashboardView',
 
-        'patient.wallet.Payments'
+        'patient.wallet.Payments',
         'patient.other.MyDoctors'
     ],
 
