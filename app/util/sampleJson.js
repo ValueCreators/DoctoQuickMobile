@@ -171,7 +171,8 @@ var DOCTOR_LIST = [
                        "practiceSinceYear": 2000,
                        "specialist": "Family Medicine",
                        "degrees": "MBBS, MD",
-                       "online" : true
+                       "online" : true,
+                       "profile_pic" : "http://sociovigil.in/wp-content/uploads/2013/01/Dr.-Devi-Shetty.png"
                    },
                    {
                        "fName": "Aparna",
@@ -181,7 +182,8 @@ var DOCTOR_LIST = [
                        "practiceSinceYear": 2005,
                        "specialist": "Dermatology",
                        "degrees": "MBBS, MD (ABCD)",
-                       "online" : false
+                       "online" : false,
+                       "profile_pic" : "http://sociovigil.in/wp-content/uploads/2013/01/Dr.-Devi-Shetty.png"
                    },
                    {
                        "fName": "Shyam",
@@ -191,7 +193,8 @@ var DOCTOR_LIST = [
                        "practiceSinceYear": 1995,
                        "specialist": "Dermatology",
                        "degrees": "MBBS, MD",
-                       "online" : true
+                       "online" : true,
+                       "profile_pic" : "http://sociovigil.in/wp-content/uploads/2013/01/Dr.-Devi-Shetty.png"
                    },
                    {
                        "fName": "Neha",
@@ -201,7 +204,8 @@ var DOCTOR_LIST = [
                        "practiceSinceYear": 2009,
                        "specialist": "Opthalmology",
                        "degrees": "MBBS",
-                       "online" : true
+                       "online" : true,
+                       "profile_pic" : "http://sociovigil.in/wp-content/uploads/2013/01/Dr.-Devi-Shetty.png"
                    },
                    {
                        "fName": "Girish",
@@ -211,7 +215,8 @@ var DOCTOR_LIST = [
                        "practiceSinceYear": 2011,
                        "specialist": "Orthopedic Surgery",
                        "degrees": "MBBS, MD (Ortho)",
-                       "online" : true
+                       "online" : true,
+                       "profile_pic" : "http://sociovigil.in/wp-content/uploads/2013/01/Dr.-Devi-Shetty.png"
                    },
                    {
                        "fName": "Santosh",
@@ -221,6 +226,7 @@ var DOCTOR_LIST = [
                        "practiceSinceYear": 2008,
                        "specialist": "General Mdicine",
                        "degrees": "MBBS",
-                       "online" : false
+                       "online" : false,
+                       "profile_pic" : "http://sociovigil.in/wp-content/uploads/2013/01/Dr.-Devi-Shetty.png"
                    }
                ];
