@@ -22,16 +22,23 @@ Ext.define('DoctorQuickMobile.controller.CommonController', {
 		refs : {
 			doctorDashBoardView : 'doctor_dashboardView',
 			docBatchBtn : 'doctor_mainPanel toolbar #batchBtnId',
-			statusNotificationBtn : 'doctor_mainPanel toolbar #statusNotificationId',
+			statusNotificationBtn : 'doctor_mainPanel toolbar container#statusNotificationId',
 			gotoPatientDashBoardBtn : 'patient_mainPanel toolbar button#gotoDashBoardBtn',
 			gotoDoctorDashBoardBtn : 'doctor_mainPanel toolbar button#gotoDashBoardBtn',								
 		},
 
 		control : {
 			gotoPatientDashBoardBtn : { tap : 'initializeView', scope : this },
-			gotoDoctorDashBoardBtn : { tap : 'initializeView', scope : this }
+			gotoDoctorDashBoardBtn : { tap : 'initializeView', scope : this },
+			'doctor_dashboardView' : { activate : 'onDocDashBoardActivate', deactivate : 'onDocDashBoardDeActivate', scope : this },
+			'patient_dashboardView' : { activate : 'onPatientDashBoardActivate', deactivate : 'onPatientDashBoardDeActivate', scope : this },
+
 		}
 
+	},
+
+	init : function () {
+		this.myConsultDoctor = DoctorQuickMobile.app.getController("patient.MyConsultController");
 	},
 
 	initializeView : function () {
@@ -42,7 +49,6 @@ Ext.define('DoctorQuickMobile.controller.CommonController', {
 		*	Whenever application is launching.
 		*/
 		Ext.Viewport.removeAll();
-		//Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.patient.LandingView'));
 		
 		if (!loginDetail.authtoken) {
 			/*
@@ -56,7 +62,7 @@ Ext.define('DoctorQuickMobile.controller.CommonController', {
 			//Doctor main View
 			this.landingView = Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.doctor.LandingView'));
 			this.landingView.getComponent('doctorMainPanel').getComponent('_mainPanelContainer').setActiveItem('doctor_dashboardView');
-			this.onDashBoardActivate(); 
+			//this.onDashBoardActivate(); 
 
 
 		} else if (loginDetail && loginDetail.loginType === 'Patient') {
@@ -64,7 +70,8 @@ Ext.define('DoctorQuickMobile.controller.CommonController', {
 			//Patient main view
 			this.landingView = Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.patient.LandingView'));	
 			this.landingView.getComponent('patientMainPanel').getComponent('_mainPanelContainer').setActiveItem('patient_dashboardView');
-			this.onDashBoardActivate();
+			//this.onDashBoardActivate();
+			this.myConsultDoctor.cunsultMyDoctor = false;
 		}
 
 	},
@@ -129,24 +136,28 @@ Ext.define('DoctorQuickMobile.controller.CommonController', {
         }
     },
 
-    onDashBoardActivate : function () {
-    	if (loginDetail && loginDetail.loginType === 'Doctor') {
-    		this.getDocBatchBtn().show();
-			this.getStatusNotificationBtn().show();
-		} else {
-			this.getGotoPatientDashBoardBtn().show();
-		}
+    onDocDashBoardActivate : function() {
+
+    	//alert("onDashBoardAct");
+    	this.getDocBatchBtn().show();
+		this.getStatusNotificationBtn().show();
     },
 
-    onDashBoardDeactivate : function () {
+    onDocDashBoardDeActivate : function() {
 
-    	if (loginDetail && loginDetail.loginType === 'Doctor') {
-    		this.getDocBatchBtn().hide();
-			this.getStatusNotificationBtn().hide();
-		} else {
-			this.getGotoPatientDashBoardBtn().hide();
-		}
+    	//alert("onDocDashBoardDeActivate");
+    	this.getDocBatchBtn().hide();
+		this.getStatusNotificationBtn().hide();
+    },
+
+    onPatientDashBoardActivate : function() {
+
+    	//alert("onPatientDashBoardActivate");
+    },
+
+    onPatientDashBoardDeActivate : function() {
+
+    	//alert("onPatientDashBoardDeActivate");
     }
-
 
 });

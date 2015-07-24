@@ -23,7 +23,10 @@ var docProfileData = {
 	membership : 'Not Available',
 	membershipNum : 456,
 	profilePicData : "",
-  online : true
+  online : true,
+  region : 'Bangalore',
+  sex : "Male",
+  age : 25
 };
 
 var patientProfileData = {

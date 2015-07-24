@@ -304,7 +304,51 @@ var doctor_templates = {
 				'	</div>'+
 				'   <img class="nextArrowIconCls" src="./resources/images/arrow_forward_white.png">'+
 				'</div>'
-			)	  
+			),
+
+	doctorCallScreenTpl : new Ext.XTemplate('{[this.setDetailsData(values)]}', {
+
+    	setDetailsData : function(data) {
+
+    		console.log("doctorCallScreenTpl >> "+data);
+
+    		var html = '<div>';
+
+    		html += '<div class="profilePicDivCls" style="text-align: center;display: -webkit-box;-webkit-box-pack: center;padding: 7% 0%;">'+
+		    			'<div class="docProfileCls"></div>'+
+					'</div>';
+
+    		html += '<div class="docDetailsDivCls">'+
+    					'<div class="textAlignCenter fontBold fontSizePoint8em colorWhite">Dr '+data.fName+' '+data.lName+'</div>'+
+    					'<div class="textAlignCenter colorWhite fontSizePoint6em" style="padding: 1% 0%;">'+data.sex+', Age '+data.age+'</div>'+
+    					'<div class="textAlignCenter colorWhite fontSizePoint6em">'+data.region+'</div>'+
+    				'</div>';
+
+    		var infoMsg = '<div class="callInfoMsg displayNone" id="callInfoMsg">Please don\'t move around much during conversation with the Patient to avoid Call Drop.</div>';
+    		var callEndedInfoMsg = '<div id="callEndedInfoDivId" class="padding5 colorWhite displayNone">'+
+    									'<div class="callEndedTextDivCls">Call Ended</div>'+
+    									'<div class="callInviteMsg colorBlack">If call ended unexpectedly please wiat for a callback</div>'+
+    								'</div>';
+
+    		var buttonsContainer =  '<div id="endConsultationBtnDivId" class="displayNone">'+
+										'<div class="width70 chargeBtnDivCls"><input type="button" class="notesBtnCls chargeBtnCls borderNone" value="End Consultation" onclick="DoctorQuickMobile.app.getController(\'doctor.DoctorMainPanelCtrl\').showNotesView()"></div>'+
+									'</div>';
+
+			html += infoMsg + callEndedInfoMsg + buttonsContainer;
+
+			var callOptions = '<div class="callOptionsParent">'+
+									'<div class="commonCallOptionCls videoInActiveCls"></div>'+
+									'<div class="commonCallOptionCls voiceInActiveCls"></div>'+
+									'<div class="commonCallOptionCls callEndActiveCls" onclick="DoctorQuickMobile.app.getController(\'doctor.DoctorMainPanelCtrl\').showCallEndedView()"></div>'+
+									'<div class="commonCallOptionCls flashInActiveCls"></div>'+
+									'<div class="commonCallOptionCls flipCameraInActiveCls"></div>'+
+							  '</div>';
+
+    		html += callOptions + '</div>';
+
+    		return html;
+       	}
+    }),	  
 
 			
 };

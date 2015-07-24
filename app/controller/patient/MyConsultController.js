@@ -32,6 +32,7 @@ Ext.define('DoctorQuickMobile.controller.patient.MyConsultController',{
 	showConsultationsView : function(){
 		this.getMainPanelContainer().setActiveItem('myConsultationView');
     	this.getMainPanelToolbarId().setTitle("My Consultation");
+    	this.cunsultMyDoctor = true;
 	},
 
 	showDoctorProfile : function (me, index, target, record, e, eOpts)  {
