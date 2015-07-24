@@ -66,6 +66,7 @@
     <link rel="stylesheet" type="text/css" href="resources/css/profileview.css">
     <link rel="stylesheet" type="text/css" href="resources/css/notesview.css">
     <link rel="stylesheet" type="text/css" href="resources/css/payment.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/paymentDetail.css">
     
     <!-- The line below must be kept intact for Sencha Command to build your application -->
     <!--  <script id="microloader" type="text/javascript" src=".sencha/app/microloader/development.js"></script> -->
@@ -141,7 +142,6 @@
    <script type="text/javascript" src="app/view/doctor/consultation/RequestDetailView.js"></script>
    <script type="text/javascript" src="app/view/doctor/wallet/AccountStatementView.js"></script>
    
-   
    <script type="text/javascript" src="app.js"></script>
    <script type="text/javascript">
 
@@ -170,6 +170,15 @@
         isMobile = true;
         //getting the details from the local database
         //and set the values
+        var data =  JSON.parse(localStorage.getItem('loginCredentials'));
+        if (data) {
+            loginDetail = {
+                loginType : data.loginType ? data.loginType : '', 
+                authtoken : data.authtoken ? data.authtoken : '', 
+                userId : data.userId ? data.userId : '', 
+                password : data.password ? data.password :'' 
+            };
+        }
     }
 
 

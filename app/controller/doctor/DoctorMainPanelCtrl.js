@@ -53,6 +53,9 @@ Ext.define('DoctorQuickMobile.controller.doctor.DoctorMainPanelCtrl',{
 
        $("#endConsultationBtnDivId").removeClass("displayNone");
        $("#endConsultationBtnDivId").addClass("displayBlock");
+
+       $("#endCallBtnId").removeClass("callEndActiveCls");
+       $("#endCallBtnId").addClass("callEndInActiveCls");
 	},
 
 	showNotesView : function() {

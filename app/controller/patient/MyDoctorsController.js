@@ -18,19 +18,17 @@ Ext.define('DoctorQuickMobile.controller.patient.MyDoctorsController',{
 	
 	init : function(){
 		this.commonController = DoctorQuickMobile.app.getController("CommonController");
+		this.myConsultDoctor = DoctorQuickMobile.app.getController("patient.MyConsultController");
 	},
 	
 	showMyDocsView : function(){
-		
-		/*if(!this.myDoctorsView){
-			this.myDoctorsView = Ext.create('DoctorQuickMobile.view.patient.other.MyDoctors'); 
+
+		if (this.myConsultDoctor.cunsultMyDoctor) {
+			this.myConsultDoctor.cunsultMyDoctor = false;
+			this.myConsultDoctor.showConsultationsView();
+			return true;
 		}
-
-		this.getGotoMyDoctorsBtn().hide();*/
-
 		this.getMainPanelToolbarId().setTitle("My Doctors");
-		//this.getMainPanelContainer().add(this.myDoctorsView);
-		// this.getMainPanelContainer().setActiveItem(this.myDoctorsView);
 		this.getMainPanelContainer().setActiveItem("myDoctorsView");
 	},
 

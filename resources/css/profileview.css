@@ -104,7 +104,7 @@
       -webkit-user-modify: read-write;
       -moz-user-modify: read-write;
       user-modify: read-write;
-      border: 1px solid;
+      border: 1px solid #D7CFCF;
       padding: 1%;
       -webkit-user-modify: read-write;
     }
@@ -154,7 +154,7 @@
 }
 
 .colorGreen {
-  color : green;
+  color : green !important;
 }
 
 .colorWhite {
@@ -216,6 +216,14 @@
 
 .doctorLandingViewCls .doctorMainPanelCls .mainPanelToolbarCls .x-title > .x-innerhtml {
   font-size : .8em;
+}
+
+.patientLandingViewCls .patientMainPanelCls .mainPanelToolbarCls .x-title > .x-innerhtml {
+  font-size: .8em;
+}
+
+.marginBottom {
+  margin-bottom : 3% !important;
 }
 
 /*************** Video Call Css **************/

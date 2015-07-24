@@ -50,7 +50,7 @@ Ext.define('DoctorQuickMobile.controller.doctor.SlideMenuController',{
 	
 	switchView : function(list, index, target, record){
 		
-		this.commonController.onDashBoardDeactivate();
+		//this.commonController.onDashBoardDeactivate();
 		this.slideMenuShow();
 		switch(record.data.id){
 		

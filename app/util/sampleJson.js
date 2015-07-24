@@ -39,7 +39,8 @@ var patientProfileData = {
 	email : 'JhonAbhraham@gmail.com',
 	mobile : '124359565546',
 	knowLaunguages : 'Marathi, English',
-	profilePicData : ""
+	profilePicData : "",
+  region : 'Bangalore'
 }
 
 var notesData = {
