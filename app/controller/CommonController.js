@@ -45,7 +45,6 @@ Ext.define('DoctorQuickMobile.controller.CommonController', {
 		*	Whenever application is launching.
 		*/
 		Ext.Viewport.removeAll();
-		//Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.patient.LandingView'));
 		
 		if (!loginDetail.authtoken) {
 			/*
