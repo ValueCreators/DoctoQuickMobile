@@ -157,6 +157,10 @@
   color : green;
 }
 
+.colorWhite {
+  color : #fff;
+}
+
 .callInviteMsg {
   font-size: .75em;
   padding: 5% 0%;
@@ -183,7 +187,7 @@
     border-radius: 2em;
     
     float: right;
-    margin: 0% 0% 0% -4%;
+    margin: 0% 0% 0% -18px;
 }
 
 .offlineColor {
@@ -192,4 +196,132 @@
 
 .onlineColor {
   background: #AFCA0B;
+}
+
+.displayNone {
+  display : none;
+}
+
+.displayBlock {
+  display : block;
+}
+
+.padding5 {
+  padding : 5%;
+}
+
+.borderNone {
+  border : none;
+}
+
+.doctorLandingViewCls .doctorMainPanelCls .mainPanelToolbarCls .x-title > .x-innerhtml {
+  font-size : .8em;
+}
+
+/*************** Video Call Css **************/
+
+.commonCallOptionCls {
+
+  background-position: 50% 50%;
+  height: 42px;
+  width: 42px;
+  float: left;
+}
+
+.videoInActiveCls {
+  background: url("../images/480x854/dq_button_video_camera_off_480x854.png");
+  background-repeat: no-repeat;
+  margin-right: 5%;
+}
+
+.videoActiveCls {
+  background: url("../images/480x854/dq_button_video_camera_on_480x854.png");
+  background-repeat: no-repeat;
+  margin-right: 5%;
+}
+
+.voiceInActiveCls {
+  background: url("../images/480x854/dq_button_video_mic_off_480x854.png");
+  background-repeat: no-repeat;
+  margin-right: 5%;
+}
+
+.voiceActiveCls {
+  background: url("../images/480x854/dq_button_video_mic_on_480x854.png");
+  background-repeat: no-repeat;
+  margin-right: 5%;
+}
+
+.callEndInActiveCls {
+  background: url("../images/480x854/dq_button_video_phone_off_480x854.png");
+  background-repeat: no-repeat;
+  margin-right: 5%;
+}
+
+.callEndActiveCls {
+  background: url("../images/480x854/dq_button_video_phone_on_480x854.png");
+  background-repeat: no-repeat;
+  margin-right: 5%;
+}
+
+.flashInActiveCls {
+  background: url("../images/480x854/dq_button_video_flash_off_480x854.png");
+  background-repeat: no-repeat;
+  margin-right: 5%;
+}
+
+.flashActiveCls {
+  background: url("../images/480x854/dq_button_video_flash_on_480x854.png");
+  background-repeat: no-repeat;
+  margin-right: 5%;
+}
+
+.flipCameraInActiveCls {
+  background: url("../images/480x854/dq_button_video_camera-reverse_off_480x854.png");
+  background-repeat: no-repeat;
+  /*margin-right: 5%;*/
+}
+
+.flipCameraActiveCls {
+  background: url("../images/480x854/dq_button_video_camera-reverse_on_480x854.png");
+  background-repeat: no-repeat;
+  /*margin-right: 5%;*/
+}
+
+.callOptionsParent {
+  width: 86%;
+  overflow: hidden;
+  margin: 7%;
+  position: absolute;
+  bottom: 2px;
+}
+
+.callInfoMsg {
+  margin: 5%;
+  /* border: 1px solid; */
+  border-radius: 1.5em;
+  padding: 6% 5%;
+  font-size: .75em;
+  color: white;
+  background: #20242d;
+}
+
+.videoCallViewPanelCls {
+  background: #737371;
+}
+
+.callEndedTextDivCls {
+  text-align: center;
+  font-size: 1.5em;
+  text-shadow: 1px 0px #fff;
+  margin-top: 4%;
+}
+
+.callInviteMsg {
+  font-size: .75em;
+  padding: 5% 0%;
+  text-align: center;
+  margin: 0% 15%;
+  color: #fff;
+  text-shadow: 0px 0px;
 }

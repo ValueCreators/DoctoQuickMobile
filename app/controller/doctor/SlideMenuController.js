@@ -58,8 +58,8 @@ Ext.define('DoctorQuickMobile.controller.doctor.SlideMenuController',{
 				DoctorQuickMobile.app.getController('doctor.ProfileController').showProfileView();
 				break;
 			case 'myConsultations' :
-				//this.myConsult_controller.showConsultationsView();
-				DoctorQuickMobile.app.getController('doctor.NotesController').showNotesView();
+				this.myConsult_controller.showConsultationsView();
+				//DoctorQuickMobile.app.getController('doctor.NotesController').showNotesView();
 				break;
 			case 'reviewApp' :
 				this.reviewApp_controller.launchAppStoreForReview();

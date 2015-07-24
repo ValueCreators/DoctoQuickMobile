@@ -49,7 +49,7 @@ Ext.define('DoctorQuickMobile.view.doctor.DashboardView', {
 			        	html : '<div>Request Pending</div>'
 			        }, {
 		            	xtype: 'list',
-		            	itemId : 'listId',
+		            	itemId : 'pendingRequestListId',
 		            	cls : 'patientReqListCls',
 		            	itemTpl : doctor_templates.requestPendingItemTpl,
 		            	data: [

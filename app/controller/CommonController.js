@@ -22,14 +22,17 @@ Ext.define('DoctorQuickMobile.controller.CommonController', {
 		refs : {
 			doctorDashBoardView : 'doctor_dashboardView',
 			docBatchBtn : 'doctor_mainPanel toolbar #batchBtnId',
-			statusNotificationBtn : 'doctor_mainPanel toolbar #statusNotificationId',
+			statusNotificationBtn : 'doctor_mainPanel toolbar container#statusNotificationId',
 			gotoPatientDashBoardBtn : 'patient_mainPanel toolbar button#gotoDashBoardBtn',
 			gotoDoctorDashBoardBtn : 'doctor_mainPanel toolbar button#gotoDashBoardBtn',									
 		},
 
 		control : {
 			gotoPatientDashBoardBtn : { tap : 'initializeView', scope : this },
-			gotoDoctorDashBoardBtn : { tap : 'initializeView', scope : this }
+			gotoDoctorDashBoardBtn : { tap : 'initializeView', scope : this },
+			'doctor_dashboardView' : { activate : 'onDocDashBoardActivate', deactivate : 'onDocDashBoardDeActivate', scope : this },
+			'patient_dashboardView' : { activate : 'onPatientDashBoardActivate', deactivate : 'onPatientDashBoardDeActivate', scope : this },
+
 		}
 
 	},
@@ -56,7 +59,7 @@ Ext.define('DoctorQuickMobile.controller.CommonController', {
 			//Doctor main View
 			this.landingView = Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.doctor.LandingView'));
 			this.landingView.getComponent('doctorMainPanel').getComponent('_mainPanelContainer').setActiveItem('doctor_dashboardView');
-			this.onDashBoardActivate(); 
+			//this.onDashBoardActivate(); 
 
 
 		} else if (loginDetail && loginDetail.loginType === 'Patient') {
@@ -137,7 +140,30 @@ Ext.define('DoctorQuickMobile.controller.CommonController', {
     onDashBoardDeactivate : function () {
     	this.getDocBatchBtn().hide();
 		this.getStatusNotificationBtn().hide();
-    }
+    },
 
+    onDocDashBoardActivate : function() {
+
+    	//alert("onDashBoardAct");
+    	this.getDocBatchBtn().show();
+		this.getStatusNotificationBtn().show();
+    },
+
+    onDocDashBoardDeActivate : function() {
+
+    	//alert("onDocDashBoardDeActivate");
+    	this.getDocBatchBtn().hide();
+		this.getStatusNotificationBtn().hide();
+    },
+
+    onPatientDashBoardActivate : function() {
+
+    	//alert("onPatientDashBoardActivate");
+    },
+
+    onPatientDashBoardDeActivate : function() {
+
+    	//alert("onPatientDashBoardDeActivate");
+    }
 
 });
