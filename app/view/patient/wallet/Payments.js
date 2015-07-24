@@ -27,6 +27,7 @@ Ext.define('DoctorQuickMobile.view.patient.wallet.Payments', {
     			cls: 'amountValueCls',
     			itemId: 'amountValueId',
     			placeHolder: '00.00',
+                clearIcon: false,
     			hidden : true
     		},
     		{
@@ -46,6 +47,7 @@ Ext.define('DoctorQuickMobile.view.patient.wallet.Payments', {
     		{
     			xtype: 'container',
     			cls: 'paymentBalls',
+                itemId: 'paymentBalId',
                 html: '<div>' + 
                         '<div class="label-cls">Balance</div>' +
                         '<div class="value-cls">$72.00</div>' +
@@ -55,6 +57,7 @@ Ext.define('DoctorQuickMobile.view.patient.wallet.Payments', {
     		{	
     			xtype : 'container',
     			cls : 'paymentsBtnCls clearfix',
+                itemId : 'paymentBtnId',
 				items : [
 					{
 						xtype : 'button',

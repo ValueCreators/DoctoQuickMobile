@@ -57,7 +57,8 @@ Ext.application({
         'doctor.DoctoRegController',
         
         'patient.PatientRegController',
-        'patient.SlideMenuController'
+        'patient.SlideMenuController',
+        'patient.PaymentsDetailController'
         
     ],
 
@@ -82,7 +83,9 @@ Ext.application({
         'patient.DashboardView',
         'patient.other.DoctorProfile',
         'patient.wallet.Payments',
-        'patient.other.MyDoctors'
+        'patient.other.MyDoctors',
+        'patient.wallet.PaymentDetails',
+        'patient.consultation.MyConsultation'
     ],
 
     icon: {

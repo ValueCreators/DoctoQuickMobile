@@ -28,6 +28,7 @@ Ext.define('DoctorQuickMobile.controller.patient.SlideMenuController',{
 		this.customerCare_controller = DoctorQuickMobile.app.getController('CustomerCareController');
 		this.payments_controller = DoctorQuickMobile.app.getController('patient.PaymentsController');
 		this.notif_controller = DoctorQuickMobile.app.getController('NotificationsController');
+		this.myConsultDoctor = DoctorQuickMobile.app.getController("patient.MyConsultController");
 	},
 	
 	
@@ -38,6 +39,7 @@ Ext.define('DoctorQuickMobile.controller.patient.SlideMenuController',{
 					
 		var me = this;
 		var mainEl = me.getMainPanel().element;
+		this.myConsultDoctor.cunsultMyDoctor = false;
 		
 		if (mainEl.hasCls('out')) {
 				
