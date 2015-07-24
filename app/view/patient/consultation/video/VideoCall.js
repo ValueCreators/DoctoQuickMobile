@@ -11,7 +11,7 @@ Ext.define('DoctorQuickMobile.view.patient.consultation.video.VideoCall', {
     				    scrollable : true,
     				    height : '100%',
     				    itemId : '_patientVideoCallView',
-			            tpl : doctor_templates.patientCallScreenTpl
+			            tpl : patient_templates.patientCallScreenTpl
 			        }
 			    ]
     		}

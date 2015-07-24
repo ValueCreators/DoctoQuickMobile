@@ -337,11 +337,11 @@ var doctor_templates = {
 			html += infoMsg + callEndedInfoMsg + buttonsContainer;
 
 			var callOptions = '<div class="callOptionsParent">'+
-									'<div class="commonCallOptionCls videoInActiveCls"></div>'+
-									'<div class="commonCallOptionCls voiceInActiveCls"></div>'+
-									'<div class="commonCallOptionCls callEndActiveCls" onclick="DoctorQuickMobile.app.getController(\'doctor.DoctorMainPanelCtrl\').showCallEndedView()"></div>'+
-									'<div class="commonCallOptionCls flashInActiveCls"></div>'+
-									'<div class="commonCallOptionCls flipCameraInActiveCls"></div>'+
+									'<div id="videoBtnId" class="commonCallOptionCls videoInActiveCls"></div>'+
+									'<div id="voiceBtnId" class="commonCallOptionCls voiceInActiveCls"></div>'+
+									'<div id="endCallBtnId" class="commonCallOptionCls callEndActiveCls" onclick="DoctorQuickMobile.app.getController(\'doctor.DoctorMainPanelCtrl\').showCallEndedView()"></div>'+
+									'<div id="flashBtnId" class="commonCallOptionCls flashInActiveCls"></div>'+
+									'<div id="flipCameraBtnId"class="commonCallOptionCls flipCameraInActiveCls"></div>'+
 							  '</div>';
 
     		html += callOptions + '</div>';
@@ -487,8 +487,8 @@ var patient_templates = {
 				infoMsg = '<div class="callInviteMsg colorBlack">Dr '+data.fName+ ' '+data.lName+' is Offline. You may request a consultation when back online by sending a notification.</div>';    			
     		}
     		var buttonsContainer =  '<div>'+
-										'<div class="width70 chargeBtnDivCls"><input type="button" class="notesBtnCls chargeBtnCls" value="Voice Call"></div>'+
-										'<div class="width70 noChargeBtnDivCls"><input type="button" class="notesBtnCls chargeBtnCls" value="Video Call"></div>'+
+										'<div class="width70 chargeBtnDivCls"><input type="button" class="notesBtnCls chargeBtnCls" value="Voice Call" onclick="DoctorQuickMobile.app.getController(\'patient.PatientMainController\').showVideoCallView()"></div>'+
+										'<div class="width70 noChargeBtnDivCls"><input type="button" class="notesBtnCls chargeBtnCls" value="Video Call" onclick="DoctorQuickMobile.app.getController(\'patient.PatientMainController\').showVideoCallView()"></div>'+
 										'<div class="width70 noChargeBtnDivCls"><input type="button" class="notesBtnCls btnBackgroundDecline" value="Decline"></div>'+
 									'</div>';
 
@@ -553,25 +553,25 @@ var patient_templates = {
     					'<div class="textAlignCenter colorWhite fontSizePoint6em">'+data.region+'</div>'+
     				'</div>';
 
-    		var infoMsg = '<div class="callInfoMsg displayNone" id="callInfoMsg">Please don\'t move around much during conversation with the Patient to avoid Call Drop.</div>';
+    		var infoMsg = '<div class="callInfoMsg displayNone" id="callInfoMsg">Please don\'t move around much during conversation with the Doctor to avoid Call Drop.</div>';
     		var callEndedInfoMsg = '<div id="callEndedInfoDivId" class="padding5 colorWhite displayNone">'+
     									'<div class="callEndedTextDivCls">Call Ended</div>'+
-    									'<div class="callInviteMsg colorBlack">If call ended unexpectedly please wiat for a callback</div>'+
+    									'<div class="callInviteMsg colorBlack">If call ended unexpectedly please callback</div>'+
     								'</div>';
 
     		var buttonsContainer =  '<div id="endConsultationBtnDivId" class="displayNone">'+
-										'<div class="width70 chargeBtnDivCls"><input type="button" class="notesBtnCls chargeBtnCls borderNone" value="End Consultation" onclick="DoctorQuickMobile.app.getController(\'doctor.DoctorMainPanelCtrl\').showNotesView()"></div>'+
-										'<div class="width70 chargeBtnDivCls"><input type="button" class="notesBtnCls chargeBtnCls borderNone" value="End Consultation" onclick="DoctorQuickMobile.app.getController(\'doctor.DoctorMainPanelCtrl\').showNotesView()"></div>'+
+										'<div class="width70 chargeBtnDivCls marginBottom"><input type="button" class="notesBtnCls chargeBtnCls borderNone" value="Call Back" onclick="DoctorQuickMobile.app.getController(\'patient.PatientMainController\').callBack()"></div>'+
+										'<div class="width70 chargeBtnDivCls"><input type="button" class="notesBtnCls chargeBtnCls borderNone" value="End Consultation" onclick="DoctorQuickMobile.app.getController(\'patient.PatientMainController\').endConsultation()"></div>'+
 									'</div>';
 
 			html += infoMsg + callEndedInfoMsg + buttonsContainer;
 
 			var callOptions = '<div class="callOptionsParent">'+
-									'<div class="commonCallOptionCls videoInActiveCls"></div>'+
-									'<div class="commonCallOptionCls voiceInActiveCls"></div>'+
-									'<div class="commonCallOptionCls callEndActiveCls" onclick="DoctorQuickMobile.app.getController(\'doctor.DoctorMainPanelCtrl\').showCallEndedView()"></div>'+
-									'<div class="commonCallOptionCls flashInActiveCls"></div>'+
-									'<div class="commonCallOptionCls flipCameraInActiveCls"></div>'+
+									'<div id="videoBtnId" class="commonCallOptionCls videoInActiveCls"></div>'+
+									'<div id="voiceBtnId" class="commonCallOptionCls voiceInActiveCls"></div>'+
+									'<div id="endCallBtnId" class="commonCallOptionCls callEndActiveCls" onclick="DoctorQuickMobile.app.getController(\'patient.PatientMainController\').showCallEndedView()"></div>'+
+									'<div id="flashBtnId" class="commonCallOptionCls flashInActiveCls"></div>'+
+									'<div id="flipCameraBtnId" class="commonCallOptionCls flipCameraInActiveCls"></div>'+
 							  '</div>';
 
     		html += callOptions + '</div>';

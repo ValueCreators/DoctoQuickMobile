@@ -50,6 +50,7 @@ Ext.application({
         'patient.MyDoctorsController',
         'patient.PaymentsController',
         'patient.ProfileController',
+        'patient.PatientMainController',
         
         'LoginController',
         'CommonController',
@@ -85,7 +86,8 @@ Ext.application({
         'patient.wallet.Payments',
         'patient.other.MyDoctors',
         'patient.wallet.PaymentDetails',
-        'patient.consultation.MyConsultation'
+        'patient.consultation.MyConsultation',
+        'patient.consultation.video.VideoCall'
     ],
 
     icon: {
