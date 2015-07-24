@@ -396,6 +396,24 @@ input.checkbox-cls {
 			}
 		}
 
+		.specialitiesViewCls{
+			.specialitiesListCls{
+				.specialityItemCls{
+
+					font-size: 13px;
+					.nameCls{
+						font-size: 15px;
+						font-weight: bold;
+					}
+					.descCls{
+						overflow: hidden;
+  						white-space: nowrap;
+  						text-overflow: ellipsis;
+					}
+				}
+			}
+		}
+
 		.myDoctorsListCls{
 			background: #E7E7E7;
 

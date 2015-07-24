@@ -301,6 +301,15 @@ input.checkbox-cls {
   font-family: UbuntuBold; }
   .patientLandingViewCls .patientMainPanelCls .mainPanelToolbarCls .x-title > .x-innerhtml {
     text-shadow: none !important; }
+.patientLandingViewCls .patientMainPanelCls .specialitiesViewCls .specialitiesListCls .specialityItemCls {
+  font-size: 13px; }
+  .patientLandingViewCls .patientMainPanelCls .specialitiesViewCls .specialitiesListCls .specialityItemCls .nameCls {
+    font-size: 15px;
+    font-weight: bold; }
+  .patientLandingViewCls .patientMainPanelCls .specialitiesViewCls .specialitiesListCls .specialityItemCls .descCls {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
 .patientLandingViewCls .patientMainPanelCls .myDoctorsListCls {
   background: #E7E7E7; }
   .patientLandingViewCls .patientMainPanelCls .myDoctorsListCls .x-list-item .x-innerhtml {

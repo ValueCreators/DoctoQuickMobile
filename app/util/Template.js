@@ -533,5 +533,11 @@ var patient_templates = {
     				return  '#AFCA0B';
     			return '#AF262D';
     		}
-    	})
+    	}),
+
+	specialityItemTpl : new Ext.XTemplate(
+		'<div class="specialityItemCls">'+
+		'	<div class="nameCls">{name}</div>'+
+		'	<div class="descCls">{desc}</div>'+
+		'</div>')
 }
