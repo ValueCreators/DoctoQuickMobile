@@ -9,28 +9,29 @@ Ext.define('DoctorQuickMobile.controller.doctor.ProfileController',{
 					doctorProfileContainer : 'doctorProfileScreen container#_doctorProfileContainer',
 					docProfileBackBtn : 'doctorProfileScreen toolbar button#closeDoctorProfile',
 					docProfileEditOrSubmitBtn : 'doctor_mainPanel toolbar button#editOrSubmitProfile',
-					gotoDashBoardBtn : 'doctor_mainPanel toolbar button#gotoDashBoardBtn'					
+					//gotoDoctorDashBoardBtn : 'doctor_mainPanel toolbar button#gotoDashBoardBtn'					
 				},
 				control : {
 					doctorProfileScreen : { activate : 'onProfileActivate', deactivate : 'onProfileDeactivate', scope : this },
 					docProfileBackBtn : { tap : 'closeDocProfileView', scope : this },
 					docProfileEditOrSubmitBtn : { tap : 'onDocProfileEditOrSave', scope : this },
-					gotoDashBoardBtn : { tap : 'gotoDashBoard', scope : this}
+					//gotoDashBoardBtn : { tap : 'gotoDashBoard', scope : this}
 				}
 	},
 	
 	init : function(){
 		this.docProfileView = null;
+		this.commonController = DoctorQuickMobile.app.getController("CommonController");
 	},
 
 	onProfileActivate : function() {
 		this.getDocProfileEditOrSubmitBtn().show();
-		this.getGotoDashBoardBtn().show();
+		this.commonController.getGotoDoctorDashBoardBtn().show();
 	},
 
 	onProfileDeactivate : function() {
 		this.getDocProfileEditOrSubmitBtn().hide();
-		this.getGotoDashBoardBtn().hide();
+		this.commonController.getGotoDoctorDashBoardBtn().hide();
 	},
 	
 	showProfileView : function(){

@@ -78,7 +78,7 @@ Ext.application({
         'patient.SlideMenu',
         'patient.profile.Profile',
         'patient.DashboardView',
-
+        'patient.other.DoctorProfile',
         'patient.wallet.Payments',
         'patient.other.MyDoctors'
     ],

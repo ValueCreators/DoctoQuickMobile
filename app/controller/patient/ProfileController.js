@@ -9,40 +9,37 @@ Ext.define('DoctorQuickMobile.controller.patient.ProfileController',{
 					patientProfileContainer : 'patientProfileScreen container#_doctorProfileContainer',
 					patientProfileBackBtn : 'patientProfileScreen toolbar button#closeDoctorProfile',
 					patientProfileEditOrSubmitBtn : 'patient_mainPanel toolbar button#editOrSubmitProfile',
-					gotoDashBoardBtn : 'patient_mainPanel toolbar button#gotoDashBoardBtn'					
+					//gotoDoctorDashBoardBtn : 'patient_mainPanel toolbar button#gotoDashBoardBtn',
+
+					docProfileContainer : 'doctorProfileView container#_doctorProfileViewContainer',					
 				},
 				control : {
 					patientProfileScreen : { activate : 'onProfileActivate', deactivate : 'onProfileDeactivate', scope : this },
 					patientProfileBackBtn : { tap : 'closeProfileView', scope : this },
 					patientProfileEditOrSubmitBtn : { tap : 'onEditOrSave', scope : this },
-					gotoDashBoardBtn : { tap : 'gotoDashBoard', scope : this}
+					//gotoDashBoardBtn : { tap : 'gotoDashBoard', scope : this}
 				}
 	},
 	
 	init : function(){
 		this.profileView = null;
+		this.commonController = DoctorQuickMobile.app.getController("CommonController");
 	},
 
 	onProfileActivate : function() {
 		this.getPatientProfileEditOrSubmitBtn().show();
-		this.getGotoDashBoardBtn().show();
+		this.commonController.getGotoPatientDashBoardBtn().show();
 	},
 
 	onProfileDeactivate : function() {
 		this.getPatientProfileEditOrSubmitBtn().hide();
-		this.getGotoDashBoardBtn().hide();
+		this.commonController.getGotoPatientDashBoardBtn().hide();
 	},
 
 	showProfileView : function(){
-		//alert('patient profile view');
+		
+       // this.getMainPanelContainer().setActiveItem('patientProfile');       
 
-		 /*if(!this.profileView) {
-            this.profileView = Ext.Viewport.add(Ext.create("DoctorQuickMobile.view.patient.profile.Profile"));
-        }
-        this.getPatientProfileContainer().setData(patientProfileData);
-        this.profileView.show();*/
-
-       // this.getMainPanelContainer().setActiveItem('patientProfile');
        this.getMainPanelContainer().setActiveItem('patientProfileScreen');
        this.getMainPanelToolbarId().setTitle("Profile");
        this.getPatientProfileContainer().setData(patientProfileData);
@@ -54,7 +51,7 @@ Ext.define('DoctorQuickMobile.controller.patient.ProfileController',{
     },
 
     onEditOrSave : function(btn, e, eOpts) {
-    	alert("OnEditOrSave");
+    	//alert("OnEditOrSave");
 
     	if(btn.getText() == "Edit") {
     		btn.setText("Save");

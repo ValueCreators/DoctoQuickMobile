@@ -7,7 +7,7 @@ Ext.define('DoctorQuickMobile.model.patient.DoctorModel', {
                  {name: 'lName', type: 'string'},
                  {name: 'rating', type: 'float'},
                  {name: 'no_of_reviews', type: 'int'},
-                 {name: 'practicingSinceYear', type: 'int'},
+                 {name: 'practiceSinceYear', type: 'int'},
                  {name: 'speciality', type: 'string'},
                  {name: 'degrees', type: 'string'},
                  {name: 'online', type: 'boolean'},
