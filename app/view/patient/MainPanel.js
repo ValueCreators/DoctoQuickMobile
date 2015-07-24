@@ -30,6 +30,24 @@ Ext.define('DoctorQuickMobile.view.patient.MainPanel', {
 										  	ui : 'plain',
 							    			hidden : true
 						        		},
+						        		{
+							    			xtype : 'button',
+							    			cls : 'loginBtnCls bgBtn1 reviewPanelToolBtnCls ',
+							    			itemId : 'paymentBackBtnId',
+							    			//text : 'Back',
+							    			iconCls : 'gotoDashBoardBtnCls',
+										  	ui : 'plain',
+							    			hidden : true
+						        		},
+						        		{
+							    			xtype : 'button',
+							    			cls : 'loginBtnCls bgBtn1 reviewPanelToolBtnCls ',
+							    			itemId : 'paymentDetailBackBtnId',
+							    			//text : 'Back',
+							    			iconCls : 'gotoDashBoardBtnCls',
+										  	ui : 'plain',
+							    			hidden : true
+						        		},
 				        	          {
 				        	        	  xtype : 'spacer'
 				        	          },{
@@ -74,6 +92,12 @@ Ext.define('DoctorQuickMobile.view.patient.MainPanel', {
 										},
 										{
 											xtype : 'doctorProfileView'
+										},
+										{
+											xtype : 'paymentDetailScreen'
+										},
+										{
+											xtype : 'myConsultationView'
 										}
 									]
 								}

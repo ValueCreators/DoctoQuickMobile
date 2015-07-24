@@ -97,8 +97,62 @@
 }
 
 
+/************************
+	My Consultation
+**************************/
 
+.myDoctorsConsListCls {
+	height: calc(100% - 20px);
+}
 
+.myDoctorsConsViewCls .doctor-list-cls {
+	font-size: 0.8em;
+}
+
+.myDoctorsConsViewCls .profile-pic {
+	float: left;
+}
+
+.myDoctorsConsViewCls .profile-pic img {
+	width: 40px;
+}
+
+.myDoctorsConsViewCls .contentViewCls {
+	float: left;
+    width: calc(100% - 40px);
+    padding: 0px 10px;
+}
+
+.myDoctorsConsViewCls .detail-cls {
+	font-weight: bold;
+}
+
+.myDoctorsConsViewCls .name-cls {
+	width: 73%;
+    float: left;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.myDoctorsConsViewCls .time-cls {
+	text-align: right;
+	line-height: 22px;
+	font-size: 0.8em;
+}
+
+.myDoctorsConsViewCls .amount-cls {
+	font-size: 0.8em;
+}
+
+.myDoctorsConsViewCls .onlineStatusCls {
+	position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    top: 5px;
+    left: 8px;
+    background-color: #5BA714;
+}
 
 
 

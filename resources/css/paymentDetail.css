@@ -1,0 +1,40 @@
+
+
+.paymentDetailContantCls {
+	font-size: 0.8em;
+	height: calc(100% - 190px);
+    margin-bottom: 15px;
+}
+
+.paymentDetailContantCls .cardTypeCls, .paymentDetailContantCls .postCodeCls, .paymentDetailContantCls .emailCls {
+	background-color: #ffffff;
+    margin: 10px;
+    line-height: 45px;
+}
+
+.paymentDetailContantCls .labelCls {
+	width: 40%;
+    float: left;
+    padding-left: 10px;
+}
+
+.paymentDetailContantCls .valueCls {
+	color: gray;
+}
+
+.paymentDetailContantCls .cardDetail, .paymentDetailContantCls .expCvc {
+	line-height: 25px;
+    background-color: #ffffff;
+    margin: 10px;
+}
+
+.doTopBtnCls {
+	width: 180px;
+	height: 40px;
+	border: 0px;
+	color: #ffffff;
+	border-radius: 3px;
+	background-image: none;
+	background-color: #5BAB00;
+	margin: 0px auto;
+}
