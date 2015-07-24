@@ -5,6 +5,7 @@ Ext.define('DoctorQuickMobile.controller.patient.SpecialityController',{
 				refs:{
 					mainPanelContainer : 'patient_mainPanel panel#_mainPanelContainer',
 					mainPanelToolbarId : 'patient_mainPanel toolbar#mainPanelToolbarId',
+					//todoVinay : Navigation pending
 					//specialityList : 'specialitiesView #specialitiesList'
 				},
 				control : {
