@@ -1,0 +1,109 @@
+/* ERROR POPUP STYLES */
+
+.errorPopUpContainerCls {
+      background: #AF383E;
+      overflow: hidden;
+      /*margin-top: 7%;*/
+      color : white;
+      /*padding: 2% 0% 5% 0%;*/
+    }
+    
+    .closeBtnCls {
+      background: url("../images/close.png") no-repeat center;
+      /*border: 1px solid red;*/
+      border-radius: 2em;
+      background-size: cover;
+      float: right;
+      height: 42px;
+      width: 42px;
+      display: block;
+      overflow: hidden;
+      right: 0px;
+      margin-right: 5%;
+      margin-top: -24px;
+      z-index: 10000;
+      position: absolute;
+    }
+
+.errorMsgCls{
+      float: left;
+      width: 100%;
+      /*margin-top: 24px;*/
+      /*padding-left : 11%;*/
+      font-size: .8em;
+      display: -webkit-box;
+      -webkit-box-align: center;
+      height: 100%;
+    }
+    
+    .message {
+      width: 100%;
+      float: left;
+      font-size: .65em;
+      padding: 2% 1% 5% 11%;
+    }
+
+    .error1 {
+      display: -webkit-box;
+      -webkit-box-align: center;
+      height: 100%;
+    }
+
+    .errorPopClass {
+      padding : 0 !important;
+      /*z-index : 6000;*/
+    }/* ERROR POPUP STYLES /
+
+.errorPopUpContainerCls {
+      background: #AF383E;
+      overflow: hidden;
+      /*margin-top: 7%;*/
+      color : white;
+      /*padding: 2% 0% 5% 0%;*/
+    }
+    
+    .closeBtnCls {
+      background: url("../images/close.png") no-repeat center;
+      /*border: 1px solid red;*/
+      border-radius: 2em;
+      background-size: cover;
+      float: right;
+      height: 42px;
+      width: 42px;
+      display: block;
+      overflow: hidden;
+      right: 0px;
+      margin-right: 5%;
+      margin-top: -24px;
+      z-index: 10000;
+      position: absolute;
+    }
+
+.errorMsgCls{
+      float: left;
+      width: 100%;
+      /*margin-top: 24px;*/
+      /*padding-left : 11%;*/
+      font-size: .8em;
+      display: -webkit-box;
+      -webkit-box-align: center;
+      height: 100%;
+    }
+    
+    .message {
+      width: 100%;
+      float: left;
+      font-size: .65em;
+      padding: 2% 1% 5% 11%;
+    }
+
+    .error1 {
+      display: -webkit-box;
+      -webkit-box-align: center;
+      height: 100%;
+    }
+
+    .errorPopClass {
+      padding : 0 !important;
+      /*z-index : 6000;*/
+    }

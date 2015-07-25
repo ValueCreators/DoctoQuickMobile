@@ -12,17 +12,17 @@
  	config: {
  		
  		items : [
- 			{
- 				xtype: 'toolbar',
- 				docked: 'top',
- 				items : {
- 					xtype: 'button',
- 					text: 'Back',
- 					itemId: 'back-btn-Id2',
- 					cls: 'back-btn-cls',
- 					iconCls: 'back-btn-icon-cls'
- 				}
- 			},
+ 			// {
+ 			// 	xtype: 'toolbar',
+ 			// 	docked: 'top',
+ 			// 	items : {
+ 			// 		xtype: 'button',
+ 			// 		text: 'Back',
+ 			// 		itemId: 'back-btn-Id2',
+ 			// 		cls: 'back-btn-cls',
+ 			// 		iconCls: 'back-btn-icon-cls'
+ 			// 	}
+ 			// },
  			{
     		
 	    		xtype : 'container',

@@ -52,7 +52,7 @@ Ext.application({
         'patient.ProfileController',
 
         'patient.SpecialityController',
-        'patient.SearchDocController',
+        //'patient.SearchDocController',
         'patient.PatientMainController',
         
         'LoginController',
@@ -70,6 +70,7 @@ Ext.application({
 
         'common.LoginView',
         'common.CustomerCareView',
+        'common.ErrorPopUp',
 
         'doctor.LandingView',
         'doctor.DashboardView',

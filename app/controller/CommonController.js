@@ -136,6 +136,26 @@ Ext.define('DoctorQuickMobile.controller.CommonController', {
         }
     },
 
+    closeErrorPopUp : function() {
+        this.errorPopUpOverlay.destroy();
+        this.errorPopUpOverlay = null;
+    },
+
+    /*********** Show Popup /******************/
+	showErrorPopUp : function(errorMsg, showInstructionMsg) {
+		if(!this.errorPopUpOverlay) {
+			this.errorPopUpOverlay = Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.common.ErrorPopUp'));
+		}
+
+		if(showInstructionMsg) {
+			document.getElementById("instructionMsgId").style.display = "block";
+		} else {
+			document.getElementById("instructionMsgId").style.display = "none";
+			document.getElementById("errorMsgDivId").innerHTML = errorMsg;
+			this.errorPopUpOverlay.show();
+		}
+	},
+
     onDocDashBoardActivate : function() {
 
     	//alert("onDashBoardAct");
