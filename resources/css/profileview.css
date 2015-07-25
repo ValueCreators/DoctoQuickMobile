@@ -231,77 +231,89 @@
 .commonCallOptionCls {
 
   background-position: 50% 50%;
-  height: 42px;
-  width: 42px;
-  float: left;
+  height: 50px;
+  width: 50px;
+  //float: left;
+  margin : 0 4% 0% 0%;
+  display : inline-block;
 }
 
 .videoInActiveCls {
   background: url("../images/480x854/dq_button_video_camera_off_480x854.png");
   background-repeat: no-repeat;
-  margin-right: 5%;
+  background-size: cover;
+ /* margin-right: 5%;*/
 }
 
 .videoActiveCls {
   background: url("../images/480x854/dq_button_video_camera_on_480x854.png");
   background-repeat: no-repeat;
-  margin-right: 5%;
+  background-size: cover;
+  /* margin-right: 5%;*/
 }
 
 .voiceInActiveCls {
   background: url("../images/480x854/dq_button_video_mic_off_480x854.png");
   background-repeat: no-repeat;
-  margin-right: 5%;
+  background-size: cover;
+  /* margin-right: 5%;*/
 }
 
 .voiceActiveCls {
   background: url("../images/480x854/dq_button_video_mic_on_480x854.png");
   background-repeat: no-repeat;
-  margin-right: 5%;
+  background-size: cover;
+  /* margin-right: 5%;*/
 }
 
 .callEndInActiveCls {
   background: url("../images/480x854/dq_button_video_phone_off_480x854.png");
   background-repeat: no-repeat;
-  margin-right: 5%;
+  background-size: cover;
+  /* margin-right: 5%;*/
 }
 
 .callEndActiveCls {
   background: url("../images/480x854/dq_button_video_phone_on_480x854.png");
   background-repeat: no-repeat;
-  margin-right: 5%;
+  background-size: cover;
+  /* margin-right: 5%;*/
 }
 
 .flashInActiveCls {
   background: url("../images/480x854/dq_button_video_flash_off_480x854.png");
   background-repeat: no-repeat;
-  margin-right: 5%;
+  background-size: cover;
+  /* margin-right: 5%;*/
 }
 
 .flashActiveCls {
   background: url("../images/480x854/dq_button_video_flash_on_480x854.png");
   background-repeat: no-repeat;
+  background-size: cover;
   margin-right: 5%;
 }
 
 .flipCameraInActiveCls {
   background: url("../images/480x854/dq_button_video_camera-reverse_off_480x854.png");
   background-repeat: no-repeat;
+  background-size: cover;
   /*margin-right: 5%;*/
 }
 
 .flipCameraActiveCls {
   background: url("../images/480x854/dq_button_video_camera-reverse_on_480x854.png");
   background-repeat: no-repeat;
+  background-size: cover;
   /*margin-right: 5%;*/
 }
 
 .callOptionsParent {
-  width: 86%;
+  width: 100%;
   overflow: hidden;
-  margin: 7%;
   position: absolute;
   bottom: 2px;
+  text-align: center;
 }
 
 .callInfoMsg {
