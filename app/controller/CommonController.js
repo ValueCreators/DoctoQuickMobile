@@ -132,7 +132,9 @@ Ext.define('DoctorQuickMobile.controller.CommonController', {
             var data = JSON.stringify(loginDetail);
             localStorage.setItem('loginCredentials',data);
         } else {
-            //setting these values in the local database in the mobile
+            //TODO:setting these values in the local database in the mobile
+            var data = JSON.stringify(loginDetail);
+            localStorage.setItem('loginCredentials',data);
         }
     },
 

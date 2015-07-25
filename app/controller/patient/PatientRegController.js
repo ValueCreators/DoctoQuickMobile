@@ -123,6 +123,12 @@ Ext.define('DoctorQuickMobile.controller.patient.PatientRegController', {
 
 	confirmVerificationCode : function () {
 		console.log('confirm otp and do login');
+		//confirm otp and do login
+		this.loginResData = data;
+        loginDetail.authtoken = data; //Please update this value after getting proper response
+        this.commonController.storingLoginCredentials();
+        //add userId and password to the config data
+        this.commonController.initializeView();
 	},
 
 	goBack : function () {
