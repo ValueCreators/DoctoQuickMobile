@@ -52,7 +52,7 @@ Ext.application({
         'patient.ProfileController',
 
         'patient.SpecialityController',
-        //'patient.SearchDocController',
+        'patient.SearchDocController',
         'patient.PatientMainController',
         
         'LoginController',
