@@ -21,16 +21,27 @@ Ext.define('DoctorQuickMobile.controller.patient.SearchDocController',{
 					clearBtn : { tap : 'doClear', scope : this},
 					searchBtn : { tap : 'doSearchByCategory', scope : this},
 					'searchDoctorsView #searchResultsView #docSearchList' : { itemtap : "onDoctorSelect", scope : this },
+					'searchDoctorsView' : { activate : 'onSearchDocsActivate', deactivate : 'onSearchDocsDeActivate', scope : this },
 				}
 	},
 	
 	init : function(){
 		this.slideMenuController = DoctorQuickMobile.app.getController("patient.SlideMenuController");
+		this.commonController = DoctorQuickMobile.app.getController("CommonController");
 	},
 	showSearchDocView : function(){
 		
 		this.getMainPanelContainer().setActiveItem('searchDoctorsView');
        	this.getMainPanelToolbarId().setTitle("Search All Doctors");
+	},
+	onSearchDocsActivate : function() {
+
+		this.commonController.getGotoPatientDashBoardBtn().show();
+	},
+
+	onSearchDocsDeActivate : function() {
+
+		this.commonController.getGotoPatientDashBoardBtn().hide();
 	},
 	categoryListTapHandler : function(me, index, target, record, e, eOpts ){
 		
@@ -56,5 +67,5 @@ Ext.define('DoctorQuickMobile.controller.patient.SearchDocController',{
 	},
 	doSearchByCategory : function(){
 		this.getSearchDoctorsView().setActiveItem(1);
-	}
+	},
 });
