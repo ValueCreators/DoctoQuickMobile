@@ -2,11 +2,18 @@
 	border-radius: 0px;
 }
 
+.learnMoreBtnCls{
+	width: 40%;
+}
+
+.registerDocBtnCls{
+	width: 55%;
+}
+
 .learnMoreBtnCls, .registerDocBtnCls {
 	background-image: none !important;
 	background-color: transparent !important;
 	border: none;
-    width: 50%;
     color: #ffffff;
 }
 
