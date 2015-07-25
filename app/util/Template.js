@@ -314,7 +314,7 @@ var doctor_templates = {
 
     		var html = '<div>';
 
-    		html += '<div class="profilePicDivCls" style="text-align: center;display: -webkit-box;-webkit-box-pack: center;padding: 7% 0%;">'+
+    		html += '<div class="profilePicDivCls" style="text-align: center;display: -webkit-box;-webkit-box-pack: center;padding: 20px 0%;">'+
 		    			'<div class="docProfileCls"></div>'+
 					'</div>';
 
