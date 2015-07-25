@@ -7,7 +7,11 @@ Ext.define('DoctorQuickMobile.controller.patient.MyConsultController',{
 					mainPanelContainer : 'patient_mainPanel panel#_mainPanelContainer',
 					mainPanelToolbarId : 'patient_mainPanel toolbar#mainPanelToolbarId',
 					gotoDashBoardBtn : 'patient_mainPanel toolbar button#gotoDashBoardBtn',
-					docProfileContainer : 'doctorProfileView container#_doctorProfileViewContainer',	
+
+					docProfileContainer : 'doctorProfileView container#_doctorProfileViewContainer',
+					docMainPanel : 'doctor_mainPanel panel#_mainPanelContainer',
+					docMainPanelToolbarId : 'doctor_mainPanel toolbar#mainPanelToolbarId',
+					gotoDocDashBoardBtn : 'doctor_mainPanel toolbar button#gotoDashBoardBtn'
 				},
 				control : {
 					myConsultationScreen : { activate : 'onConsultationActivate', deactivate : 'onConsultationDeactivate', scope : this },			
@@ -20,19 +24,33 @@ Ext.define('DoctorQuickMobile.controller.patient.MyConsultController',{
 	},
 
 	onConsultationActivate : function () {
-		this.getGotoDashBoardBtn().show();
+		if (loginDetail.loginType == 'Doctor') {
+			this.getGotoDocDashBoardBtn().show();
+		} else {
+			this.getGotoDashBoardBtn().show();
+		}
 	},
 
 
 	onConsultationDeactivate : function () {
-		this.getGotoDashBoardBtn().hide();
+		if (loginDetail.loginType == 'Doctor') {
+			this.getGotoDocDashBoardBtn().hide();
+		} else {
+			this.getGotoDashBoardBtn().hide();
+		}
 	},
 
 	
 	showConsultationsView : function(){
-		this.getMainPanelContainer().setActiveItem('myConsultationView');
-    	this.getMainPanelToolbarId().setTitle("My Consultation");
-    	this.cunsultMyDoctor = true;
+
+		if (loginDetail.loginType == 'Doctor') {
+			this.getDocMainPanel().setActiveItem('myConsultationView');
+    		this.getDocMainPanelToolbarId().setTitle("My Consultation");
+		} else {
+			this.getMainPanelContainer().setActiveItem('myConsultationView');
+    		this.getMainPanelToolbarId().setTitle("My Consultation");
+    		this.cunsultMyDoctor = true;
+    	}
 	},
 
 	showDoctorProfile : function (me, index, target, record, e, eOpts)  {

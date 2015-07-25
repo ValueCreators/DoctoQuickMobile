@@ -8,11 +8,12 @@ Ext.define('DoctorQuickMobile.view.doctor.consultation.RequestDetailView', {
 	config : {
 		items : {
 			xtype: 'panel',
+			 scrollable: true,
 			itemId : 'requestDetailViewId',
             cls : 'requestDetailViewCls height100',
             html : '<div class="patientRequestDetails">'+
             			'<div class="patientProfilePic">'+
-            				'<img src="./resources/images/dq_icon_small_mydoctors.png" />'+
+            				'<img src="./resources/images/dq_registration_background.png" />'+
             			'</div>'+
             			'<div class="nameContent">'+
             				'<span>FirstName LastName</span>' +
@@ -33,7 +34,7 @@ Ext.define('DoctorQuickMobile.view.doctor.consultation.RequestDetailView', {
 	            					'<img class="declineImgCls" src="./resources/images/dq_request_decline_off.png" />'+
 	            					'<p>Decline</p>'+
 	            				'</div>'+
-	            				'<div class="acceptBtnCls">'+
+	            				'<div class="acceptBtnCls" onclick="DoctorQuickMobile.app.getController(\'doctor.DoctorMainPanelCtrl\').showCallView()">'+
 	            					'<img class="acceptImgCls" src="./resources/images/dq_request_accept_up.png" />'+
 	            					'<p>Accept</p>'+
 	            				'</div>'+

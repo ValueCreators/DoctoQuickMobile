@@ -80,6 +80,7 @@ Ext.application({
         'doctor.profile.Profile',
         'doctor.notes.NotesMain',
         'doctor.consultation.video.VideoCall',
+        'doctor.consultation.RequestDetailView',
         
         'patient.registration.PatientRegMainView',
         'patient.LandingView',
