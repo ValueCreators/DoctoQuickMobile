@@ -6,11 +6,13 @@ Ext.define('DoctorQuickMobile.controller.patient.SpecialityController',{
 					mainPanelContainer : 'patient_mainPanel panel#_mainPanelContainer',
 					mainPanelToolbarId : 'patient_mainPanel toolbar#mainPanelToolbarId',
 					//todoVinay : Navigation pending
-					//specialityList : 'specialitiesView #specialitiesList'
+					specialityList : 'specialitiesView #specialitiesList',
+					medicalSpecialityView : 'medicalSpecialityView'
 				},
 				control : {
 					'specialitiesView' : { activate : 'onSpecialitiesActivate', deactivate : 'onSpecialitiesDeActivate', scope : this },
-					//specialityList : {itemtap : 'onSpecialitySelect', scope : this }	
+					medicalSpecialityView : { activate : 'onMedSpecActivate', deactivate : 'onMedSpecDeActivate', scope : this },
+					specialityList : {itemtap : 'onSpecialitySelect', scope : this }	
 				}
 	},
 	
@@ -33,10 +35,20 @@ Ext.define('DoctorQuickMobile.controller.patient.SpecialityController',{
 		this.commonController.getGotoPatientDashBoardBtn().hide();
 	},
 	
-//	onSpecialitySelect : function(me, index, target, record, e, eOpts ) {
-//
-//	   	this.getMainPanelContainer().setActiveItem('doctorProfileView');
-//       	this.getMainPanelToolbarId().setTitle("Doctor Profile");
-//       	this.getDocProfileContainer().setData(record.getData());
-//	}
+	onMedSpecActivate : function() {
+
+		this.commonController.getGotoPatientDashBoardBtn().show();
+	},
+
+	onMedSpecDeActivate : function() {
+
+		this.commonController.getGotoPatientDashBoardBtn().hide();
+	},
+	
+	onSpecialitySelect : function(list, index, target, record, e, eOpts ){
+
+	   	this.getMainPanelContainer().setActiveItem('medicalSpecialityView');
+       	this.getMainPanelToolbarId().setTitle("Medical Speciality");
+       	this.getMedicalSpecialityView().setData(record.getData());
+	}
 });

@@ -301,6 +301,45 @@ input.checkbox-cls {
   font-family: UbuntuBold; }
   .patientLandingViewCls .patientMainPanelCls .mainPanelToolbarCls .x-title > .x-innerhtml {
     text-shadow: none !important; }
+.patientLandingViewCls .patientMainPanelCls .medicalSpecialityViewCls .wrapperCls {
+  padding: 20px; }
+  .patientLandingViewCls .patientMainPanelCls .medicalSpecialityViewCls .wrapperCls .specialityTitleCls {
+    overflow: auto;
+    margin-bottom: 30px; }
+    .patientLandingViewCls .patientMainPanelCls .medicalSpecialityViewCls .wrapperCls .specialityTitleCls .imgCls {
+      float: left; }
+      .patientLandingViewCls .patientMainPanelCls .medicalSpecialityViewCls .wrapperCls .specialityTitleCls .imgCls img {
+        height: 40px;
+        width: 40px; }
+    .patientLandingViewCls .patientMainPanelCls .medicalSpecialityViewCls .wrapperCls .specialityTitleCls .nameCls {
+      float: left;
+      font-size: 14px;
+      margin-left: 10px; }
+      .patientLandingViewCls .patientMainPanelCls .medicalSpecialityViewCls .wrapperCls .specialityTitleCls .nameCls div:first-child {
+        font-size: 16px;
+        font-weight: bold; }
+  .patientLandingViewCls .patientMainPanelCls .medicalSpecialityViewCls .wrapperCls .descCls {
+    font-size: 15px;
+    margin-bottom: 30px; }
+  .patientLandingViewCls .patientMainPanelCls .medicalSpecialityViewCls .wrapperCls .onlineCountCls {
+    padding: 10px 15px;
+    background: white;
+    border: 1px solid #cecece;
+    font-size: 15px;
+    margin-bottom: 30px; }
+  .patientLandingViewCls .patientMainPanelCls .medicalSpecialityViewCls .wrapperCls .infoCls {
+    font-size: 16px;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px; }
+  .patientLandingViewCls .patientMainPanelCls .medicalSpecialityViewCls .wrapperCls .buttonConatinerCls {
+    text-align: center; }
+    .patientLandingViewCls .patientMainPanelCls .medicalSpecialityViewCls .wrapperCls .buttonConatinerCls input {
+      padding: 10px;
+      width: 70%;
+      background-color: #6fa02d;
+      color: white; }
 .patientLandingViewCls .patientMainPanelCls .searchDoctorsViewCls .searchResultsViewCls .docName_searchFieldCls {
   border-bottom: 1px solid gray; }
 .patientLandingViewCls .patientMainPanelCls .searchDoctorsViewCls .searchResultsViewCls .docSearchListCls {

@@ -93,6 +93,7 @@ Ext.application({
         
         'patient.other.MyDoctors',
 		'patient.other.Specialities',
+		'patient.other.MedicalSpeciality',
 		'patient.other.SearchDoctors',
 		
         'patient.wallet.PaymentDetails',

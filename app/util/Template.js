@@ -584,6 +584,37 @@ var patient_templates = {
 
     		return html;
        	}
+    }),
+    
+    medicalSpecialityTpl : new Ext.XTemplate('{[this.setDetailsData(values)]}', {
+    	
+    	setDetailsData : function(data) {
+    		
+    		 var html = '    <div class="wrapperCls">'+
+				        '    <div class="specialityTitleCls">'+
+				        '        <div class="imgCls">'+
+				        '            <img src="./resources/images/icon_specialities.png"/>'+
+				        '        </div>'+
+				        '        <div class="nameCls">'+
+				        '            <div>Dermatology</div>'+
+				        '            <div>Lorem ipsum sdbjfnjks d  dsj</div>'+
+				        '        </div>'+
+				        '    </div>'+
+				        '    <div class="descCls">'+
+				        '        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore'+ 
+				        '    </div>'+
+				        '    <div class="onlineCountCls">'+
+				        '        Online Doctors <span style="float:right">25</span>'+
+				        '    </div>'+
+				        '    <div class="infoCls">'+
+				        '       Send a request for a consultation to all Dermatology Specialists that are online.'+
+				        '    </div>'+
+				        '    <div class="buttonConatinerCls">'+
+				        '       <input type="button" value="Send Request"/>'+
+				        '    </div>'+
+				        '</div>';
+    		return html;
+    	}
     })
 
 }
