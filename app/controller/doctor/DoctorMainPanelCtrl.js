@@ -33,12 +33,16 @@ Ext.define('DoctorQuickMobile.controller.doctor.DoctorMainPanelCtrl',{
 
 		//alert("onPendingReqTap >> ");
 
-	   this.getMainPanelContainer().setActiveItem('videoCallView');
-       this.getMainPanelToolbarId().setTitle("Call");
-       this.getDoctorProfileContainer().setData(docProfileData);
+		this.getMainPanelContainer().setActiveItem('doctor_request_detail_view');
+	},
 
-       $("#callInfoMsg").removeClass("displayNone");
-       $("#callInfoMsg").addClass("displayBlock");
+	showCallView : function () {
+		this.getMainPanelContainer().setActiveItem('videoCallView');
+		this.getMainPanelToolbarId().setTitle("Call");
+		this.getDoctorProfileContainer().setData(docProfileData);
+
+		$("#callInfoMsg").removeClass("displayNone");
+		$("#callInfoMsg").addClass("displayBlock");
 	},
 
 	showCallEndedView : function() {

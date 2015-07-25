@@ -92,6 +92,11 @@ Ext.define('DoctorQuickMobile.controller.patient.PatientRegController', {
 	patientRegistrationSuccessCb : function (data) {
 
 		console.log('after success call back',data);
+		if (data.result && data.result.is_found) {
+			console.log('already registered');
+			this.commonController.showErrorPopUp('Mobile number already registered');
+			return true;
+		}
 		this.patientResponseData = data;
 
 		/*	Setting login type whether he is patient or doctor
@@ -118,6 +123,12 @@ Ext.define('DoctorQuickMobile.controller.patient.PatientRegController', {
 
 	confirmVerificationCode : function () {
 		console.log('confirm otp and do login');
+		//confirm otp and do login
+		this.loginResData = data;
+        loginDetail.authtoken = data; //Please update this value after getting proper response
+        this.commonController.storingLoginCredentials();
+        //add userId and password to the config data
+        this.commonController.initializeView();
 	},
 
 	goBack : function () {
@@ -125,9 +136,9 @@ Ext.define('DoctorQuickMobile.controller.patient.PatientRegController', {
 		var activeItemId = this.getPatientRegMainView().getActiveItem().getItemId();
 		console.log('active item id is-->',activeItemId);
 		if (activeItemId === 'patientRegistration_2') {
-			this.patientRegMainView().setActiveItem(0);
+			this.getPatientRegMainView().setActiveItem(0);
 		} else if (activeItemId === 'patientRegistration_3') {
-			this.patientRegMainView().setActiveItem(1);
+			this.getPatientRegMainView().setActiveItem(1);
 		}	
 	}
 

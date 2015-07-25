@@ -27,6 +27,9 @@ Ext.define('DoctorQuickMobile.controller.doctor.SlideMenuController',{
 		this.accStatement_controller = DoctorQuickMobile.app.getController('doctor.AccStatementController');
 		this.notif_controller = DoctorQuickMobile.app.getController('NotificationsController');
 		this.commonController = DoctorQuickMobile.app.getController('CommonController');
+
+		//my consultation did for patient
+		this.myConsultDoctor = DoctorQuickMobile.app.getController("patient.MyConsultController");
 	},
 	
 	/**
@@ -58,8 +61,9 @@ Ext.define('DoctorQuickMobile.controller.doctor.SlideMenuController',{
 				DoctorQuickMobile.app.getController('doctor.ProfileController').showProfileView();
 				break;
 			case 'myConsultations' :
-				this.myConsult_controller.showConsultationsView();
+				//this.myConsult_controller.showConsultationsView();
 				//DoctorQuickMobile.app.getController('doctor.NotesController').showNotesView();
+				this.myConsultDoctor.showConsultationsView();
 				break;
 			case 'reviewApp' :
 				this.reviewApp_controller.launchAppStoreForReview();

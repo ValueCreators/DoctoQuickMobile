@@ -138,9 +138,31 @@ Ext.define('DoctorQuickMobile.controller.CommonController', {
             var data = JSON.stringify(loginDetail);
             localStorage.setItem('loginCredentials',data);
         } else {
-            //setting these values in the local database in the mobile
+            //TODO:setting these values in the local database in the mobile
+            var data = JSON.stringify(loginDetail);
+            localStorage.setItem('loginCredentials',data);
         }
     },
+
+    closeErrorPopUp : function() {
+        this.errorPopUpOverlay.destroy();
+        this.errorPopUpOverlay = null;
+    },
+
+    /*********** Show Popup /******************/
+	showErrorPopUp : function(errorMsg, showInstructionMsg) {
+		if(!this.errorPopUpOverlay) {
+			this.errorPopUpOverlay = Ext.Viewport.add(Ext.create('DoctorQuickMobile.view.common.ErrorPopUp'));
+		}
+
+		if(showInstructionMsg) {
+			document.getElementById("instructionMsgId").style.display = "block";
+		} else {
+			document.getElementById("instructionMsgId").style.display = "none";
+			document.getElementById("errorMsgDivId").innerHTML = errorMsg;
+			this.errorPopUpOverlay.show();
+		}
+	},
 
     onDocDashBoardActivate : function() {
 

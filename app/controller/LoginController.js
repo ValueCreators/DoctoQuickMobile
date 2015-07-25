@@ -78,6 +78,11 @@ Ext.define('DoctorQuickMobile.controller.LoginController', {
 
     loginSuccessCb : function (data) {
         console.log('login success');
+
+        // if (data.status) {
+
+        //     return true;
+        // }
         this.loginResData = data;
         loginDetail.authtoken = data; //Please update this value after getting proper response
         this.commonController.storingLoginCredentials();
@@ -87,10 +92,10 @@ Ext.define('DoctorQuickMobile.controller.LoginController', {
     },
 
     loginFailureCb : function () {
-        loginDetail.authtoken = 'test'; ///no internet conn please remove it
-        this.commonController.storingLoginCredentials();
+        //loginDetail.authtoken = 'test'; ///no internet conn please remove it
+        //this.commonController.storingLoginCredentials();
         //add userId and password to the config data
-        this.commonController.initializeView();
+        //this.commonController.initializeView();
         console.log('login fails');
     }
     
