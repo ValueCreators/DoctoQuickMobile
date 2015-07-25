@@ -94,6 +94,9 @@ Ext.define('DoctorQuickMobile.view.patient.MainPanel', {
 											xtype : 'specialitiesView'
 										},
 										{
+											xtype : 'searchDoctorsView'
+										},
+										{
 											xtype : 'doctorProfileView'
 										},
 										{

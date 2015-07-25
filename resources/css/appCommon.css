@@ -301,6 +301,50 @@ input.checkbox-cls {
   font-family: UbuntuBold; }
   .patientLandingViewCls .patientMainPanelCls .mainPanelToolbarCls .x-title > .x-innerhtml {
     text-shadow: none !important; }
+.patientLandingViewCls .patientMainPanelCls .searchDoctorsViewCls .searchResultsViewCls .docName_searchFieldCls {
+  border-bottom: 1px solid gray; }
+.patientLandingViewCls .patientMainPanelCls .searchDoctorsViewCls .searchResultsViewCls .docSearchListCls {
+  height: 100%; }
+  .patientLandingViewCls .patientMainPanelCls .searchDoctorsViewCls .searchResultsViewCls .docSearchListCls .x-list-item .x-innerhtml {
+    padding: 0px; }
+.patientLandingViewCls .patientMainPanelCls .searchDoctorsViewCls .searchFormCls {
+  background: #E7E7E7; }
+  .patientLandingViewCls .patientMainPanelCls .searchDoctorsViewCls .searchFormCls .nameSearchBtnCls, .patientLandingViewCls .patientMainPanelCls .searchDoctorsViewCls .searchFormCls .categorySearchBtnCls {
+    background: none;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid #C2C2C2;
+    border-top: 1px solid #fff;
+    height: 40px; }
+    .patientLandingViewCls .patientMainPanelCls .searchDoctorsViewCls .searchFormCls .nameSearchBtnCls .x-button-label, .patientLandingViewCls .patientMainPanelCls .searchDoctorsViewCls .searchFormCls .categorySearchBtnCls .x-button-label {
+      text-align: left; }
+      .patientLandingViewCls .patientMainPanelCls .searchDoctorsViewCls .searchFormCls .nameSearchBtnCls .x-button-label span:first-child, .patientLandingViewCls .patientMainPanelCls .searchDoctorsViewCls .searchFormCls .categorySearchBtnCls .x-button-label span:first-child {
+        color: gray;
+        font-family: Pictos;
+        position: absolute; }
+      .patientLandingViewCls .patientMainPanelCls .searchDoctorsViewCls .searchFormCls .nameSearchBtnCls .x-button-label span:nth-child(2), .patientLandingViewCls .patientMainPanelCls .searchDoctorsViewCls .searchFormCls .categorySearchBtnCls .x-button-label span:nth-child(2) {
+        margin-left: 20px; }
+    .patientLandingViewCls .patientMainPanelCls .searchDoctorsViewCls .searchFormCls .nameSearchBtnCls.x-button-pressing, .patientLandingViewCls .patientMainPanelCls .searchDoctorsViewCls .searchFormCls .categorySearchBtnCls.x-button-pressing {
+      background: #C2C2C2; }
+    .patientLandingViewCls .patientMainPanelCls .searchDoctorsViewCls .searchFormCls .nameSearchBtnCls.revealCls .x-button-label span:first-child, .patientLandingViewCls .patientMainPanelCls .searchDoctorsViewCls .searchFormCls .categorySearchBtnCls.revealCls .x-button-label span:first-child {
+      -webkit-transform: rotate(90deg); }
+  .patientLandingViewCls .patientMainPanelCls .searchDoctorsViewCls .searchFormCls .categorySearchFormCls .searchCategoryListCls {
+    height: 130px; }
+    .patientLandingViewCls .patientMainPanelCls .searchDoctorsViewCls .searchFormCls .categorySearchFormCls .searchCategoryListCls .x-list-item {
+      min-height: 40px;
+      height: 40px; }
+  .patientLandingViewCls .patientMainPanelCls .searchDoctorsViewCls .searchFormCls .categorySearchFormCls .searchFormActionBtnsBarCls {
+    background: none;
+    padding: 10px 20% 0px 20%; }
+    .patientLandingViewCls .patientMainPanelCls .searchDoctorsViewCls .searchFormCls .categorySearchFormCls .searchFormActionBtnsBarCls .x-button {
+      height: 40px;
+      border-radius: 0px;
+      border: none;
+      padding: 0 20px 0 20px; }
+    .patientLandingViewCls .patientMainPanelCls .searchDoctorsViewCls .searchFormCls .categorySearchFormCls .searchFormActionBtnsBarCls .clearBtnCls {
+      background: gray; }
+    .patientLandingViewCls .patientMainPanelCls .searchDoctorsViewCls .searchFormCls .categorySearchFormCls .searchFormActionBtnsBarCls .searchBtnCls {
+      background: #6FA02D; }
 .patientLandingViewCls .patientMainPanelCls .specialitiesViewCls .specialitiesListCls .specialityItemCls {
   font-size: 13px; }
   .patientLandingViewCls .patientMainPanelCls .specialitiesViewCls .specialitiesListCls .specialityItemCls .nameCls {
@@ -363,6 +407,13 @@ input.checkbox-cls {
       text-align: left;
       line-height: 1.2em;
       font-size: 0.9em; }
+.patientLandingViewCls .slideMenuCls .searchOptionContCls .x-toolbar {
+  background: white; }
+  .patientLandingViewCls .slideMenuCls .searchOptionContCls .x-toolbar .x-title {
+    color: black;
+    text-shadow: none; }
+.patientLandingViewCls .slideMenuCls .searchOptionContCls .x-list .x-container {
+  background: white; }
 .patientLandingViewCls .slideMenuCls .patientMenuListCls {
   height: 100%;
   background: #20242D; }

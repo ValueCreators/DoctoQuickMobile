@@ -87,9 +87,11 @@ Ext.application({
         'patient.DashboardView',
         'patient.other.DoctorProfile',
         'patient.wallet.Payments',
+        
         'patient.other.MyDoctors',
-
 		'patient.other.Specialities',
+		'patient.other.SearchDoctors',
+		
         'patient.wallet.PaymentDetails',
         'patient.consultation.MyConsultation',
         'patient.consultation.video.VideoCall'

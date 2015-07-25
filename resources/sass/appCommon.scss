@@ -396,6 +396,92 @@ input.checkbox-cls {
 			}
 		}
 
+		.searchDoctorsViewCls{
+
+			.searchResultsViewCls{
+				.docName_searchFieldCls{
+					border-bottom : 1px solid gray;
+				}
+				.filterDisplayCmpCls{
+
+				}
+				.docSearchListCls{
+					height: 100%;
+					.x-list-item{
+						.x-innerhtml{
+							padding : 0px;
+						}
+					}	
+				}
+			}
+
+			.searchFormCls{
+
+				background: #E7E7E7;
+				.nameSearchBtnCls, .categorySearchBtnCls{
+					background: none;
+  					border: none;
+  					border-radius: 0px;
+					border-bottom: 1px solid #C2C2C2;
+  					border-top: 1px solid #fff;
+  					height : 40px;
+
+  					.x-button-label{
+  						text-align: left;
+
+  						span:first-child{
+						  color: gray;
+						  font-family: Pictos;
+						  position: absolute;
+  						}
+  						span:nth-child(2){
+  						  margin-left: 20px;	
+  						}
+  					}
+
+  					&.x-button-pressing {
+  						background: #C2C2C2;
+  					}
+  					&.revealCls {
+  						.x-button-label{
+  							span:first-child{
+  								-webkit-transform : rotate(90deg);
+  							}
+  						}
+  					}
+				}
+
+				.categorySearchFormCls{
+					.searchCategoryListCls{
+
+						height : 130px;
+						.x-list-item{
+							min-height: 40px;
+							height: 40px;
+						}
+					}
+
+					.searchFormActionBtnsBarCls{
+						background: none;
+  						padding: 10px 20% 0px 20%;
+
+  						.x-button{ 
+  						  height: 40px;
+						  border-radius: 0px;
+						  border: none;
+						  padding: 0 20px 0 20px;	
+  						}
+  						.clearBtnCls{
+						  background: gray;
+  						}
+  						.searchBtnCls{
+  						  background: #6FA02D;
+  						}
+					}
+				}
+			}
+		}
+
 		.specialitiesViewCls{
 			.specialitiesListCls{
 				.specialityItemCls{
@@ -491,6 +577,25 @@ input.checkbox-cls {
 				}
 			}
 		}
+
+		.searchOptionContCls{
+
+			.x-toolbar{
+				background: white;	
+
+				.x-title{
+					color : black;
+					text-shadow : none;	
+				}
+			}
+
+			.x-list{
+				.x-container{
+					background: white;
+				}
+			}
+			
+		}
 		
 		.patientMenuListCls{
 			height : 100%;
@@ -510,7 +615,7 @@ input.checkbox-cls {
 					
 					>.menuIconCls {
 						
-						height: 1.2em;
+					    height: 1.2em;
   					    width: 1.2em;
 					    float: left;
 					    margin-right: 15px;
@@ -530,7 +635,6 @@ input.checkbox-cls {
 			
 			.x-list{
 				height : 100%;
-				
 			}
 		}
 	}

@@ -24,7 +24,8 @@ Ext.define('DoctorQuickMobile.controller.CommonController', {
 			docBatchBtn : 'doctor_mainPanel toolbar #batchBtnId',
 			statusNotificationBtn : 'doctor_mainPanel toolbar container#statusNotificationId',
 			gotoPatientDashBoardBtn : 'patient_mainPanel toolbar button#gotoDashBoardBtn',
-			gotoDoctorDashBoardBtn : 'doctor_mainPanel toolbar button#gotoDashBoardBtn',								
+			gotoDoctorDashBoardBtn : 'doctor_mainPanel toolbar button#gotoDashBoardBtn',
+			patientReqList : 'patient_dashboardView #listId'
 		},
 
 		control : {
@@ -32,6 +33,8 @@ Ext.define('DoctorQuickMobile.controller.CommonController', {
 			gotoDoctorDashBoardBtn : { tap : 'initializeView', scope : this },
 			'doctor_dashboardView' : { activate : 'onDocDashBoardActivate', deactivate : 'onDocDashBoardDeActivate', scope : this },
 			'patient_dashboardView' : { activate : 'onPatientDashBoardActivate', deactivate : 'onPatientDashBoardDeActivate', scope : this },
+			
+			'patient_dashboardView #listId' : {itemtap : 'patientReqHandler', scope : this}
 
 		}
 
@@ -39,6 +42,9 @@ Ext.define('DoctorQuickMobile.controller.CommonController', {
 
 	init : function () {
 		this.myConsultDoctor = DoctorQuickMobile.app.getController("patient.MyConsultController");
+		this.myDoctorController = DoctorQuickMobile.app.getController("patient.MyDoctorsController");
+		this.searchDocController = DoctorQuickMobile.app.getController("patient.SearchDocController");
+		this.specialityController = DoctorQuickMobile.app.getController("patient.SpecialityController");
 	},
 
 	initializeView : function () {
@@ -157,7 +163,25 @@ Ext.define('DoctorQuickMobile.controller.CommonController', {
 
     onPatientDashBoardDeActivate : function() {
 
-    	//alert("onPatientDashBoardDeActivate");
+    	//alert("onPatientDashBoardDeActivate");.
+    },
+    
+    patientReqHandler : function(list, index, target, record, e, eOpts){
+    	var req_name = list.getData()[index].name;
+    	
+    	switch(req_name){
+    		
+    		case 'Medical Speciality' :
+    			this.specialityController.showSpecialitiesView();
+    			break;
+    		case 'Search' :
+    			this.searchDocController.showSearchDocView();
+    			break;
+    		case 'My Doctors' :
+    			this.myDoctorController.showMyDocsView();
+    			break;
+    			
+    	}
     }
 
 });

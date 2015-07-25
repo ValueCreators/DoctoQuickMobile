@@ -96,6 +96,7 @@ Ext.define('DoctorQuickMobile.view.patient.SlideMenu', {
 									 xtype : 'list',
 									 itemId : 'specialityList',
 									 store : 'SpecialityStore',
+									 selectedCls : '',
 									 itemTpl : '{name}',
 								}
 		        	         ]
@@ -114,6 +115,7 @@ Ext.define('DoctorQuickMobile.view.patient.SlideMenu', {
 									 xtype : 'list',
 									 itemId : 'languageList',
 									 store : 'LanguageStore',
+									 selectedCls : '',
 									 itemTpl : '{name}',
 								}
 		        	         ]
@@ -132,6 +134,7 @@ Ext.define('DoctorQuickMobile.view.patient.SlideMenu', {
 									 xtype : 'list',
 									 itemId : 'genderList',
 									 itemTpl : '{name}',
+									 selectedCls : '',
 									 data : GENDERS					//todoVinay : evaluate and change to store if needed.
 								}
 		        	         ]

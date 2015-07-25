@@ -6,6 +6,9 @@ Ext.define('DoctorQuickMobile.controller.patient.SlideMenuController',{
 							mainPanel : 'patient_mainPanel',
 							slideMenu : 'patient_slideMenu',
 							slideMenuList : 'patient_slideMenu #patientMenuList',
+							specialityList : 'patient_slideMenu #specialityList',
+							languageList : 'patient_slideMenu #languageList',
+							genderList : 'patient_slideMenu #genderList',
 							
 							navBtn : '#patientMainPanel button[name="patient_nav_btn"]'
 				},
@@ -15,8 +18,17 @@ Ext.define('DoctorQuickMobile.controller.patient.SlideMenuController',{
 							},
 							
 							slideMenuList : {
-										itemtap : 'switchView'
-										}
+								itemtap : 'switchView'
+							},
+							specialityList : {
+								itemtap : 'switchView'
+							},
+							languageList : {
+								itemtap : 'switchView'
+							},
+							genderList : {
+								itemtap : 'switchView'
+							}
 				}
 	},
 	
@@ -35,11 +47,26 @@ Ext.define('DoctorQuickMobile.controller.patient.SlideMenuController',{
 	/**
 	 * Toggle the slide navogation view
 	 */
-	slideMenuOpen : function(){
+	slideMenuOpen : function(category){
 					
 		var me = this;
 		var mainEl = me.getMainPanel().element;
 		this.myConsultDoctor.cunsultMyDoctor = false;
+		
+		switch(category){
+			case 'speciality' :
+				this.getSlideMenu().setActiveItem(1);
+				break;
+			case 'language' : 
+				this.getSlideMenu().setActiveItem(2);
+				break;
+			case 'gender' : 
+				this.getSlideMenu().setActiveItem(3);
+				break;
+			default : 
+				this.getSlideMenu().setActiveItem(0);
+				break;
+		}
 		
 		if (mainEl.hasCls('out')) {
 				
