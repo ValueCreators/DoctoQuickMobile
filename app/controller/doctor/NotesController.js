@@ -42,6 +42,11 @@ Ext.define('DoctorQuickMobile.controller.doctor.NotesController',{
 		this.getNotesContainer().setData(notesData);
 		this.getMainPanelToolbarId().setTitle("Notes");
 		this.getGotoNoteMainPanelBtn().hide();
+
+        /*
+            Online/Offline btn is not hiding on video call deactivate. So for time being hidden here.
+        */
+        DoctorQuickMobile.app.getController("CommonController").getStatusNotificationBtn().hide();
 	},
 
 	onNotesMainDeactivate : function() {
