@@ -72,6 +72,7 @@ Ext.application({
         'common.CustomerCareView',
         'common.ErrorPopUp',
 
+        'doctor.registration.DocRegMainView',
         'doctor.LandingView',
         'doctor.DashboardView',
         'doctor.MainPanel',

@@ -92,7 +92,7 @@ Ext.define('DoctorQuickMobile.controller.patient.PatientRegController', {
 	patientRegistrationSuccessCb : function (data) {
 
 		console.log('after success call back',data);
-		if (data.result.is_found) {
+		if (data.result && data.result.is_found) {
 			console.log('already registered');
 			this.commonController.showErrorPopUp('Mobile number already registered');
 			return true;

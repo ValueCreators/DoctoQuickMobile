@@ -83,6 +83,14 @@ Ext.define('DoctorQuickMobile.controller.doctor.DoctoRegController', {
 
     registerSuccessCl : function (data) {
         console.log('successfully data saved',data);
+
+        if (data.error && data.error.is_found) {
+
+            console.log('already registered');
+            this.commonController.showErrorPopUp('Mobile number already registered');
+            return true;
+        }
+
         //Ext.Viewport.add(DoctorQuickMobile.view.notificationOverlay).showBy();
 
         /*  Setting login type whether he is patient or doctor
@@ -127,7 +135,7 @@ Ext.define('DoctorQuickMobile.controller.doctor.DoctoRegController', {
                 },
                 {
                     xtype : 'button',
-                    cls : 'bgBtn1 closeBtnCls',
+                    cls : 'bgBtn1 closeBtnCls1',
                     text : 'Close',
                     handler : function (thisView, e) {
                         DoctorQuickMobile.app.getController('CommonController').initializeView();
@@ -150,7 +158,7 @@ Ext.define('DoctorQuickMobile.controller.doctor.DoctoRegController', {
          /*  Setting login type whether he is patient or doctor
         *   And storing in the localstorage in desktop and local databse on the mobile
         */
-        loginDetail.loginType = 'Doctor';
+        //loginDetail.loginType = 'Doctor';
         this.commonController.storingLoginCredentials();
 
          overlay = Ext.Viewport.add({
